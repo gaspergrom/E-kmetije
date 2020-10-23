@@ -1,0 +1,109 @@
+#login h1 a, .login h1 a {
+  background: url(https://e-kmetije.si/wp-content/uploads/logo-1-latest-black.png) no-repeat;
+  height: 71px;
+  width: 224px;
+  background-size: 224px 71px;
+  outline: none;
+  box-shadow: none;
+}
+$color-white: #fff;
+$color-black: #03262c;
+$color-green: #1d8007;
+$color-green-light: #5cb917;
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+$button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, $color-green);
+
+body {
+  background: #f6faf5 !important;
+  font-family: $font-primary;
+}
+
+.login {
+  .message{
+    border-left: solid 4px $color-green;
+  }
+  a.privacy-policy-link{
+    color: $color-green !important;
+  }
+  a:hover{
+    color: $color-green !important;
+  }
+  a{
+    box-shadow: none !important;
+    border: none !important;
+  }
+  form {
+    border: 1px solid #dcedd8 !important;
+    border-radius: 0 !important;
+    padding: 24px !important;
+    .dashicons{
+      color: $color-black !important;
+    }
+  }
+  .input{
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: $color-black !important;
+    background-color: #fff !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    position: relative !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    display: block !important;
+    width: 100% !important;
+    background-image: none !important;
+    background-clip: padding-box !important;
+    height: 48px !important;
+    font-family: $font-primary !important;
+    box-shadow: none !important;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;;
+    }
+  }
+  .submit{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding-top: 16px !important;
+    input[type='submit']{
+      font-size: 16px !important;
+      line-height: 20px !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      color: #fff !important;
+      border: 0 !important;
+      padding: 14px 30px !important;
+      border-radius: 100px !important;
+      outline: none !important;
+      background-image: $button-gradient !important;
+      background-size: 200% !important;
+      background-position: 0 !important;
+      cursor: pointer !important;
+      height: 48px !important;
+      font-family: $font-primary !important;
+      white-space: nowrap !important;
+      vertical-align: middle !important;
+      user-select: none !important;
+      display: inline-block !important;
+      position: relative !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.2px !important;
+      transition: background-position 0.3s ease-in-out  !important;
+      box-shadow: none !important;
+      &:hover{
+        background-position: 100% !important;
+      }
+    }
+  }
+  button.wp-hide-pw:focus{
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    min-height: 48px !important;
+  }
+}

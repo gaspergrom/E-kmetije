@@ -1,0 +1,27 @@
+/* ---------------------------------- *\
+    Lists
+\* ---------------------------------- */
+
+$show-list: false;
+
+@if $show-list {
+    ol,
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        li {
+            display: list-item;
+        }
+
+        .list {
+            padding-left: 0;
+
+            &--none {
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}

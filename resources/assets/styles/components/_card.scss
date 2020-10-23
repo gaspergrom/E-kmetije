@@ -1,0 +1,51 @@
+.card {
+  border: solid 1px #DCEDD8;
+  background: $color-white;
+  display: block;
+  color: $color-black;
+
+  &--hover {
+    background: $color-white;
+    position: relative;
+    z-index: 1;
+    @include transition(background color 0.3s ease-in-out);
+    &:hover{
+      background: $color-black;
+      color: $color-white;
+      .card__icon{
+        color: $color-white;
+        border-color: #36970e;
+        &:before{
+          background: #36970e;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    height: 93px;
+    width: 93px;
+    border-radius: 50%;
+    border: solid 1px #ABE4B2;
+    color: #36970E;
+    padding: 13px;
+    z-index: 1;
+    position: relative;
+    @include flex;
+    @include flex--center;
+    @include flex--middle;
+    @include transition(background color 0.3s ease-in-out);
+    &:before{
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background-color: #E2F6DE;
+      z-index: -1;
+      @include transition(background 0.3s ease-in-out);
+    }
+  }
+}

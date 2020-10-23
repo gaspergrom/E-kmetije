@@ -1,0 +1,47 @@
+/* ---------------------------------- *\
+    content
+\* ---------------------------------- */
+
+.content{
+  p{
+    margin-bottom: 24px;
+  }
+  h1,h2, h3, h4, h5, h6{
+    margin-bottom: 8px;
+    margin-top: 24px;
+  }
+}
+/*
+[class*=' content'],
+[class^='content'] {
+    a {
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+    }
+
+    ul,
+    ol {
+
+    }
+
+    blockquote {
+
+    }
+
+    img {
+
+    }
+}
+
+.content {
+
+}
+*/

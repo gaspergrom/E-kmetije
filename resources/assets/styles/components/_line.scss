@@ -1,0 +1,22 @@
+/* ---------------------------------- *\
+    Line
+\* ---------------------------------- */
+
+/*
+.line {
+
+}
+
+.border {
+
+}
+*/
+
+hr {
+    margin: 0 auto;
+    display: block;
+    width: 70px;
+    border: 0;
+    height: 4px;
+    background-color: $color-green;
+}

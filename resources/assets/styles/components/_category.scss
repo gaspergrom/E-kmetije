@@ -1,0 +1,30 @@
+.category{
+  display:block;
+  width: 100%;
+  padding: 12px 20px;
+  border: solid 1px #DCEDD8;
+  background: $color-white;
+  color: $color-black;
+  line-height: 24px;
+  z-index: 1;
+  position: relative;
+  @include transition(color 0.3s ease-in-out);
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: $gradient;
+    opacity: 0;
+    z-index: -1;
+    @include transition(opacity 0.3s ease-in-out);
+  }
+  &:hover, &.active{
+    color: $color-white;
+    &:after{
+      opacity: 1;
+    }
+  }
+}

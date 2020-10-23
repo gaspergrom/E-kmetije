@@ -1,0 +1,55 @@
+/* ---------------------------------- *\
+    spacing variables
+\* ---------------------------------- */
+
+/* sizes of padding and margin */
+$sizes: 0, 4, 8, 16, 24, 32, 40, 48, 64, 80, 120, 160;
+
+/* prefixes */
+$contains: (
+        'pt': padding-top,
+        'pb': padding-bottom,
+        'pr': padding-right,
+        'pl': padding-left,
+        'mt': margin-top,
+        'mb': margin-bottom,
+        'mr': margin-right,
+        'ml': margin-left
+);
+
+/* responsive spacings */
+$spacing-md: false;
+$spacing-sm: true;
+$spacing-xs: false;
+
+@each $prefix, $meaning in $contains {
+    @each $size in $sizes {
+        .#{$prefix}#{$size} {
+            #{$meaning}: $size*1px;
+        }
+
+        @if $spacing-md {
+            @include md-down {
+                .#{$prefix}#{$size}\:md {
+                    #{$meaning}: $size*1px !important;
+                }
+            }
+        }
+
+        @if $spacing-sm {
+            @include sm-down {
+                .#{$prefix}#{$size}\:sm {
+                    #{$meaning}: $size*1px !important;
+                }
+            }
+        }
+
+        @if $spacing-xs {
+            @include xs-down {
+                .#{$prefix}#{$size}\:xs {
+                    #{$meaning}: $size*1px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/* ---------------------------------- *\
+    Video
+\* ---------------------------------- */
+
+/* variables what to display */
+$show-video-default: false;
+$show-video-iframe: false;
+$show-video-bg: false;
+
+.video {
+    /* show default video */
+    @if $show-video-default {
+        width: 100%;
+        height: auto;
+    }
+
+    /* iframe video (youtube, vimeo) */
+    @if $show-video-iframe {
+        &__iframe {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+
+            & iframe,
+            & object,
+            & embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    /* video background */
+    @if $show-video-bg {
+        &__bg {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                @media (min-aspect-ratio: 16/9) {
+                    height: auto;
+                    width: 100%;
+                    left: -50%;
+                    right: -50%;
+                    margin: auto;
+                }
+
+                @media (max-aspect-ratio: 16/9) {
+                    width: auto;
+                    height: 100%;
+                    left: -50%;
+                    right: -50%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

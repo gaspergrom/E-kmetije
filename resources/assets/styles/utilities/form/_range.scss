@@ -1,0 +1,63 @@
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    outline: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    //track
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track,
+    &::-ms-track {
+        width: 100%;
+        height: 2px;
+        background: #d0dbe2;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    //thumb
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb,
+    &::-ms-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        outline: 0;
+        margin-top: -24px;
+        background: black;
+        cursor: pointer;
+        padding: 0;
+        display: block;
+        z-index: 99;
+
+        &:hover {
+            background: black;
+        }
+    }
+
+    /*
+    &::-ms-fill-lower {
+
+    }
+
+    &::-ms-fill-upper {
+
+    }
+    */
+
+    &::-ms-tooltip {
+        display: none;
+    }
+
+    &::-moz-focus-outer {
+        border: 0;
+    }
+}

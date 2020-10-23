@@ -1,0 +1,63 @@
+/* ---------------------------------- *\
+    Buttons
+\* ---------------------------------- */
+$button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, $color-green);
+
+[class*=' btn'],
+[class^='btn']{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: $bold;
+    text-align: center;
+    color: $color-white;
+    border: 0;
+    padding: 14px 30px;
+    border-radius: 100px;
+    outline: none;
+    background-image: $button-gradient;
+    background-size: 200%;
+    background-position: 0;
+    cursor: pointer;
+    height: 48px;
+    font-family: $font-primary;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    @include transition(background-position 0.3s ease-in-out);
+    &:hover{
+        background-position: 100%;
+    }
+}
+
+.btn {
+    &--full {
+        width: 100%;
+    }
+    &--icon{
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        @include flex;
+        @include flex--center;
+        @include flex--middle;
+        &.btn--small{
+            width: 36px;
+            height: 36px;
+        }
+    }
+    &--white{
+        background: $color-white;
+        color: $color-green;
+        &:hover{
+            background: $color-green;
+            color: $color-white;
+        }
+    }
+    &--square{
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,43 @@
+/*
+ TABLE OF CONTENTS
+    01. Variables....................Imported via gulp and can be found in _vars.scss
+    02. Utilities......................The general styles like align-center etc.
+    03. Components...................Other SCSS components like _dividers.scss, _navigation.scss etc.
+    04. Default Tags.................Like <body>, <h1> etc.
+*/
+/* Variables */
+@import 'vars/font';
+@import 'vars/color';
+@import 'vars/media';
+@import 'vars/grid';
+@import 'vars/spacings';
+@import 'vars/mixins';
+@import 'vars/visibility';
+@import 'vars/headings';
+
+/* Globals */
+@import 'globals';
+
+/* Layout */
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+/* Utilities */
+@import 'utilities/animations';
+@import 'utilities/backgrounds';
+@import 'utilities/buttons';
+@import 'utilities/form';
+@import 'utilities/images';
+@import 'utilities/links';
+@import 'utilities/lists';
+@import 'utilities/positions';
+@import 'utilities/table';
+@import 'utilities/text';
+@import 'utilities/video';
+
+/* Components */
+@import 'components';
+
+/* Plugins */
+@import 'plugins';

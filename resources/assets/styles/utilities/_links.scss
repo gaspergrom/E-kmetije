@@ -1,0 +1,30 @@
+/* ---------------------------------- *\
+    Links
+\* ---------------------------------- */
+
+a {
+    color: $color-green;
+}
+
+.link{
+    &--reverse{
+        color: $color-black;
+        &:hover{
+            color: $color-green;
+        }
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/*
+.link {
+
+}
+
+.btn {
+
+}
+*/

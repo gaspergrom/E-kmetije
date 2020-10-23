@@ -1,0 +1,38 @@
+/* ---------------------------------- *\
+    Table
+\* ---------------------------------- */
+
+$show-table: false;
+
+@if $show-table {
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        /*
+        th {
+
+        }
+
+        tr {
+            td {
+
+            }
+        }
+        */
+
+        &.responsive {
+            width: 100%;
+            max-width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+
+            td,
+            th {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+

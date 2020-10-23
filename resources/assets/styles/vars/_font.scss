@@ -1,0 +1,22 @@
+/* ---------------------------------- *\
+    font variables
+\* ---------------------------------- */
+
+$body-font-size: 16px;
+
+/* Font Families */
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+$font-tertiary: "";
+
+/* Font Weights */
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+$font-weight: (
+    'normal': $normal,
+    'bold': $bold
+);

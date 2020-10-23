@@ -1,0 +1,43 @@
+.checkbox{
+    display: inline-block;
+    input{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        padding: 0;
+        margin: 0;
+    }
+    span{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &:before{
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin: 0 8px 0 0;
+            border: 1px solid #99a5bd;
+            background-color: #fff;
+            color: #fff;
+            text-align: center;
+            visibility: visible;
+            line-height: 24px;
+            @include transition(border 0.2s ease-in-out)
+        }
+    }
+    input:checked~span{
+        &:before{
+            border: 10px solid $color-green;
+        }
+    }
+    input.error:invalid~span{
+        &:before{
+            border-color: #ed4d4d;
+        }
+    }
+}

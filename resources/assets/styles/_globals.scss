@@ -1,0 +1,182 @@
+/* ---------------------------------- *\
+    globals
+\* ---------------------------------- */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 1.2;
+    background: #F6FAF5;
+}
+
+::selection {
+    color: $selection-text;
+    background-color: $selection-bg;
+}
+
+::-moz-selection {
+    color: $selection-text;
+    background-color: $selection-bg;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    font-family: $font-primary;
+}
+
+iframe {
+    border: 0;
+}
+
+main {
+    display: block;
+    overflow-y: hidden;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+dd {
+    margin-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+i {
+    font-weight: $normal;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+sup {
+    position: relative;
+    top: -0.5em;
+    vertical-align: baseline;
+    line-height: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+p {
+    display: block;
+    margin: 0 0 10px;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    text-transform: inherit;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+    overflow: visible;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+}
+
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    outline: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+/* Elements have padding and border included in the element's total width and height */
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+.loading {
+    height: 60px;
+    width: 60px;
+    border-top: 7px solid transparent;
+    //    border-bottom: 7px solid $color-green;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-radius: 50%;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-name: a;
+    -webkit-animation-name: a;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+@-webkit-keyframes a {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+*/

@@ -1,0 +1,47 @@
+/* ---------------------------------- *\
+    Text
+\* ---------------------------------- */
+
+.text {
+    /* text colors */
+    @each $name, $value in $colors {
+        &--#{$name} {
+            color: #{$value};
+        }
+    }
+
+    /* FONT WEIGHT */
+    @each $name, $val in $font-weight {
+        &-#{$name} {
+            font-weight: $val;
+        }
+    }
+
+    /* TEXT ALIGNMENT */
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    /* TEXT TRANSFORM */
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-capitalize {
+        text-transform: capitalize;
+    }
+}
+.font--primary{
+    font-family: $font-primary;
+}
+.font--secondary{
+    font-family: $font-secondary;
+}

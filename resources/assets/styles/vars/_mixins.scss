@@ -1,0 +1,58 @@
+/* ---------------------------------- *\
+    mixins
+\* ---------------------------------- */
+
+/* Transitions */
+@mixin transition($args: 300ms ease-in-out) {
+    transition: #{$args};
+}
+
+/* Transforms */
+@mixin transform($args) {
+    -webkit-transform: #{$args};
+    -ms-transform: #{$args};
+    transform: #{$args};
+}
+
+/* responsive font-size */
+@function rem($size) {
+    @return ($size / $body-font-size) * 1rem;
+}
+
+/* animation */
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+
+/* keyframes */
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+/* mixin for internet explorer */
+@mixin ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
+
+@mixin safari {
+    @media not all and (min-resolution: 0.001dpcm) {
+        @media {
+            @content;
+        }
+    }
+}
+
+@mixin firefox {
+    @-moz-document url-prefix() {
+        @content;
+    }
+}

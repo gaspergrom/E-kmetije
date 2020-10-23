@@ -1,0 +1,20 @@
+/* ---------------------------------- *\
+    Footer
+\* ---------------------------------- */
+
+.footer {
+  background-image: url('https://e-kmetije.si/wp-content/uploads/2020/10/product_footer_bg-1.png') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  padding-top: 150px;
+  a:not(.btn){
+    color: $color-white;
+    &:hover{
+      color: $color-green-light;
+    }
+  }
+  &__copyright{
+    border-top: solid 1px rgba(255,255,255, 0.7)
+  }
+}

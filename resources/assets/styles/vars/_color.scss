@@ -1,0 +1,30 @@
+/* ---------------------------------- *\
+    color variables
+\* ---------------------------------- */
+
+/* color variables */
+$color-white: #fff;
+$color-black: #03262c;
+$color-green: #1d8007;
+$color-green-light: #5cb917;
+
+$gradient: linear-gradient(to right,  $color-green, $color-green-light);
+/* colors you want to include in text and background */
+$colors: (
+        'white': $color-white,
+        'green': $color-green,
+        'green-light': $color-green-light,
+);
+
+/* primary color */
+$color-primary: $color-black;
+
+/* selection background and color */
+$selection-text: $color-black;
+$selection-bg:   $color-green-light;
+
+/* percentage of darkening color on hover */
+$darken: 5%;
+
+/* percentage of lightening color on hover */
+$lighten: 5%;

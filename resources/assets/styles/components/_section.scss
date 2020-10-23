@@ -1,0 +1,39 @@
+.section {
+  &__leaves {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+    &:before {
+      bottom: -65px;
+      left: 15px;
+      height: 245px;
+      width: 225px;
+      background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/leaf-2-1.png);
+      @include sm-down{
+        height: 130px;
+        width: 119px;
+        bottom: -45px;
+        left: 10px;
+      }
+    }
+    &:after {
+      top: -68px;
+      right: 0;
+      height: 225px;
+      width: 190px;
+      background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/leaf-3-1.png);
+      @include sm-down{
+        height: 130px;
+        width: 110px;
+        top: -45px;
+        right: 0;
+      }
+    }
+  }
+}

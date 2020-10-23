@@ -1,0 +1,27 @@
+/* ---------------------------------- *\
+		Form
+\* ---------------------------------- */
+
+textarea {
+  resize: vertical;
+  max-width: 100%;
+  min-height: 120px;
+}
+
+input,
+textarea {
+  position: relative;
+  font-family: $font-primary;
+}
+
+label {
+  cursor: pointer;
+}
+
+@import "form/_default";
+
+@import "form/checkbox";
+@import "form/select";
+@import "form/boxinput";
+// @import "form/range";
+// @import "form/color";

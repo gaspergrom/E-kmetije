@@ -1,0 +1,20 @@
+.file {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: $bold;
+    text-align: center;
+    color: $color-white;
+    border: 0;
+    padding: 14px 30px;
+    border-radius: 200px;
+    outline: none;
+    background: $color-black;
+    cursor: pointer;
+    height: 56px;
+    font-family: $font-primary;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    display: inline-block;
+    position: relative;
+}

@@ -1,0 +1,292 @@
+/* ---------------------------------- *\
+            Grid
+\* ---------------------------------- */
+
+.container {
+    /* Width 768px on small devices (768px and more) */
+    @include sm-up {
+        width: 728px;
+    }
+
+    /* Width 936px on medium devices (960px and more) */
+    @include md-up {
+        width: 920px;
+    }
+
+    /* Width 1140px on large devices (1160px and more) */
+    @include lg-up {
+        width: 1100px;
+    }
+
+    /* Width 1440px on large devices (1440px and more) */
+    @include extra-up {
+        width: 1400px;
+    }
+}
+
+/* Fluid container aka full width */
+.container,
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $padding + $container-space;
+    padding-left: $padding + $container-space;
+}
+
+/* Container with padding not width */
+
+/*
+.container {
+        width: 100%;
+        padding-right: $padding + $container-space;
+        padding-left: $padding + $container-space;
+
+        @media #{$sm-up} {
+            padding-right:60px;
+            padding-left: 60px;
+        }
+        @media #{$md-up} {
+            padding-right:90px;
+            padding-left: 90px;
+        }
+        @media #{$lg-up} {
+            padding-right:140px;
+            padding-left: 140px;
+        }
+        @media #{$extra-up} {
+            padding-right:180px;
+            padding-left: 180px;
+        }
+
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $padding + $container-space;
+    padding-left: $padding + $container-space;
+}
+*/
+
+/* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
+.row {
+    margin-right: -$padding;
+    margin-left: -$padding;
+}
+
+/* Main flex class, without this, flex positioning is not working. Use "row" when using columns, if not, use "flex" */
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*=' flex'],
+[class^='flex'],
+.row {
+    @include flex;
+}
+
+/*
+	Flex alignment
+*/
+@mixin flex--one {
+    flex: 1;
+    -webkit-flex: 1;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+}
+
+@mixin flex--center {
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+@mixin flex--row {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+@mixin flex--row-reverse {
+    flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+}
+
+@mixin flex--column {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+@mixin flex--column-reverse {
+    flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+
+@mixin flex--left {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+}
+
+@mixin flex--right {
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+}
+
+@mixin flex--between {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+
+@mixin flex--around {
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+@mixin flex--top {
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+
+@mixin flex--bottom {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+@mixin flex--middle {
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+@mixin flex--stretch {
+    align-items: stretch;
+    -webkit-align-items: stretch;
+}
+
+.flex {
+    &--one {
+        @include flex--one;
+    }
+
+    &--row {
+        @include flex--row;
+    }
+
+    &--row-reverse {
+        @include flex--row-reverse;
+    }
+
+    &--column {
+        @include flex--column;
+    }
+
+    &--column-reverse {
+        @include flex--column-reverse;
+    }
+
+    &--left {
+        @include flex--left;
+    }
+
+    &--right {
+        @include flex--right;
+    }
+
+    &--center {
+        @include flex--center;
+    }
+
+    &--between {
+        @include flex--between;
+    }
+
+    &--around {
+        @include flex--around;
+    }
+
+    &--top {
+        @include flex--top;
+    }
+
+    &--bottom {
+        @include flex--bottom;
+    }
+
+    &--middle {
+        @include flex--middle;
+    }
+
+    &--stretch {
+        @include flex--stretch;
+    }
+}
+
+/* ---------------------------------- *\
+    Flex Positions
+\* ---------------------------------- */
+
+@each $class, $point in $breakpoints-order {
+    @media #{$point} {
+        @for $i from 1 through $order-num {
+            .order-#{$i}\:#{$class} {
+                order: $i;
+            }
+        }
+    }
+}
+
+/* ---------------------------------- *\
+         Columns
+\* ---------------------------------- */
+
+/* default styling for column */
+[class*=' col-'],
+[class^='col-'] {
+    padding-right: $padding;
+    padding-left: $padding;
+    width: 100%;
+
+    &.pl0 {
+        padding-left: 0 !important;
+    }
+
+    &.pr0 {
+        padding-right: 0 !important;
+    }
+}
+
+/* set column width */
+@mixin col-width($per) {
+    flex: 0 0 $per;
+    max-width: $per;
+}
+
+@mixin col-same {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+/* create classes */
+@each $pre, $point in $breakpoints {
+    @media #{$point} {
+        @for $i from 1 through $grid - 1 {
+            .col-#{$pre}-#{$i} {
+                @include col-width(100%/$grid*$i);
+            }
+        }
+
+        .col-#{$pre} {
+            @include col-same;
+        }
+    }
+}
+
+.col {
+    @include col-same;
+}
+
+.col-auto {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: 100%;
+}

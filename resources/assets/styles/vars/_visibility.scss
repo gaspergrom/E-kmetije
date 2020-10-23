@@ -1,0 +1,47 @@
+/* ---------------------------------- *\
+    visibility variables
+\* ---------------------------------- */
+
+$display: (
+        flex,
+        block,
+    //inline,
+    //inline-block
+);
+
+/* breakpoints used for visibility */
+$breakpoints-visibility: (
+    //'xs': $xs-down,
+        'sm': $sm-down,
+    //'md': $md-down,
+    //'lg': $lg-down
+);
+
+[class*=" show-"],
+[class^="show-"] {
+    display: none !important;
+}
+
+/* Override none property with appropriate one (flex, block, inline, inline-block). Use it as "show-xs-flex" */
+@each $class, $point in $breakpoints-visibility {
+    @media #{$point} {
+        @each $property in $display {
+            .show-#{$property}\:#{$class} {
+                display: $property !important;
+            }
+        }
+    }
+}
+
+/*
+	Element Hidden
+*/
+
+/* Add "display: none;" to the appropriate breakpoint. Use it as "hide-xs" */
+@each $class, $point in $breakpoints-visibility {
+    @media #{$point} {
+        .hide\:#{$class} {
+            display: none !important;
+        }
+    }
+}

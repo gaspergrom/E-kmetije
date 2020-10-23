@@ -1,0 +1,17 @@
+/* ---------------------------------- *\
+    Quadric
+\* ---------------------------------- */
+
+[class*=' quadric'],
+[class^='quadric'] {
+    display: block;
+    position: relative;
+}
+
+.quadric {
+    padding-bottom: 56.25%;
+
+    &--full {
+        padding-bottom: 100%;
+    }
+}

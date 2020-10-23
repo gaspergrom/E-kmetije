@@ -1,0 +1,31 @@
+/* ---------------------------------- *\
+    grid variables
+\* ---------------------------------- */
+
+/* number of columns */
+$grid: 12;
+
+/* column padding */
+$padding: 16px;
+
+/* container spacing */
+$container-space: 0;
+
+/* breakpoints (used for grid) */
+$breakpoints: (
+    //'xs': $default,
+    'sm': $sm-up,
+    'md': $md-up,
+    'lg': $lg-up
+);
+
+/* breakpoints used for positioning */
+$breakpoints-order: (
+    //'xs': $xs-down,
+    //'sm': $sm-down,
+    //'md': $md-down,
+    //'lg': $lg-down
+);
+
+/* number of positions */
+$order-num: 3;

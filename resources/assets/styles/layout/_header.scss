@@ -1,0 +1,195 @@
+/* ---------------------------------- *\
+    Header
+\* ---------------------------------- */
+
+$header-desktop: 65px;
+$header-mobile: 70px;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-black;
+    z-index: 999;
+
+    &__logo {
+        z-index: 1010;
+
+        img,
+        svg {
+            height: 48px;
+        }
+    }
+
+    &__box {
+        height: $header-desktop;
+
+        @include header-down {
+            height: $header-mobile;
+        }
+    }
+
+
+    &__links {
+        z-index: 900;
+        display: block;
+        height: 100%;
+        @include transition(visibility opacity 0.3s ease-in-out);
+        @include header-down {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: $color-black;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1000;
+            padding-top: $header-mobile;
+        }
+
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        nav {
+            display: block;
+
+            @include header-down {
+                overflow: auto;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                @include header-down{
+                    padding-top: 32px;
+                }
+
+                li {
+                    a {
+                        color: $color-white;
+                        font-size: 18px;
+                        line-height: 20px;
+                        //font-family: $font-secondary;
+                        @include header-down {
+                            display: inline-block;
+                            font-size: 24px;
+                            line-height: 32px;
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+
+            > ul {
+                @include flex;
+
+                @include header-down {
+                    display: block;
+                }
+
+                > li {
+                    position: relative;
+                    padding: 0 15px;
+
+                    @include header-down {
+                        text-align: center;
+                        width: 100%;
+                        @include flex;
+                        @include flex--column;
+                    }
+
+                    > a {
+                        height: 100%;
+                        display: block;
+                        width: auto;
+                        line-height: $header-desktop;
+                        @include header-down{
+                            line-height: 32px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .btn{
+        height: 38px;
+        padding: 9px 25px;
+        font-size: 14px;
+    }
+
+    $btn-height: 20px;
+    $btn-width: 25px;
+    $btn-line: 2px;
+    $line-color: $color-white;
+    $line-color-open: $color-white;
+
+    &__btn {
+        z-index: 1100;
+        position: relative;
+        width: $btn-width;
+        height: $btn-height;
+        cursor: pointer;
+
+        @include header-up {
+            display: none;
+        }
+
+        span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: $btn-line;
+            opacity: 1;
+            background: $line-color;
+            border-radius: $btn-line;
+
+            @include transform(rotate(0deg));
+
+            &:nth-child(1) {
+                top: 0;
+
+                @include transition("top .2s .2s, transform .2s, background-color .2s");
+            }
+
+            &:nth-child(2) {
+                top: calc(50% - (#{$btn-line} / 2));
+
+                @include transition("opacity 0s linear .2s, background-color .2s");
+            }
+
+            &:nth-child(3) {
+                top: calc(100% - #{$btn-line});
+
+                @include transition("top .2s .2s, transform .2s, background-color .2s");
+            }
+        }
+
+        &.open span {
+            background-color: $line-color-open !important;
+
+            &:nth-child(1) {
+                top: calc(50% - (#{$btn-line} / 2));
+
+                @include transform(rotate(45deg));
+                @include transition("top .2s, transform .2s .2s, background-color .2s");
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+
+                @include transition("opacity 0s linear .2s, background-color .2s");
+            }
+
+            &:nth-child(3) {
+                top: calc(50% - (#{$btn-line} / 2));
+
+                @include transform(rotate(-45deg));
+                @include transition("top .2s, transform .2s .2s, background-color .2s");
+            }
+        }
+    }
+}
