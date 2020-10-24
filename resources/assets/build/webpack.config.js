@@ -131,6 +131,7 @@ let webpackConfig = {
   externals: {
     jquery: 'jQuery',
     google: 'google',
+      MarkerClusterer: 'MarkerClusterer',
   },
   plugins: [
     new CleanPlugin([config.paths.dist], {
@@ -157,7 +158,8 @@ let webpackConfig = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       Popper: 'popper.js/dist/umd/popper.js',
-        'window.google': 'google'
+        'window.google': 'google',
+        'window.MarkerClusterer': 'MarkerClusterer'
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,

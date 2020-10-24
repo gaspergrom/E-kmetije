@@ -10,7 +10,7 @@ add_action("init", function () {
     $admin->add_cap('read_ponudniki');
     $admin->add_cap('edit_ponudnik');
     $admin->add_cap('edit_ponudniki');
-    $admin->remove_cap('edit_other_ponudniki');
+    $admin->add_cap('edit_other_ponudniki');
     $admin->add_cap('publish_ponudniki');
     $admin->add_cap('read_private_ponudniki');
     $admin->add_cap('delete_ponudniki');
