@@ -20,7 +20,10 @@ return [
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => false,
-    'rewrite' => ['slug' => 'vrste-izdelkov'],
+    'rewrite' => [
+        'slug' => 'vrste-izdelkov',
+        'ep_mask' => EP_VRSTE_IZDELKOV
+    ],
     'show_in_rest' => true,
     'capabilities'      => array(
         'manage_terms'  => 'manage_vrste-izdelkov',

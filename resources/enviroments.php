@@ -18,3 +18,4 @@ define("THEME_COLOR", "#ffffff");
  * */
 
 
+define('EP_VRSTE_IZDELKOV', 1001);

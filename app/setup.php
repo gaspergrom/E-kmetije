@@ -17,9 +17,13 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), [], APP_VERSION);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], APP_VERSION, true);
-    if(is_front_page() || is_singular(['ponudniki', 'izdelki'])){
+    if (is_front_page()
+        || is_singular(['ponudniki', 'izdelki'])
+        || basename(get_page_template()) == "template-zemljevid.blade.php"
+        || is_post_type_archive(['ponudniki', 'izdelki'])
+        || is_tax(['vrste-izdelkov'])) {
         wp_enqueue_script('google-maps-clusers', "https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js", [], null, true);
-        wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') ."&callback=initMap&libraries=&v=weekly", [], null, true);
+        wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') . "&callback=initMap&libraries=&v=weekly", [], null, true);
     }
 }, 100);
 
@@ -27,16 +31,26 @@ add_action('login_head', function () {
     wp_enqueue_style('sage/login.css', asset_path('styles/login.css'), [], APP_VERSION);
 }, 100);
 
-//add_action('after_setup_theme', function() {
-//    show_admin_bar(false);
-//});
 
+add_action('init', function () {
+    add_rewrite_endpoint('prikazi', EP_VRSTE_IZDELKOV);
+});
 
+add_action('pre_get_posts', function ($query) {
+    if ($query->is_main_query() && !$query->is_admin() && is_tax('vrste-izdelkov')) {
+        $post_type = $query->get('prikazi');
+        if ($post_type) {
+            $query->set('post_type', $post_type);
+        } else {
+            $query->set('post_type', 'izdelki');
+        }
+    }
+});
 
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_styles', 'print_emoji_styles');
 
 /**
  * Theme setup
@@ -97,18 +111,18 @@ add_action('after_setup_theme', function () {
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
+            'name' => __('Primary', 'sage'),
+            'id' => 'sidebar-primary'
+        ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+            'name' => __('Footer', 'sage'),
+            'id' => 'sidebar-footer'
+        ] + $config);
 });
 
 /**
@@ -147,9 +161,9 @@ add_action('after_setup_theme', function () {
      * Create Blade directives
      */
 //    sage('blade')->compiler()->directive('inapp', function () {
-/*        return '<?php if(!isset($_GET["inapp"])): ?>';*/
+    /*        return '<?php if(!isset($_GET["inapp"])): ?>';*/
 //    });
 //    sage('blade')->compiler()->directive('endinapp', function () {
-/*        return "<?php endif; ?>";*/
+    /*        return "<?php endif; ?>";*/
 //    });
 });

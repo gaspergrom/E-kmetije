@@ -1,4 +1,5 @@
 import { isEmail } from '../util/validations';
+import serialize from "./partials/common/serialize";
 
 export default {
     init () {
@@ -10,21 +11,7 @@ export default {
         $('#formponudnik').submit(function (e) {
             e.preventDefault();
             error.text('');
-            const inputs = $(this).serializeArray();
-            const data = {};
-            inputs.forEach((input) => {
-                if (input.name in data) {
-                    if (typeof data[input.name] === 'string') {
-                        data[input.name] = [data[input.name], input.value];
-                    }
-                    else {
-                        data[input.name].push(input.value);
-                    }
-                }
-                else {
-                    data[input.name] = input.value;
-                }
-            });
+            const data = serialize($(this));
             let el = [];
             if (data.email.length === 0) {
                 el.push('email');
@@ -87,7 +74,6 @@ export default {
             }
             $.post('/wp-json/ekmetije/v1/ponudnik', data)
                 .done(function (data) {
-                    console.log(data);
                     window.location = '/ponudniki-zakljucek'
                 })
                 .fail(function (data) {

@@ -9,7 +9,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import templatePovprasevanje from './routes/template-povprasevanje';
-import singlePonudniki from './routes/single-ponudniki';
+import templateZemljevid from './routes/template-zemljevid';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -17,7 +17,7 @@ const routes = new Router({
     common,
     home,
     templatePovprasevanje,
-    singlePonudniki,
+    templateZemljevid,
 });
 
 // Load Events

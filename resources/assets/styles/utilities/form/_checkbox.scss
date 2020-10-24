@@ -12,14 +12,16 @@
     }
     span{
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
+        user-select: none;
         &:before{
             content: '';
             display: inline-block;
             position: relative;
             width: 20px;
             height: 20px;
+            min-width: 20px;
+            min-height: 20px;
             margin: 0 8px 0 0;
             border: 1px solid #99a5bd;
             background-color: #fff;
@@ -38,6 +40,13 @@
     input.error:invalid~span{
         &:before{
             border-color: #ed4d4d;
+        }
+    }
+    &.radio{
+        span{
+            &:before{
+                border-radius: 50%;
+            }
         }
     }
 }

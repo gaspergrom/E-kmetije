@@ -12,6 +12,15 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
+    if (is_archive()) {
+        if(is_post_type_archive('ponudniki')){
+            $classes[] = 'archive-ponudniki';
+        }
+        else if(is_post_type_archive('izdelki')){
+            $classes[] = 'archive-izdelki';
+        }
+    }
+
     /** Add class if sidebar is active */
     if (display_sidebar()) {
         $classes[] = 'sidebar-primary';
