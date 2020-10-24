@@ -7,6 +7,7 @@
     $telefon = get_field('telefon');
     $email = get_field('email');
     $spletnastran = get_field('spletna_stran');
+    $lokacija = get_field('lokacija');
     $izdelki = get_posts(array(
                 'posts_per_page'	=> -1,
                 'post_type'			=> 'izdelki',
@@ -52,40 +53,43 @@
                     <div class="content">
                         {{the_content()}}
                     </div>
-                    <h3 class="mb16">Izdelki</h3>
-                    <div class="row">
-                        @foreach($izdelki as $izdelek)
-                            @php
-                                $thumbnail = get_the_post_thumbnail_url($izdelek->ID);
-                                $title = $izdelek->post_title;
-                                $opis = get_field('opis', $izdelek->ID);
-                                $cena = get_field('cena', $izdelek->ID);
-                            @endphp
-                            <div class="col-lg-4 col-sm-6 mb16 flex--one">
-                                <a href="{{get_permalink($izdelek->ID)}}" class="card pt16 pl24 pr24 pb16 height100 width100">
-                                    @if($thumbnail)
-                                        <img src="{{$thumbnail}}"
-                                             alt="{{$title}}" loading="lazy" class="img">
-                                    @endif
-                                    @if($title)
-                                        <h4 class="mb16">
-                                            {{$title}}
-                                        </h4>
-                                    @endif
-                                    @if($opis)
-                                        <p>
-                                            {{$opis}}
-                                        </p>
-                                    @endif
-                                    @if($cena)
-                                        <h5 class="text-right">
-                                            {{$cena}}
-                                        </h5>
-                                    @endif
-                                </a>
-                            </div>
-                        @endforeach
-                    </div>
+                    @if($izdelki && count($izdelki))
+                        <h3 class="mb16">Izdelki</h3>
+                        <div class="row">
+                            @foreach($izdelki as $izdelek)
+                                @php
+                                    $thumbnail = get_the_post_thumbnail_url($izdelek->ID);
+                                    $title = $izdelek->post_title;
+                                    $opis = get_field('opis', $izdelek->ID);
+                                    $cena = get_field('cena', $izdelek->ID);
+                                @endphp
+                                <div class="col-lg-4 col-sm-6 mb16 flex--one">
+                                    <a href="{{get_permalink($izdelek->ID)}}"
+                                       class="card pt16 pl24 pr24 pb16 height100 width100">
+                                        @if($thumbnail)
+                                            <img src="{{$thumbnail}}"
+                                                 alt="{{$title}}" loading="lazy" class="img">
+                                        @endif
+                                        @if($title)
+                                            <h4 class="mb16">
+                                                {{$title}}
+                                            </h4>
+                                        @endif
+                                        @if($opis)
+                                            <p>
+                                                {{$opis}}
+                                            </p>
+                                        @endif
+                                        @if($cena)
+                                            <h5 class="text-right">
+                                                {{$cena}}
+                                            </h5>
+                                        @endif
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
                 <div class="col-md-4">
                     @if($telefon || $email || $spletnastran)
@@ -127,6 +131,18 @@
                                     </a>
                                 </div>
                             @endif
+                        </div>
+                    @endif
+                    @if($lokacija)
+                        <script>
+                            const loc = {!!  json_encode([
+                                    'lat' => $lokacija['lat'],
+                                    'lng' => $lokacija['lng'],
+                                ]) !!}
+                        </script>
+                        <div class="card pl16 pr16 pt16 pb16 mb24">
+                            <h3 class="mb16">Lokacija</h3>
+                            <div id="map" style="width: 100%; height: 260px"></div>
                         </div>
                     @endif
                 </div>

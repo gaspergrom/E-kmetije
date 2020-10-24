@@ -1,4 +1,9 @@
 import header from './partials/common/header'
+import map from './partials/common/map'
+
+window.initMap = function () {
+    map();
+};
 
 export default {
   init() {

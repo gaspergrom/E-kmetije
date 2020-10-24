@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), [], APP_VERSION);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], APP_VERSION, true);
-    if(is_front_page()){
+    if(is_front_page() || is_singular(['ponudniki', 'izdelki'])){
         wp_enqueue_script('google-maps-clusers', "https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js", [], null, true);
         wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') ."&callback=initMap&libraries=&v=weekly", [], null, true);
     }

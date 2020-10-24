@@ -13,6 +13,7 @@
         $telefon = get_field('telefon', $ponudnik->ID);
         $email = get_field('email', $ponudnik->ID);
         $spletnastran = get_field('spletna_stran', $ponudnik->ID);
+        $lokacija = get_field('lokacija', $ponudnik->ID);
         $dostava = get_the_terms( $ponudnik->ID , 'dostava' );
         $izdelki = get_posts(array(
             'posts_per_page'	=> -1,
@@ -165,6 +166,18 @@
                                 @endif
                             </div>
                         @endif
+                            @if($lokacija)
+                                <script>
+                                    const loc = {!!  json_encode([
+                                    'lat' => $lokacija['lat'],
+                                    'lng' => $lokacija['lng'],
+                                ]) !!}
+                                </script>
+                                <div class="card pl16 pr16 pt16 pb16 mb24">
+                                    <h3 class="mb16">Lokacija</h3>
+                                    <div id="map" style="width: 100%; height: 260px"></div>
+                                </div>
+                            @endif
                     </div>
                 @endif
             </div>
