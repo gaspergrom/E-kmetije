@@ -1,13 +1,7 @@
 @extends('layouts.app')
 
 @php
-    $vrste = get_terms([
-        'taxonomy' => 'vrste-izdelkov',
-        'hide_empty' => false,
-    ]);
-    if(isset($_GET['s'])){
-        $search = $_GET['s'];
-    }
+    $search = get_query_var('s');
 @endphp
 
 @section('content')
@@ -41,11 +35,7 @@
                         @else
                             <div class="col-md-12">
                                 <h5>
-                                    @if(isset($search) && $search)
-                                        Za vaš iskalni niz ni najdenih ponudnikov
-                                    @else
-                                        Ni ponudnikov
-                                    @endif
+                                    Za vaš iskalni niz ni najdenih ponudnikov
                                 </h5>
                             </div>
                         @endif

@@ -7,7 +7,7 @@
         <div class="row flex--center">
             <div class="col-md-8">
                 <h4 class="text-center text--white h2">
-                    {{$organic['text']}}
+                    {!! $organic['text'] !!}
                 </h4>
                 @if($organic['cta'])
                     <div class="flex flex--center pt16">

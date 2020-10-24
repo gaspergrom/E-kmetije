@@ -113,21 +113,10 @@
                                     </h5>
                                 </div>
                             @endif
+                        @elseif($prikazi === 'izdelki')
+
                         @else
-                            @if(have_posts())
-                                @while(have_posts())
-                                    @php
-                                        the_post();
-                                    @endphp
-                                    @include('partials.list.izdelki.hook')
-                                @endwhile
-                            @else
-                                <div class="col-md-12">
-                                    <h5>
-                                        Za izbrano vrsto ni izdelkov
-                                    </h5>
-                                </div>
-                            @endif
+
                         @endif
                     </div>
                 </div>
@@ -149,3 +138,57 @@
     @endphp
     @include('partials.zemljevid', ['ponudniki' => $ponudniki])
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+@extends('layouts.app')
+
+@php
+    $vrstaIzdelka = get_queried_object();
+    $vrste = get_terms([
+        'taxonomy' => 'vrste-izdelkov',
+        'hide_empty' => false,
+    ]);
+    $prikazi = get_query_var('prikazi');
+
+@endphp
+
+@section('content')
+    <section class="bg--image"
+             style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
+        <div class="container pt160 pb80 pt120:sm pb48:sm">
+            <h1 class="h2 h1:sm">{!! $vrstaIzdelka->name !!}</h1>
+        </div>
+    </section>
+    @if($prikazi === 'ponudniki')
+        @include('view.taxonomy-vrste-izdelkov.ponudniki')
+    @else
+        @include('view.taxonomy-vrste-izdelkov.izdelki')
+    @endif
+    @php
+        $ponudniki = get_posts([
+            'post_type' => 'ponudniki',
+            'orderby' => 'menu_order',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'vrste-izdelkov',
+                    'field' => 'term_id',
+                    'terms' => $vrstaIzdelka->term_id,
+                ),
+            ),
+        ]);
+    @endphp
+    @include('partials.zemljevid', ['ponudniki' => $ponudniki])
+@endsection
+
+
+

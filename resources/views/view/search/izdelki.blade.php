@@ -1,20 +1,15 @@
 @extends('layouts.app')
 
 @php
-    $vrste = get_terms([
-        'taxonomy' => 'vrste-izdelkov',
-        'hide_empty' => false,
-    ]);
-    if(isset($_GET['s'])){
-        $search = $_GET['s'];
-    }
+
+    $search = get_query_var('s');
 @endphp
 
 @section('content')
     <section class="bg--image"
              style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
         <div class="container pt160 pb80 pt120:sm pb48:sm">
-            <h1 class="h2 h1:sm">Razišči ponudnike</h1>
+            <h1 class="h2 h1:sm">Poišči izdelke</h1>
         </div>
     </section>
     <section>
@@ -22,9 +17,9 @@
             <div class="row">
                 <div class="col-lg-3 col-md-4">
                     <div class="pb24">
-                        @include('partials.search.ponudniki')
+                        @include('partials.search.izdelki')
                     </div>
-                    @include('partials.categories', ['append' => 'prikazi/ponudniki'])
+                    @include('partials.categories')
                 </div>
                 <div class="col-lg-9 col-md-8">
                     @if(isset($search) && $search)
@@ -36,15 +31,15 @@
                                 @php
                                     the_post();
                                 @endphp
-                                @include('partials.list.ponudnik.hook')
+                                @include('partials.list.izdelki.hook')
                             @endwhile
                         @else
                             <div class="col-md-12">
                                 <h5>
                                     @if(isset($search) && $search)
-                                        Za vaš iskalni niz ni najdenih ponudnikov
+                                        Za vaš iskalni niz ni najdenih izdelkov
                                     @else
-                                        Ni ponudnikov
+                                        Ni izdelkov
                                     @endif
                                 </h5>
                             </div>

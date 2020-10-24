@@ -34,6 +34,7 @@ add_action('login_head', function () {
 
 add_action('init', function () {
     add_rewrite_endpoint('prikazi', EP_VRSTE_IZDELKOV);
+    add_rewrite_endpoint('prikazi', EP_SEARCH);
 });
 
 add_action('pre_get_posts', function ($query) {
@@ -45,7 +46,43 @@ add_action('pre_get_posts', function ($query) {
             $query->set('post_type', 'izdelki');
         }
     }
+    if ($query->is_search() && !$query->is_admin()) {
+        $post_type = $query->get('prikazi');
+        if ($post_type) {
+            $query->set('post_type', $post_type);
+        } else {
+            $query->set('post_type', 'post');
+        }
+    }
 });
+
+
+add_action('template_redirect', function() {
+    global $wp_rewrite;
+
+
+    if (!isset($wp_rewrite) || !is_object($wp_rewrite) || !$wp_rewrite->get_search_permastruct()) {
+        return;
+    }
+
+    $search_base = $wp_rewrite->search_base;
+
+    if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
+        if(isset($_GET['post_type']) && $_GET['post_type'] && ($_GET['post_type'] === 'izdelki' || $_GET['post_type'] === 'ponudniki')){
+            wp_redirect(get_search_link(). 'prikazi/'.$_GET['post_type']);
+            exit();
+        }
+        if(strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false){
+            wp_redirect(get_search_link());
+            exit();
+        }
+    }
+});
+
+add_filter('wpseo_json_ld_search_url', function($url) {
+    return str_replace('/?s=', '/search/', str_replace('&post_type=', '/prikazi/', $url));
+});
+
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
@@ -63,7 +100,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-clean-up');
     add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-nav-walker');
-    add_theme_support('soil-nice-search');
+//    add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
 
     /**
