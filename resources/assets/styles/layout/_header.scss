@@ -30,7 +30,17 @@ $header-mobile: 70px;
         }
     }
 
-
+    &__login{
+        color: $color-white;
+        font-size: 18px;
+        line-height: 20px;
+        @include header-down {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+    }
     &__links {
         z-index: 900;
         display: block;
@@ -119,6 +129,11 @@ $header-mobile: 70px;
         height: 38px;
         padding: 9px 25px;
         font-size: 14px;
+        @include header-down{
+            font-size: 16px;
+            padding: 14px 30px;
+            height: 48px;
+        }
     }
 
     $btn-height: 20px;

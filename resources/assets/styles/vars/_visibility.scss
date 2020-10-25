@@ -17,6 +17,11 @@ $breakpoints-visibility: (
     //'lg': $lg-down
 );
 
+.hide-plain{
+    @include sm{
+        display: none;
+    }
+}
 [class*=" show-"],
 [class^="show-"] {
     display: none !important;

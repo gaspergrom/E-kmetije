@@ -18,7 +18,9 @@ body {
     line-height: 1.2;
     background: #F6FAF5;
 }
-
+.select-none{
+    user-select: none;
+}
 ::selection {
     color: $selection-text;
     background-color: $selection-bg;

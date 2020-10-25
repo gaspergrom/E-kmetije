@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', function () {
         || is_singular(['ponudniki', 'izdelki'])
         || basename(get_page_template()) == "template-zemljevid.blade.php"
         || is_post_type_archive(['ponudniki', 'izdelki'])
-        || is_tax(['vrste-izdelkov'])) {
+        || is_tax(['vrste-izdelkov', 'regije', 'obcine','dostava'])) {
         wp_enqueue_script('google-maps-clusers', "https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js", [], null, true);
         wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') . "&callback=initMap&libraries=&v=weekly", [], null, true);
     }

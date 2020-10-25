@@ -21,7 +21,7 @@
     z-index: -1;
     @include transition(opacity 0.3s ease-in-out);
   }
-  &:hover, &.active{
+  &:hover:not(.nohover), &.active{
     color: $color-white;
     &:after{
       opacity: 1;

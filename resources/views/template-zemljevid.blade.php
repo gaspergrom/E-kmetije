@@ -62,46 +62,53 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-5 col-md-6 pt40">
-                    <form class="flex" id="filterform">
-                        <div class="col-sm-6">
-                            <article class="pb24">
-                                <h4 class="mb16">Vrste izdelkov</h4>
-                                @foreach($vrste as $vrsta)
-                                    <div>
-                                        <label class="checkbox pb8">
-                                            <input type="checkbox" name="vrste" value="{{$vrsta->term_id}}">
-                                            <span>
+                <div class="col-lg-5 col-md-6 pt40 pt16:sm">
+                    <div class="category pl16 pr16 pt16 pb16 mb16 flex flex--middle show-flex:sm cursor select-none text-bold nohover" data-acc="#filterform" style="max-width: 210px">
+                        @include('icons.filter')
+                        <p class="mb0 ml8">Filtriraj ponudnike</p>
+                    </div>
+                    <form id="filterform" class="hide-plain:sm">
+                        <div class="flex">
+                            <div class="col-sm-6">
+                                <article class="pb24">
+                                    <h4 class="mb16">Vrste izdelkov</h4>
+                                    @foreach($vrste as $vrsta)
+                                        <div>
+                                            <label class="checkbox pb8">
+                                                <input type="checkbox" name="vrste" value="{{$vrsta->term_id}}">
+                                                <span>
                                             {!! $vrsta->name !!}
                                         </span>
-                                        </label>
-                                    </div>
-                                @endforeach
-                            </article>
-                        </div>
-                        <div class="col-sm-6">
-                            <article class="pb24">
-                                <h4 class="mb16">Vrste dostav</h4>
-                                <div>
-                                    <label class="checkbox radio pb8">
-                                        <input type="radio" name="dostava" value="0" checked>
-                                        <span>
-                                            Vse vrste dostav
-                                        </span>
-                                    </label>
-                                </div>
-                                @foreach($dostave as $dostava)
+                                            </label>
+                                        </div>
+                                    @endforeach
+                                </article>
+                            </div>
+                            <div class="col-sm-6">
+                                <article class="pb24">
+                                    <h4 class="mb16">Vrste dostav</h4>
                                     <div>
                                         <label class="checkbox radio pb8">
-                                            <input type="radio" name="dostava" value="{{$dostava->term_id}}">
+                                            <input type="radio" name="dostava" value="0" checked>
                                             <span>
-                                            {!! $dostava->name !!}
+                                            Vse vrste dostav
                                         </span>
                                         </label>
                                     </div>
-                                @endforeach
-                            </article>
+                                    @foreach($dostave as $dostava)
+                                        <div>
+                                            <label class="checkbox radio pb8">
+                                                <input type="radio" name="dostava" value="{{$dostava->term_id}}">
+                                                <span>
+                                            {!! $dostava->name !!}
+                                        </span>
+                                            </label>
+                                        </div>
+                                    @endforeach
+                                </article>
+                            </div>
                         </div>
+
                     </form>
                 </div>
                 <div class="col-lg-7 col-md-6 pl0 pr0">
