@@ -15,6 +15,14 @@ add_action("init", function () {
     $admin->add_cap('read_private_ponudniki');
     $admin->add_cap('delete_ponudniki');
 
+    $admin->add_cap('read_turisticni-ponudniki');
+    $admin->add_cap('edit_turisticni-ponudnik');
+    $admin->add_cap('edit_turisticni-ponudniki');
+    $admin->add_cap('edit_other_turisticni-ponudniki');
+    $admin->add_cap('publish_turisticni-ponudniki');
+    $admin->add_cap('read_private_turisticni-ponudniki');
+    $admin->add_cap('delete_turisticni-ponudniki');
+
     $admin->add_cap('read_izdelki');
     $admin->add_cap('publish_izdelki');
     $admin->add_cap('edit_izdelek');
@@ -22,6 +30,14 @@ add_action("init", function () {
     $admin->add_cap('edit_other_izdelki');
     $admin->add_cap('read_private_izdelki');
     $admin->add_cap('delete_izdelki');
+
+    $admin->add_cap('edit_sponzor');
+    $admin->add_cap('edit_sponzorji');
+    $admin->add_cap('edit_other_sponzorji');
+    $admin->add_cap('publish_splonzorji');
+    $admin->add_cap('read_splonzor');
+    $admin->add_cap('read_private_sponzorji');
+    $admin->add_cap('delete_sponzor');
 
     $admin->add_cap('manage_dostava');
     $admin->add_cap('edit_dostava');
