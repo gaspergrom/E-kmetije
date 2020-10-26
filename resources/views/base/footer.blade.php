@@ -21,7 +21,7 @@
                     <span class="text--green-light" style="width: 70px;display: inline-block;">
                         Email:
                     </span>
-                        <a href="mailto:{{$splosno['email']}}">
+                        <a href="mailto:{{$splosno['email']}}" class="gtm-footer-email">
                             {{$splosno['email']}}
                         </a>
                     </p>
@@ -31,7 +31,7 @@
                     <span class="text--green-light" style="width: 70px;display: inline-block;">
                         Telefon:
                     </span>
-                        <a href="tel:{{$splosno['telefon']}}">
+                        <a href="tel:{{$splosno['telefon']}}" class="gtm-footer-tel">
                             {{$splosno['telefon']}}
                         </a>
                     </p>
@@ -39,13 +39,13 @@
                 <div class="flex pt16">
                     @if($social['instagram'])
                         <a href="{{$social['instagram']}}" target="_blank" rel="noreferrer" aria-label="Instagram"
-                           class="btn btn--icon btn--small btn--white mr8">
+                           class="btn btn--icon btn--small btn--white mr8 gtm-footer-social">
                             @include('icons.instagram')
                         </a>
                     @endif
                     @if($social['facebook'])
                         <a href="{{$social['facebook']}}" target="_blank" rel="noreferrer" aria-label="Facebook"
-                           class="btn btn--icon btn--small btn--white">
+                           class="btn btn--icon btn--small btn--white gtm-footer-social">
                             @include('icons.facebook')
                         </a>
                     @endif
@@ -60,7 +60,7 @@
                             <nav class="flex flex--column">
                                 @foreach($sekcija['povezave'] as $povezava)
                                     @if($povezava['link'])
-                                        <a href="{{$povezava['link']['url']}}" target="{{$povezava['link']['target']}}" class="mb16 flex flex--middle">
+                                        <a href="{{$povezava['link']['url']}}" target="{{$povezava['link']['target']}}" class="mb16 flex flex--middle gtm-footer-link">
                                             <span class="pr4">
                                                 @include('icons.chevrons-right')
                                             </span>

@@ -16,7 +16,7 @@
                                 $kraj = get_field('kraj', $ponudnik['ponudnik']->ID);
                             @endphp
                             <a href="{{get_permalink($ponudnik['ponudnik']->ID)}}"
-                               class="card pt32 pl24 pr24 pb32 width100 height100">
+                               class="card pt32 pl24 pr24 pb32 width100 height100 gtm-main-ponudniki">
                                 <h4 class="mb16">{{$ponudnik['ponudnik']->post_title}}</h4>
                                 @if($kraj)
                                     <div class="flex flex--middle mb8">
@@ -64,7 +64,7 @@
                             $kraj = get_field('kraj', $ponudnik->ID);
                         @endphp
                         <a href="{{get_permalink($ponudnik->ID)}}"
-                           class="card pt32 pl24 pr24 pb32 width100 height100">
+                           class="card pt32 pl24 pr24 pb32 width100 height100 gtm-main-ponudniki">
                             <h4 class="mb16">{{$ponudnik->post_title}}</h4>
                             @if($kraj)
                                 <div class="flex flex--middle mb8">

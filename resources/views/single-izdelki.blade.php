@@ -53,7 +53,7 @@
                     @endforeach
                 @endif
                 <div class="pt16">
-                    <a href="{{get_permalink($ponudnik->ID)}}" class="btn">
+                    <a href="{{get_permalink($ponudnik->ID)}}" class="btn gtm-izdelek-ponudnik">
                         Poglej ponudnika
                     </a>
                 </div>
@@ -93,7 +93,7 @@
                                     @endphp
                                     <div class="col-lg-4 col-sm-6 mb16 flex--one">
                                         <a href="{{get_permalink($izdelek->ID)}}"
-                                           class="card pt16 pl24 pr24 pb16 height100 width100">
+                                           class="card pt16 pl24 pr24 pb16 height100 width100 gtm-izdelek-other">
                                             @if($thumbnail)
                                                 <img src="{{$thumbnail}}"
                                                      alt="{{$title}}" loading="lazy" class="img">
@@ -137,7 +137,7 @@
                                         @include('icons.phone')
                                     </span>
                                         <a href="tel:{{$telefon}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse">
+                                           class="link--reverse gtm-izdelek-tel gtm-contact">
                                             {{$telefon}}
                                         </a>
                                     </div>
@@ -148,7 +148,7 @@
                                         @include('icons.mail')
                                     </span>
                                         <a href="mailto:{{$email}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse">
+                                           class="link--reverse gtm-izdelek-email gtm-contact">
                                             {{$email}}
                                         </a>
                                     </div>
@@ -159,7 +159,7 @@
                                         @include('icons.globe')
                                     </span>
                                         <a href="{{$spletnastran}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse">
+                                           class="link--reverse gtm-izdelek-web gtm-contact">
                                             {{$spletnastran}}
                                         </a>
                                     </div>

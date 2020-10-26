@@ -1,4 +1,4 @@
-<form class="relative" role="search" method="get" action="/">
+<form class="relative gtm-search-form-izdelki" role="search" method="get" action="/">
     <input type="search" name="s" value="" class="input pr48"
            placeholder="Poišči izdelke..."
            required>

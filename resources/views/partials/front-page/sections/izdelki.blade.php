@@ -12,7 +12,7 @@
         <div class="row">
             @foreach($vrste as $vrsta)
                 <div class="col-md-4">
-                    <a href="{{get_term_link($vrsta->term_id)}}" class="category mb16 text-center">
+                    <a href="{{get_term_link($vrsta->term_id)}}" class="category mb16 text-center gtm-main-izdelki">
                         {!! $vrsta->name !!}
                     </a>
                 </div>

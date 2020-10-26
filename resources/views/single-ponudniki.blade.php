@@ -63,9 +63,9 @@
                                     $opis = get_field('opis', $izdelek->ID);
                                     $cena = get_field('cena', $izdelek->ID);
                                 @endphp
-                                <div class="col-lg-4 col-sm-6 mb16 flex--one">
+                                <div class="col-lg-4 col-sm-6 mb16 flex--one ">
                                     <a href="{{get_permalink($izdelek->ID)}}"
-                                       class="card pt16 pl24 pr24 pb16 height100 width100">
+                                       class="card pt16 pl24 pr24 pb16 height100 width100 gtm-ponudnik-izdelek">
                                         @if($thumbnail)
                                             <img src="{{$thumbnail}}"
                                                  alt="{{$title}}" loading="lazy" class="img">
@@ -106,7 +106,7 @@
                                     <span class="text--green mr4">
                                         @include('icons.phone')
                                     </span>
-                                    <a href="tel:{{$telefon}}" target="_blank" rel="noreferrer" class="link--reverse">
+                                    <a href="tel:{{$telefon}}" target="_blank" rel="noreferrer" class="link--reverse gtm-ponudnik-tel gtm-contact">
                                         {{$telefon}}
                                     </a>
                                 </div>
@@ -116,7 +116,7 @@
                                     <span class="text--green mr4">
                                         @include('icons.mail')
                                     </span>
-                                    <a href="mailto:{{$email}}" target="_blank" rel="noreferrer" class="link--reverse">
+                                    <a href="mailto:{{$email}}" target="_blank" rel="noreferrer" class="link--reverse gtm-ponudnik-email gtm-contact">
                                         {{$email}}
                                     </a>
                                 </div>
@@ -126,7 +126,7 @@
                                     <span class="text--green mr4">
                                         @include('icons.globe')
                                     </span>
-                                    <a href="{{$spletnastran}}" target="_blank" rel="noreferrer" class="link--reverse">
+                                    <a href="{{$spletnastran}}" target="_blank" rel="noreferrer" class="link--reverse gtm-ponudnik-web gtm-contact">
                                         {{$spletnastran}}
                                     </a>
                                 </div>

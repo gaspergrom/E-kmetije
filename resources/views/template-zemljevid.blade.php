@@ -74,7 +74,7 @@
                                     <h4 class="mb16">Vrste izdelkov</h4>
                                     @foreach($vrste as $vrsta)
                                         <div>
-                                            <label class="checkbox pb8">
+                                            <label class="checkbox pb8 gtm-zemljevid-vrste">
                                                 <input type="checkbox" name="vrste" value="{{$vrsta->term_id}}">
                                                 <span>
                                             {!! $vrsta->name !!}
@@ -88,7 +88,7 @@
                                 <article class="pb24">
                                     <h4 class="mb16">Vrste dostav</h4>
                                     <div>
-                                        <label class="checkbox radio pb8">
+                                        <label class="checkbox radio pb8 gtm-zemljevid-dostava">
                                             <input type="radio" name="dostava" value="0" checked>
                                             <span>
                                             Vse vrste dostav
@@ -97,7 +97,7 @@
                                     </div>
                                     @foreach($dostave as $dostava)
                                         <div>
-                                            <label class="checkbox radio pb8">
+                                            <label class="checkbox radio pb8 gtm-zemljevid-dostava">
                                                 <input type="radio" name="dostava" value="{{$dostava->term_id}}">
                                                 <span>
                                             {!! $dostava->name !!}

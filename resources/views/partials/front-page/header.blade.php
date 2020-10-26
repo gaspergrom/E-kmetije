@@ -12,7 +12,7 @@
         @endif
         @if($header['cta'])
             <div class="">
-                <a href="{{$header['cta']['url']}}" target="{{$header['cta']['target']}}" class="btn">
+                <a href="{{$header['cta']['url']}}" target="{{$header['cta']['target']}}" class="btn gtm-main-header-cta">
                     {{$header['cta']['title']}}
                 </a>
             </div>

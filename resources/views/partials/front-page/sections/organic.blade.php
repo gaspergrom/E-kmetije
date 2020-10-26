@@ -11,7 +11,7 @@
                 </h4>
                 @if($organic['cta'])
                     <div class="flex flex--center pt16">
-                        <a href="{{$organic['cta']['url']}}" target="{{$organic['cta']['target']}}" class="btn">
+                        <a href="{{$organic['cta']['url']}}" target="{{$organic['cta']['target']}}" class="btn gtm-main-organic-cta">
                             {{$organic['cta']['title']}}
                         </a>
                     </div>

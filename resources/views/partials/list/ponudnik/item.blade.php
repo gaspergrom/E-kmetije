@@ -4,7 +4,7 @@
 @endphp
 <div class="col-md-4 col-sm-6 flex--one mb16">
     <a href="{{get_the_permalink($ponudnik->ID)}}"
-       class="card pt32 pl24 pr24 pb32 width100 height100">
+       class="card pt32 pl24 pr24 pb32 width100 height100 gtm-card-ponudniki">
         <h4 class="mb16">{{$ponudnik->post_title}}</h4>
         @if($kraj)
             <div class="flex flex--middle mb8">

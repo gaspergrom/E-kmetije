@@ -17,7 +17,7 @@
     @endif
     @foreach($vrste as $vrsta)
         <a href="{{get_term_link($vrsta->term_id)}}{{isset($append) ? $append : null}}"
-           class="category mb8  @if(isset($active) && $vrsta->term_id === $active) active @endif">
+           class="category mb8  @if(isset($active) && $vrsta->term_id === $active) active @endif gtm-category">
             <div class="flex flex--middle">
                 @include('icons.chevron-right')
                 <span class="pl4" style="width: calc(100% - 20px)">
@@ -32,7 +32,7 @@
         <select onchange="if (this.value) window.location.href=this.value">
             <option selected value="" disabled style="display:none">Izberi vrsto izdelkov</option>
             @foreach($vrste as $vrsta)
-                <option value="{{get_term_link($vrsta->term_id)}}{{isset($append) ? $append : null}}"
+                <option value="{{get_term_link($vrsta->term_id)}}{{isset($append) ? $append : null}}" class="gtm-category"
                         @if(isset($active) && $vrsta->term_id === $active) selected @endif>{!! $vrsta->name !!}</option>
             @endforeach
         </select>
