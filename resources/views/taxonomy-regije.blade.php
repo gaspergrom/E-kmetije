@@ -5,6 +5,7 @@
     $ponudniki = get_posts([
         'post_type' => 'ponudniki',
         'orderby' => 'menu_order',
+        'numberposts' => -1,
         'tax_query' => array(
             array(
                 'taxonomy' => 'regije',

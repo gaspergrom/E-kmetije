@@ -8,12 +8,12 @@
     $email = get_field('email');
     $spletnastran = get_field('spletna_stran');
     $lokacija = get_field('lokacija');
-    $izdelki = get_posts(array(
-                'posts_per_page'	=> -1,
+    $izdelki = get_posts([
+                'numberposts'	=> -1,
                 'post_type'			=> 'izdelki',
                 'meta_key'		=> 'ponudnik',
                 'meta_value'	=> get_the_ID()
-            ));
+            ]);
     $dostava = get_the_terms( get_the_ID() , 'dostava' );
 @endphp
 
@@ -21,29 +21,34 @@
     <section class="bg--image"
              style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
         <div class="container pt160 pb80 pt120:sm pb40:sm">
-            <h1 class="h2">{{the_title()}}</h1>
-            @if($kraj)
-                <div class="flex flex--middle mb8">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="h2 mb16">{{the_title()}}</h1>
+                    @if($kraj)
+                        <div class="flex flex--middle mb8">
                             <span class="text--green mr4">
                                 @include('icons.map-pin')
                             </span>
-                    <span>
+                            <span>
                                 {{$kraj}}
                             </span>
-                </div>
-            @endif
-            @if($dostava)
-                @foreach($dostava as $vrsta)
-                    <div class="flex flex--middle mb8">
+                        </div>
+                    @endif
+                    @if($dostava)
+                        @foreach($dostava as $vrsta)
+                            <div class="flex flex--middle mb8">
                         <span class="text--green mr4">
                             @include('icons.'.get_field('ikona', 'term_'.$vrsta->term_id))
                         </span>
-                        <span>
+                                <span>
                             {{$vrsta->name}}
                         </span>
-                    </div>
-                @endforeach
-            @endif
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+
         </div>
     </section>
     <section>

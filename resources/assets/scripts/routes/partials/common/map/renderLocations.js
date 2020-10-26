@@ -20,7 +20,9 @@ export default (map, locations, infowindow) => {
             marker.addListener("click", () => {
                 infowindow.setContent(`
 <div>
-    <h6>${location.title}</h6>
+    <div style="max-width: 270px;">
+        <h6>${location.title}</h6>
+    </div>
     <p class="small" style="max-width: 200px">${location.vrste.map((d) => d.name).join(', ')}</p>
     ` + (location.telefon ? `
     <div class="flex flex--middle mb8">

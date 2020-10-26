@@ -1,9 +1,9 @@
 @php
     if (!(isset($ponudniki))){
-    $ponudniki = get_posts([
-               'post_type' => 'ponudniki',
-               'post_per_page' => -1,
-           ]);
+        $ponudniki = get_posts([
+           'post_type' => 'ponudniki',
+           'numberposts' => -1,
+       ]);
     }
 
            $ponudnikiJson = array_map(function($ponudnik){

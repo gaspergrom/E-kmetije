@@ -7,7 +7,7 @@
 @php
     $ponudniki = get_posts([
            'post_type' => 'ponudniki',
-           'post_per_page' => -1,
+           'numberposts' => -1,
        ]);
        $ponudnikiJson = array_map(function($ponudnik){
                $dostava = (array) get_the_terms($ponudnik->ID, 'dostava');

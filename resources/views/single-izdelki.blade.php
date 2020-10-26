@@ -15,12 +15,12 @@
         $spletnastran = get_field('spletna_stran', $ponudnik->ID);
         $lokacija = get_field('lokacija', $ponudnik->ID);
         $dostava = get_the_terms( $ponudnik->ID , 'dostava' );
-        $izdelki = get_posts(array(
-            'posts_per_page'	=> -1,
+        $izdelki = get_posts([
+            'numberposts'	=> -1,
             'post_type'			=> 'izdelki',
             'meta_key'		=> 'ponudnik',
             'meta_value'	=> $ponudnik->ID
-        ));
+        ]);
     }
 @endphp
 
@@ -29,33 +29,37 @@
         <section class="bg--image"
                  style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
             <div class="container pt160 pb80 pt120:sm pb40:sm">
-                <h2>{{$ponudnik->post_title}}</h2>
-                @if($kraj)
-                    <div class="flex flex--middle mb8">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="mb16">{{$ponudnik->post_title}}</h2>
+                        @if($kraj)
+                            <div class="flex flex--middle mb8">
                             <span class="text--green mr4">
                                 @include('icons.map-pin')
                             </span>
-                        <span>
+                                <span>
                                 {{$kraj}}
                             </span>
-                    </div>
-                @endif
-                @if($dostava)
-                    @foreach($dostava as $vrsta)
-                        <div class="flex flex--middle mb8">
+                            </div>
+                        @endif
+                        @if($dostava)
+                            @foreach($dostava as $vrsta)
+                                <div class="flex flex--middle mb8">
                         <span class="text--green mr4">
                             @include('icons.'.get_field('ikona', 'term_'.$vrsta->term_id))
                         </span>
-                            <span>
+                                    <span>
                             {{$vrsta->name}}
                         </span>
+                                </div>
+                            @endforeach
+                        @endif
+                        <div class="pt16">
+                            <a href="{{get_permalink($ponudnik->ID)}}" class="btn gtm-izdelek-ponudnik">
+                                Poglej ponudnika
+                            </a>
                         </div>
-                    @endforeach
-                @endif
-                <div class="pt16">
-                    <a href="{{get_permalink($ponudnik->ID)}}" class="btn gtm-izdelek-ponudnik">
-                        Poglej ponudnika
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>

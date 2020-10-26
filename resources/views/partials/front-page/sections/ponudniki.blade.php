@@ -54,7 +54,7 @@
                 @php
                     $list = get_posts([
                         'post_type' => 'ponudniki',
-                        'post_per_page' => 3
+                        'numberposts' => 3
                     ]);
                 @endphp
                 @foreach($list as $ponudnik)
