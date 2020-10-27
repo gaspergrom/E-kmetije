@@ -19,8 +19,7 @@
                    'ID' => $ponudnik->ID,
                    'title' => $ponudnik->post_title,
                    'link' => get_permalink($ponudnik->ID),
-                   'telefon' => get_field('telefon', $ponudnik->ID),
-                   'email' => get_field('email', $ponudnik->ID),
+                   'kontakti' => get_field('kontakti', $ponudnik->ID),
                    'kraj' => get_field('kraj', $ponudnik->ID),
                    'lokacija' => get_field('lokacija', $ponudnik->ID),
                    'dostava' => array_map(function($el){

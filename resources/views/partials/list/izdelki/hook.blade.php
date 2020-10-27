@@ -8,7 +8,7 @@
     <a href="{{the_permalink()}}" class="card pt16 pl24 pr24 pb16 height100 width100 gtm-card-izdelki">
         @if($thumbnail)
             <img src="{{$thumbnail}}"
-                 alt="{{$title}}" loading="lazy" class="img">
+                 alt="{{the_title()}}" loading="lazy" class="img">
         @endif
         <h4 class="mb16">
             {{the_title()}}

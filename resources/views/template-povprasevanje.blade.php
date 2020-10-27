@@ -178,9 +178,12 @@
 
 
                         <div class="col-md-12 pt16">
-                            <button class="btn">
-                                Pošlji povpraševanje
-                            </button>
+                            <div>
+                                <button type="submit" class="btn">
+                                    Pošlji povpraševanje
+                                </button>
+                                <div class="loading" style="display: none"></div>
+                            </div>
                             <p class="error-text pt8"></p>
                         </div>
                     </form>

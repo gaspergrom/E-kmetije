@@ -20,6 +20,5 @@ add_filter('wp_mail_from_name', function ($original_email_from) {
 
 
 add_action('pending_to_publish', function ($post) {
-    var_dump($post_id);
-    die();
+
 }, 10, 1);

@@ -10,10 +10,8 @@
         $kraj = get_field('kraj', $ponudnik->ID);
         $naslov = get_field('naslov', $ponudnik->ID);
         $lokacija = get_field('lokacija', $ponudnik->ID);
-        $telefon = get_field('telefon', $ponudnik->ID);
-        $email = get_field('email', $ponudnik->ID);
-        $spletnastran = get_field('spletna_stran', $ponudnik->ID);
-        $lokacija = get_field('lokacija', $ponudnik->ID);
+        $kontakti = get_field('kontakti', $ponudnik->ID);
+        $social = get_field('druzbena_omrezja', $ponudnik->ID);
         $dostava = get_the_terms( $ponudnik->ID , 'dostava' );
         $izdelki = get_posts([
             'numberposts'	=> -1,
@@ -126,7 +124,7 @@
                 </div>
                 @if($ponudnik)
                     <div class="col-md-4">
-                        @if($telefon || $email || $spletnastran)
+                        @if($naslov && $kontakti && count($kontakti))
                             <div class="card pl16 pr16 pt16 pb16 mb24">
                                 <h3 class="mb16">Kontakti</h3>
 
@@ -135,37 +133,55 @@
                                         {!! $naslov !!}
                                     </p>
                                 @endif
-                                @if($telefon)
-                                    <div class="flex flex--middle mb8">
-                                    <span class="text--green mr4">
-                                        @include('icons.phone')
-                                    </span>
-                                        <a href="tel:{{$telefon}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse gtm-izdelek-tel gtm-contact">
-                                            {{$telefon}}
-                                        </a>
-                                    </div>
-                                @endif
-                                @if($email)
-                                    <div class="flex flex--middle mb8">
-                                    <span class="text--green mr4">
-                                        @include('icons.mail')
-                                    </span>
-                                        <a href="mailto:{{$email}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse gtm-izdelek-email gtm-contact">
-                                            {{$email}}
-                                        </a>
-                                    </div>
-                                @endif
-                                @if($spletnastran)
-                                    <div class="flex flex--middle mb8">
+                                @foreach($kontakti as $kontakt)
+                                    @if($kontakt['vrsta'] === 'tel')
+                                        <div class="flex flex--middle mb8">
+                                        <span class="text--green mr4">
+                                            @include('icons.phone')
+                                        </span>
+                                            <a href="tel:{{$kontakt['kontakt']}}" target="_blank" rel="noreferrer"
+                                               class="link--reverse gtm-ponudnik-tel gtm-contact">
+                                                {{$kontakt['kontakt']}}
+                                            </a>
+                                        </div>
+                                    @elseif($kontakt['vrsta'] === 'email')
+                                        <div class="flex flex--middle mb8">
+                                        <span class="text--green mr4">
+                                            @include('icons.mail')
+                                        </span>
+                                            <a href="mailto:{{$kontakt['kontakt']}}" target="_blank" rel="noreferrer"
+                                               class="link--reverse gtm-ponudnik-email gtm-contact">
+                                                {{$kontakt['kontakt']}}
+                                            </a>
+                                        </div>
+                                    @elseif($kontakt['vrsta'] === 'web')
+                                        <div class="flex flex--middle mb8">
                                     <span class="text--green mr4">
                                         @include('icons.globe')
                                     </span>
-                                        <a href="{{$spletnastran}}" target="_blank" rel="noreferrer"
-                                           class="link--reverse gtm-izdelek-web gtm-contact">
-                                            {{$spletnastran}}
-                                        </a>
+                                            <a href="{{$kontakt['kontakt']}}" target="_blank" rel="noreferrer"
+                                               class="link--reverse gtm-ponudnik-web gtm-contact">
+                                                {{$kontakt['kontakt']}}
+                                            </a>
+                                        </div>
+                                    @endif
+                                @endforeach
+                                @if($social && count($social))
+                                    <div class="pt16">
+                                        <h6 class="mb4">Družabna omrežja</h6>
+                                        <div class="flex">
+                                            @foreach($social as $soc)
+                                                <a href="{{$soc['povezava']}}" target="_blank" rel="noreferrer"
+                                                   aria-label="{{$soc['platforma']}}"
+                                                   class="btn btn--icon btn--small gtm-ponudnik-social mr8">
+                                                    @if($soc['platforma'] === 'facebook')
+                                                        @include('icons.facebook')
+                                                    @elseif($soc['platforma'] === 'instagram')
+                                                        @include('icons.instagram')
+                                                    @endif
+                                                </a>
+                                            @endforeach
+                                        </div>
                                     </div>
                                 @endif
                             </div>

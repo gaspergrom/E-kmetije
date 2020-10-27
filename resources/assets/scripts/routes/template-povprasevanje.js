@@ -72,8 +72,14 @@ export default {
                 }, 500);
                 return;
             }
+            const submitbtn = $(this).find('button[type="submit"]');
+            const loading = $(this).find('.loading');
+            submitbtn.css('display', 'none');
+            loading.css('display', 'block');
             $.post('/wp-json/ekmetije/v1/ponudnik', data)
                 .done(function (data) {
+                    submitbtn.css('display', 'block');
+                    loading.css('display', 'none');
                     window.location = '/ponudniki-zakljucek'
                 })
                 .fail(function (data) {

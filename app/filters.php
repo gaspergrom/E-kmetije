@@ -4,15 +4,13 @@ namespace App;
 /**
  * Add <body> classes
  */
-add_action('wp_dropdown_users_args', 'filter_authors');
-function filter_authors( $args ) {
-    if ( isset( $args['who'])) {
-        $args['role__in'] = ['author', 'editor', 'administrator', 'manager', 'ponudnik'];
-        unset( $args['who']);
-    }
-    return $args;
-}
 
+add_action('admin_init',function () {
+    $users = get_users([ 'role__in' => [ 'ponudnik' ], 'role__not_in' => [ 'author' ] ]);
+    foreach ($users as $user) {
+        $user->add_role('author');
+    }
+});
 
 add_filter('body_class', function (array $classes) {
     /** Add page slug if it doesn't exist */
