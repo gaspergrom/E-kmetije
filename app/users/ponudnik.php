@@ -16,7 +16,7 @@ return [
     'edit_ponudnik' => true,
     'edit_ponudniki' => true,
     'edit_other_ponudniki' => false,
-    'publish_ponudniki' => true,
+    'publish_ponudniki' => false,
     'read_private_ponudniki' => false,
     'delete_ponudniki' => true,
 

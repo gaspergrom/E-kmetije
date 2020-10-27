@@ -147,14 +147,12 @@ return function (WP_REST_Request $request) {
                 Ekipa e-kmetije se vam zahvaljuje za prijavo. Do naše spletne strani vam je bil dodeljen dostop s podatki, ki ste jih vnesli ob prijavi.<br>
                 <br>
                 E-mail: ' .$email . '<br> 
-                Uporabniško ime'. $username . '<br>
+                Uporabniško ime: '. $username . '<br>
                 
                 Do nadzorne plošče lahko dostopate na naslednji povezavi.<br>
                 <a href="https://e-kmetije.si/wp-admin" target="_blank">https://e-kmetije.si/wp-admin</a><br>
                 <br>
                 Vaši podatki o ponudniku bodo pregledani s strani naše ekipe v roku 1-2 dni. Ko bodo vaši podatki ponudnika objavljeni, vas bomo obvestili na vaš email naslov.<br>
-                <br>
-                Navodila za uporabo nadzorne plošče so dosegljiva na naslovu <a href="https://e-kmetije.si/navodila-za-uporabo/" target="_blank">https://e-kmetije.si/navodila-za-uporabo/</a>
                 <br>
                 Lep pozdrav,<br>
                 Ekipa E-kmetije<br>
