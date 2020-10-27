@@ -26,7 +26,7 @@
 @section('content')
     <section class="bg--image"
              style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
-        <div class="container pt160 pb80 pt120:sm pb40:sm">
+        <div class="container pt120 pb48 pt120:sm pb40:sm">
             <h1 class="h2">{{the_title()}}</h1>
         </div>
     </section>
@@ -36,7 +36,10 @@
                 <div class="col-md-9">
                     <form class="row" id="formponudnik" novalidate>
                         <div class="col-md-12">
-                            <h5 class="mb16">Dostopni podatki</h5>
+                            <h5 class="mb8">Dostopne podatki</h5>
+                            <p class="pb8">
+                                Dostopni podatki so potrebni za dostop do nadzorne plošče, ker lahko urejate vaše izdelke in informacije.
+                            </p>
                         </div>
                         <div class="col-md-6 mb8">
                             <label for="email">E-mail</label>
@@ -111,13 +114,16 @@
 
 
                         <div class="col-md-12 pt16">
-                            <h5 class="mb16">Vrste izdelkov</h5>
+                            <h5 class="mb8">Vrste izdelkov</h5>
+                            <p class="pb8">
+                                Če za vaše izdelke ne najdete kategorije, pustite prazno in bomo mi umestili v primerno kategorijo.
+                            </p>
                         </div>
                         <div class="col-md-12 mb8">
                             <div class="row">
                                 @foreach($vrste as $vrsta)
-                                <div class="col-md-6 mb8">
-                                    <label class="boxinput">
+                                <div class="col-sm-6 col-lg-4 mb8">
+                                    <label class="checkbox">
                                         <input type="checkbox" name="vrste" value="{{$vrsta->term_id}}">
                                         <span>
                                             {!! $vrsta->name !!}

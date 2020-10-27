@@ -4,6 +4,16 @@ namespace App;
 /**
  * Add <body> classes
  */
+add_action('wp_dropdown_users_args', 'filter_authors');
+function filter_authors( $args ) {
+    if ( isset( $args['who'])) {
+        $args['role__in'] = ['author', 'editor', 'administrator', 'manager', 'ponudnik'];
+        unset( $args['who']);
+    }
+    return $args;
+}
+
+
 add_filter('body_class', function (array $classes) {
     /** Add page slug if it doesn't exist */
     if (is_single() || is_page() && !is_front_page()) {

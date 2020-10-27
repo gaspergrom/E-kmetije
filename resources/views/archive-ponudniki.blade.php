@@ -13,7 +13,7 @@
 @section('content')
     <section class="bg--image"
              style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
-        <div class="container pt160 pb80 pt120:sm pb48:sm">
+        <div class="container pt120 pb48 pt120:sm pb48:sm">
             <h1 class="h2 h1:sm">Razišči ponudnike</h1>
         </div>
     </section>
