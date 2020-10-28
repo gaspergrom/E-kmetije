@@ -15,7 +15,7 @@
         </h4>
         @if($opis)
             <p>
-                {{$opis}}
+                {!! $opis !!}
             </p>
         @endif
         @if($cena)

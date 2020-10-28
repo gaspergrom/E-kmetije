@@ -77,24 +77,6 @@ return function (WP_REST_Request $request) {
         }
 
     } else {
-        $kontakti = [
-            [
-                'vrsta' => 'email',
-                'kontakt' => $email,
-            ]
-        ];
-        if($telefon){
-            array_push($kontakti, [
-                'vrsta' => 'tel',
-                'kontakt' => $telefon,
-            ]);
-        }
-        if($spletnastran){
-            array_push($kontakti, [
-                'vrsta' => 'web',
-                'kontakt' => $spletnastran,
-            ]);
-        }
 
         $post = wp_insert_post([
             'post_type' => 'ponudniki',
@@ -107,6 +89,8 @@ return function (WP_REST_Request $request) {
             'post_status' => 'pending',
             'meta_input' => [
                 'kraj' => $kraj,
+                'ulica' => $ulica,
+                'postna_stevilka' => $postnastevilka,
                 'naslov' => $ulica . ',
 ' . $postnastevilka . ' ' . $kraj,
                 'kontakti' => [],

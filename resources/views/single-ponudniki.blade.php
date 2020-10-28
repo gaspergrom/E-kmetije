@@ -2,7 +2,8 @@
 
 @php
     $kraj = get_field('kraj');
-    $naslov = get_field('naslov');
+    $ulica = get_field('ulica');
+    $postna_stevilka = get_field('postna_stevilka');
     $lokacija = get_field('lokacija');
     $kontakti = get_field('kontakti');
     $social = get_field('druzbena_omrezja');
@@ -81,7 +82,7 @@
                                         @endif
                                         @if($opis)
                                             <p>
-                                                {{$opis}}
+                                                {!! $opis !!}
                                             </p>
                                         @endif
                                         @if($cena)
@@ -100,13 +101,14 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    @if($naslov && $kontakti && count($kontakti))
+                    @if($ulica && $kraj && $postna_stevilka || $kontakti && count($kontakti))
                         <div class="card pl16 pr16 pt16 pb16 mb24">
                             <h3 class="mb16">Kontakti</h3>
 
-                            @if($naslov)
+                            @if($ulica && $kraj && $postna_stevilka)
                                 <p>
-                                    {!! $naslov !!}
+                                    {{ $ulica }},<br>
+                                    {{ $postna_stevilka }} {{ $kraj }}
                                 </p>
                             @endif
                             @foreach($kontakti as $kontakt)
