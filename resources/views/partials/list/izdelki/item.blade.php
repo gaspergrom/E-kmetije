@@ -10,9 +10,9 @@
             <img src="{{$thumbnail}}"
                  alt="{{$izdelek->post_title}}" loading="lazy" class="img">
         @endif
-        <h4 class="mb16">
+        <h5 class="mb8 mt8">
             {{$izdelek->post_title}}
-        </h4>
+        </h5>
             @if($excerpt)
                 <p>
                     {!! wp_trim_words($excerpt, 20, '...') !!}
@@ -21,7 +21,7 @@
         @if($cena)
             @if($cena['vrsta'] === 'dogovor')
                 <h5 class="text-right">
-                    Po dogovoru
+                    Cena po dogovoru
                 </h5>
             @elseif($cena['vrsta'] === 'cena')
                 <h5 class="text-right">

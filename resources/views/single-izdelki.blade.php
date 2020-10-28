@@ -90,9 +90,9 @@
                                 </div>
                                 @if($cena)
                                     @if($cena['vrsta'] === 'cena')
-                                        <h5 class="text-right">
+                                        <h6 class="text-right">
                                             {{$cena['vrednost']}}€
-                                        </h5>
+                                        </h6>
                                         <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
                                             <link itemprop="url" href="{{the_permalink()}}"/>
                                             <meta itemprop="availability" content="https://schema.org/InStock"/>
@@ -101,7 +101,7 @@
                                         </div>
                                     @elseif($cena['vrsta'] === 'dogovor')
                                         <h5 class="text-right">
-                                            Po dogovoru
+                                            Cena po dogovoru
                                         </h5>
                                     @endif
                                 @endif
