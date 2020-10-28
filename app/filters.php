@@ -49,7 +49,7 @@ add_filter('excerpt_more', function () {
     return '...';
 });
 add_filter('excerpt_length', function () {
-    return 25;
+    return 10;
 });
 
 /**

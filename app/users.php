@@ -68,6 +68,3 @@ add_action("init", function () {
     $ponudnik->remove_cap('publish_ponudniki');
 });
 include 'users/roles/index.php';
-
-
-

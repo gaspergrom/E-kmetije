@@ -18,7 +18,7 @@
         </div>
     </section>
     <section>
-        <div class="container pt64 pb120 pt48:sm pb64:sm">
+        <div class="container-fluid pt64 pb120 pt48:sm pb64:sm">
             <div class="row">
                 <div class="col-lg-3 col-md-4">
                     <div class="pb24">

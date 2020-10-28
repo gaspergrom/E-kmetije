@@ -19,7 +19,7 @@
     <section class="bg--image"
              style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
         <div class="container pt120 pb48 pt120:sm pb48:sm">
-            <h1 class="h2 h1:sm">Ponudniki v regiji {!! $regija->name !!}</h1>
+            <h1 class="h2 h1:sm">{!! $regija->name !!}</h1>
         </div>
     </section>
     <section>

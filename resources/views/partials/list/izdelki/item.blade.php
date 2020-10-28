@@ -1,17 +1,17 @@
 @php
-    $thumbnail = get_the_post_thumbnail_url();
-    $cena = get_field('cena');
-    $excerpt = get_the_excerpt();
+    $thumbnail = get_the_post_thumbnail_url($izdelek->ID);
+    $cena = get_field('cena', $izdelek->ID);
+    $excerpt = get_the_excerpt($izdelek->ID);
 @endphp
 
 <div class="col-lg-4 col-sm-6 mb16">
-    <a href="{{the_permalink()}}" class="card pt16 pl24 pr24 pb16 height100 width100 gtm-card-izdelki">
+    <a href="{{the_permalink($izdelek->ID)}}" class="card pt16 pl24 pr24 pb16 height100 width100 gtm-card-izdelki">
         @if($thumbnail)
             <img src="{{$thumbnail}}"
-                 alt="{{the_title()}}" loading="lazy" class="img">
+                 alt="{{$izdelek->post_title}}" loading="lazy" class="img">
         @endif
         <h4 class="mb16">
-            {{the_title()}}
+            {{$izdelek->post_title}}
         </h4>
             @if($excerpt)
                 <p>

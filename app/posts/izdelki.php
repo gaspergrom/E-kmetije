@@ -18,7 +18,7 @@ return [
     'label'               => __( 'Izdelki', APP_DOMAIN ),
     'description'         => __( 'Izdelki za ponudnike', APP_DOMAIN ),
     'labels'              => $labels,
-    'supports'            => ['title', 'editor', 'revisions', 'author', 'thumbnail'],
+    'supports'            => ['title', 'editor', 'revisions', 'author', 'thumbnail', 'excerpt'],
     'taxonomies'          => [],
     'hierarchical'        => true,
     'public'              => true,
