@@ -54,6 +54,9 @@ add_action('pre_get_posts', function ($query) {
             $query->set('post_type', 'post');
         }
     }
+    if(is_tax('regije') || is_tax('obcine') || is_tax('dostava')){
+        $query->set('post_type', 'ponudniki');
+    }
 });
 
 

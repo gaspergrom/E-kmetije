@@ -5,8 +5,8 @@ namespace App;
  * Add <body> classes
  */
 
-add_action('admin_init',function () {
-    $users = get_users([ 'role__in' => [ 'ponudnik' ], 'role__not_in' => [ 'author' ] ]);
+add_action('admin_init', function () {
+    $users = get_users(['role__in' => ['ponudnik'], 'role__not_in' => ['author']]);
     foreach ($users as $user) {
         $user->add_role('author');
     }
@@ -21,10 +21,9 @@ add_filter('body_class', function (array $classes) {
     }
 
     if (is_archive()) {
-        if(is_post_type_archive('ponudniki')){
+        if (is_post_type_archive('ponudniki')) {
             $classes[] = 'archive-ponudniki';
-        }
-        else if(is_post_type_archive('izdelki')){
+        } else if (is_post_type_archive('izdelki')) {
             $classes[] = 'archive-izdelki';
         }
     }
@@ -88,6 +87,15 @@ add_filter('template_include', function ($template) {
     }
     return $template;
 }, PHP_INT_MAX);
+
+add_filter('wp_insert_post_data', function ($data, $postarr) {
+    $post_type = get_post_type( $data->ID );
+    if($post_type === 'izdelki'){
+        $ponudnik = get_field('ponudnik', $data->ID);
+        $data['post_author'] = $ponudnik->post_author;
+    }
+    return $data;
+}, '99', 2);
 
 /**
  * Render comments.blade.php

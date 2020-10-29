@@ -9,19 +9,19 @@
         <h4 class="mb16">{{the_title()}}</h4>
         @if($kraj)
             <div class="flex mb8">
-                            <span class="text--green mr4">
-                                @include('icons.map-pin')
-                            </span>
+                <span class="text--green mr4">
+                    @include('icons.map-pin')
+                </span>
                 <span style="width: calc(100% - 25px)">
-                                {{$kraj}}
-                            </span>
+                    {{$kraj}}
+                </span>
             </div>
         @endif
         @if($dostava)
             <div class="flex mb8">
-                            <span class="text--green mr4">
-                                @include('icons.truck')
-                            </span>
+                <span class="text--green mr4">
+                    @include('icons.truck')
+                </span>
                 <span style="width: calc(100% - 25px)">
                     {{implode(', ', array_map(function ($vrsta){return $vrsta->name;}, $dostava))}}
                 </span>

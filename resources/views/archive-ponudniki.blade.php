@@ -50,6 +50,15 @@
                             </div>
                         @endif
                     </div>
+                    <div class="flex flex--center pt16">
+                        <div>
+                            @php(the_posts_pagination([
+                                'screen_reader_text' => ' ',
+                                 'prev_text'          => __('<div style="height: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></div>'),
+                                 'next_text'          => __('<div style="height: 20px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></div>'),
+                            ]))
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

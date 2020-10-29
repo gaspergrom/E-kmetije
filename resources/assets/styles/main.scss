@@ -41,3 +41,7 @@
 
 /* Plugins */
 @import 'plugins';
+
+#map{
+  overflow-anchor:none;
+}

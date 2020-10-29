@@ -5,29 +5,35 @@
 @endphp
 
 <div class="col-lg-4 col-sm-6 mb16">
-    <a href="{{the_permalink()}}" class="card pt16 pl24 pr24 pb16 height100 width100 gtm-card-izdelki">
+    <a href="{{the_permalink()}}" class="card height100 width100 gtm-card-izdelki">
         @if($thumbnail)
             <div style="background-image:url({{$thumbnail}}); " class="quadric bg--image">
             </div>
         @endif
-        <h5 class="mb8 mt8">
-            {{the_title()}}
-        </h5>
-        @if($excerpt)
-            <p>
-                {!! wp_trim_words($excerpt, 20, '...') !!}
-            </p>
-        @endif
-        @if($cena)
-            @if($cena['vrsta'] === 'dogovor')
-                <h5 class="text-right">
-                    Cena po dogovoru
-                </h5>
-            @elseif($cena['vrsta'] === 'cena')
-                <h5 class="text-right">
-                    {{$cena['vrednost']}}€
-                </h5>
+        <div class="pt16 pl24 pr24 pb24">
+            <h5 class="mb8">
+                {{the_title()}}
+            </h5>
+            @if($cena)
+                @if($cena['vrsta'] === 'dogovor')
+                    <p class="text-bold">
+                        Cena po dogovoru
+                    </p>
+                @elseif($cena['vrsta'] === 'cena')
+                    <p class="text-bold">
+                        {{$cena['vrednost']}}€
+                    </p>
+                @endif
             @endif
-        @endif
+            @if($excerpt)
+                <p>
+                    {!! wp_trim_words($excerpt, 20, '...') !!}
+                </p>
+            @endif
+            <div class="text--green flex flex--middle mt8">
+                <span class="text-bold">Poglej podrobnosti</span>
+                @include('icons.chevron-right')
+            </div>
+        </div>
     </a>
 </div>

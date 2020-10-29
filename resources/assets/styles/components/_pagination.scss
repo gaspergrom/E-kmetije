@@ -1,0 +1,18 @@
+.nav-links{
+  @include flex;
+  @include flex--middle;
+  a, span{
+    font-size: 18px;
+    line-height: 20px;
+    height: 20px;
+    padding: 0 8px;
+    display: inline-block;
+  }
+  a{
+    color: $color-black;
+  }
+  span{
+    color: $color-green;
+    font-weight: bold;
+  }
+}
