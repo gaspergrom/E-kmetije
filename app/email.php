@@ -21,9 +21,10 @@ add_filter('wp_mail_from_name', function ($original_email_from) {
 
 add_action('pending_to_publish', function ($post) {
     $url = get_permalink($post->ID);
+    $post_type = get_post_type( $post->ID );
     $authorId = $post->post_author;
     $email = $address = get_the_author_meta('user_email', $authorId);
-    if($email){
+    if($email && $post_type == "ponudniki"){
         wp_mail($email, 'E-kmetije - Vaš ponudnik je bil objavljen!', '
             Pozdravljeni,<br>
             <br>
