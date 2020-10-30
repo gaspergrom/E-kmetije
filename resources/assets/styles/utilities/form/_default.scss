@@ -1,50 +1,51 @@
-.input{
-    padding: 12px 20px;
-    font-size: 16px;
-    line-height: 24px;
-    color: $color-black;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    outline: none;
-    position: relative;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: block;
-    width: 100%;
-    background-image: none;
-    background-clip: padding-box;
-    height: 48px;
-    font-family: $font-primary;
-    @include transition(border-color 0.3s ease-in-out);
-    &.error:invalid {
-        border-color: #ed4d4d;
-    }
+.input {
+  padding: 12px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-black;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  background-image: none;
+  background-clip: padding-box;
+  height: 48px;
+  font-family: $font-primary;
+  @include transition(border-color 0.3s ease-in-out);
+  &.error:invalid {
+    border-color: #ed4d4d;
+  }
 
-    &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 30px white inset;
-    }
-    //&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    //    color: #ced4da;
-    //}
-    //
-    //&::-moz-placeholder { /* Firefox 19+ */
-    //    color: #ced4da;
-    //}
-    //
-    //&:-ms-input-placeholder { /* IE 10+ */
-    //    color: #ced4da;
-    //}
-    //
-    //&:-moz-placeholder { /* Firefox 18- */
-    //    color: #ced4da;
-    //}
-}
-.error-text{
-    color: #ed4d4d;
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+  //&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  //    color: #ced4da;
+  //}
+  //
+  //&::-moz-placeholder { /* Firefox 19+ */
+  //    color: #ced4da;
+  //}
+  //
+  //&:-ms-input-placeholder { /* IE 10+ */
+  //    color: #ced4da;
+  //}
+  //
+  //&:-moz-placeholder { /* Firefox 18- */
+  //    color: #ced4da;
+  //}
 }
 
-.success-text{
-    color: $color-green;
+.error-text, .required {
+  color: #ed4d4d;
+}
+
+.success-text {
+  color: $color-green;
 }
