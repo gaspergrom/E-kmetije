@@ -9,7 +9,7 @@
 </main>
 @php do_action('get_footer') @endphp
 @include('base.footer')
-
+@include('base.cookie')
 @php wp_footer() @endphp
 {!! get_field('code_footer', 'options') !!}
 </body>

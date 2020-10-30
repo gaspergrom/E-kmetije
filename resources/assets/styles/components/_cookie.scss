@@ -1,0 +1,79 @@
+.cookie {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 6px 26px 0 rgba(50, 28, 84, .16);
+  padding: 16px;
+  border-radius: 200px;
+  width: calc(100% - 32px);
+  max-width: 600px;
+  background-color: #fff;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 300ms, opacity 300ms;
+  @include xs-down{
+    border-radius: 0;
+    left: 0;
+    transform: translateX(0%);
+    width: calc(100%);
+    bottom: 0;
+  }
+  &.active {
+    bottom: 40px;
+    opacity: 1;
+    visibility: visible;
+    transition: bottom 500ms, opacity 500ms;
+    @include xs-down{
+      bottom: 0;
+    }
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 16px;
+    border-right: 1px solid #dadada;
+    width: calc(100% - 78px);
+    @include xs-down{
+      border-right: 0;
+      width: 100%;
+      text-align: center;
+      margin: 8px 0;
+    }
+  }
+  &__content {
+    @include flex;
+    @include flex--middle;
+    @include xs-down {
+      @include flex--column;
+    }
+  }
+  &__close {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    &:before, &:after {
+      content: "";
+      width: 25px;
+      height: 2px;
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      background-color: #ed4d4d;
+    }
+    &:before {
+      @include transform(rotate(45deg))
+    }
+    &:after {
+      @include transform(rotate(-45deg))
+    }
+    @include xs-down{
+      margin-left: 0;
+    }
+  }
+}
