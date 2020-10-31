@@ -31,7 +31,9 @@
                                 @php
                                     the_post();
                                 @endphp
-                                @include('partials.list.izdelki.hook')
+                                <div class="col-lg-4 col-sm-6 mb16">
+                                    @include('partials.list.izdelki.hook')
+                                </div>
                             @endwhile
                         @else
                             <div class="col-md-12">
@@ -44,6 +46,15 @@
                                 </h5>
                             </div>
                         @endif
+                    </div>
+                    <div class="flex flex--center pt16">
+                        <div>
+                            @php(the_posts_pagination([
+                                'screen_reader_text' => ' ',
+                                 'prev_text'          => __('<div style="height: 20px;"><div style="height: 0px;width: 0; overflow: hidden; opacity: 0;">Prejšnji</div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></div>'),
+                                 'next_text'          => __('<div style="height: 20px;"><div style="height: 0px;width: 0; overflow: hidden; opacity: 0;">Naslednji</div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></div>'),
+                            ]))
+                        </div>
                     </div>
                 </div>
             </div>

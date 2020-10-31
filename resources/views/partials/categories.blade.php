@@ -3,14 +3,15 @@
         'taxonomy' => 'vrste-izdelkov',
         'hide_empty' => false,
     ]);
+    $prikazi = get_query_var('prikazi');
 @endphp
 <div class="hide:sm">
-    @if(isset($type))
+    @if(isset($prikazi))
         <a href="{{get_post_type_archive_link('izdelki')}}" class="category mb8">
             <div class="flex flex--middle">
                 @include('icons.chevron-right')
                 <span class="pl4" style="width: calc(100% - 20px)">
-                   @if($type==='ponudniki') Vsi ponudniki @else Vsi izdelki @endif
+                   @if($prikazi==='ponudniki') Vsi ponudniki @else Vsi izdelki @endif
                 </span>
             </div>
         </a>
@@ -29,7 +30,8 @@
 </div>
 <div class="show-block:sm mb24">
     <div class="select">
-        <select onchange="if (this.value) window.location.href=this.value">
+        <label for="categories" style="height: 0;width: 0; overflow: hidden; opacity: 0;display:block;">Poišči vrste izdelkov</label>
+        <select onchange="if (this.value) window.location.href=this.value" id="categories">
             <option selected value="" disabled style="display:none">Izberi vrsto izdelkov</option>
             @foreach($vrste as $vrsta)
                 <option value="{{get_term_link($vrsta->term_id)}}{{isset($append) ? $append : null}}" class="gtm-category"

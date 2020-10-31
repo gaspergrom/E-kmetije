@@ -2,21 +2,34 @@
     $vrste = get_terms([
         'taxonomy' => 'vrste-izdelkov',
         'hide_empty' => false,
+        'number' => 6,
     ]);
 @endphp
 <section>
-    <div class="container pt48 pb80 pt48:sm pb60:sm">
-        <h2 class="text-center mb24">
-            Razišči ponudbo
-        </h2>
+    <div class="container pt48 pb48 pt30:sm pb30:sm">
         <div class="row">
-            @foreach($vrste as $vrsta)
-                <div class="col-md-4">
-                    <a href="{{get_term_link($vrsta->term_id)}}" class="category mb16 text-center gtm-main-izdelki">
-                        {!! $vrsta->name !!}
-                    </a>
-                </div>
-            @endforeach
+            <div class="pl8 pr8 flex width100">
+                @foreach($vrste as $vrsta)
+                    @php
+                       $image = get_field('slika', 'term_'.$vrsta->term_id);
+                    @endphp
+                    <div class="col-lg-4 col-sm-6 mb16" style="padding: 0 8px;">
+                        <a href="{{get_term_link($vrsta->term_id)}}" class="bg--zoom quadric relative block">
+                            <div class="zoombg bg--image" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('{{$image}}')"></div>
+                            <div class="absolute absolute--full pl32 pr32 pl16:sm pr16:sm">
+                                <div class="height100 width100 flex flex--center flex--middle">
+                                    <h3 class="text--white text-center" style="text-shadow: 1px 0 7px rgba(0,0,0, 0.7);">{!! $vrsta->name !!}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="flex flex--center pt16">
+            <a href="/izdelki" class="btn">
+                Poglej celotno ponudbo
+            </a>
         </div>
     </div>
 </section>

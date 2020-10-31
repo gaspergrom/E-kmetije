@@ -16,6 +16,7 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
       header();
       dataAcc();
-      cookie()
+      cookie();
+
   },
 };

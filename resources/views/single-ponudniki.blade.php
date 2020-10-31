@@ -81,7 +81,9 @@
                                     @if($thumbnail)
                                         <link itemprop="image" href="{{$thumbnail}}"/>
                                     @endif
-                                    @include('partials.list.izdelki.item', ['izdelek' => $izdelek])
+                                    <div class="col-lg-4 col-sm-6 mb16">
+                                        @include('partials.list.izdelki.item', ['izdelek' => $izdelek])
+                                    </div>
                                 @endforeach
                             @else
                                 <div class="col-md-12">

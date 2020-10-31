@@ -122,7 +122,9 @@
                             <div class="row">
                                 @foreach($izdelki as $izdelek)
                                     @if($id !== $izdelek->ID)
-                                        @include('partials.list.izdelki.item', ['izdelek' => $izdelek])
+                                        <div class="col-lg-4 col-sm-6 mb16">
+                                            @include('partials.list.izdelki.item', ['izdelek' => $izdelek])
+                                        </div>
                                     @endif
                                 @endforeach
                             </div>

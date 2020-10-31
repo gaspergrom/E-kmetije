@@ -1,8 +1,8 @@
 @php
-    $splosno = get_field('splosni_podatki', 'options');
-    $social = get_field('social_media', 'options');
-    $description = get_field('footer_description', 'options');
-    $povezave = get_field('footer_povezave', 'options');
+    $splosno = get_field('splosni_podatki', 'option');
+    $social = get_field('social_media', 'option');
+    $description = get_field('footer_description', 'option');
+    $povezave = get_field('footer_povezave', 'option');
 @endphp
 <footer class="footer">
     <div class="container">

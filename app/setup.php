@@ -21,7 +21,8 @@ add_action('wp_enqueue_scripts', function () {
         || is_singular(['ponudniki', 'izdelki'])
         || basename(get_page_template()) == "template-zemljevid.blade.php"
         || is_post_type_archive(['ponudniki', 'izdelki'])
-        || is_tax(['vrste-izdelkov', 'regije', 'obcine','dostava'])) {
+        || is_tax(['vrste-izdelkov', 'regije', 'obcine','dostava'])
+        || is_search()) {
         wp_enqueue_script('google-maps-clusers', "https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js", [], null, true);
         wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') . "&callback=initMap&libraries=&v=weekly", [], null, true);
     }
@@ -54,7 +55,13 @@ add_action('pre_get_posts', function ($query) {
             $query->set('post_type', 'post');
         }
     }
-    if(is_tax('regije') || is_tax('obcine') || is_tax('dostava')){
+    if ($query->is_main_query() && !$query->is_admin() && is_tax('regije')) {
+        $query->set('post_type', 'ponudniki');
+    }
+    if ($query->is_main_query() && !$query->is_admin() && is_tax('obcine')) {
+        $query->set('post_type', 'ponudniki');
+    }
+    if ($query->is_main_query() && !$query->is_admin() && is_tax('dostava')) {
         $query->set('post_type', 'ponudniki');
     }
 });

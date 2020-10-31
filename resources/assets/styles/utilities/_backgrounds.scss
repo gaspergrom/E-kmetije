@@ -10,6 +10,25 @@
         background-position: 50% 50%;
         background-size: cover;
     }
+    &--zoom{
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        .zoombg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            @include transition(transform 300ms ease-in-out)
+        }
+        &:hover{
+            .zoombg{
+                transform: scale(1.1);
+            }
+        }
+    }
 
     /* background-colors */
     @each $name, $value in $colors {

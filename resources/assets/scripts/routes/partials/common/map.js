@@ -15,6 +15,7 @@ export default () => {
                 fullscreenControl: false,
                 streetViewControl: false,
                 mapTypeControl: false,
+                zoomControl: false,
             });
             const infowindow = new google.maps.InfoWindow({
                 content: "",
@@ -31,6 +32,7 @@ export default () => {
                 fullscreenControl: false,
                 streetViewControl: false,
                 mapTypeControl: false,
+                zoomControl: false,
             });
             const marker = new google.maps.Marker({
                 position: loc,
@@ -39,6 +41,7 @@ export default () => {
             });
             window.map = map;
         }
+
     }
 
 }
