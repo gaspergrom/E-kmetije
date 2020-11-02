@@ -67,6 +67,15 @@ add_action("init", function () {
     $admin->add_cap('izdelki');
     add_role('ponudnik','Ponudnik', include 'users/ponudnik.php');
     $ponudnik = get_role('ponudnik');
-    $ponudnik->remove_cap('publish_ponudniki');
+    $ponudnik->add_cap('publish_ponudniki');
+    $ponudnik->add_cap('ponudniki');
+    $ponudnik->add_cap('izdelki');
 });
 include 'users/roles/index.php';
+
+add_action('admin_menu', function () {
+    if (!current_user_can('administrator')) {
+        remove_menu_page('edit.php?post_type=ponudniki');
+        remove_menu_page('edit.php?post_type=izdelki');
+    }
+});

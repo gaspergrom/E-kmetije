@@ -20,6 +20,9 @@ export default () => {
         if (data.cenavrsta.length === 0) {
             el.push('cenavrsta');
         }
+        if (!data.vrsta) {
+            el.push('vrsta');
+        }
         if (data.cenavrsta === 'cena' && data.cenavrednost.length === 0) {
             el.push('cenavrednost');
         }

@@ -55,6 +55,9 @@ return [
     'edit_vrste-izdelkov' => false,
     'delete_vrste-izdelkov' => false,
     'assign_vrste-izdelkov' => true,
+
+    'ponudniki' => true,
+    'izdelki' => true,
 ];
 
 

@@ -8,6 +8,12 @@
         $cena = get_field('cena', $id);
         $izdelekPonudnik = get_field('ponudnik', $id);
         $izdelekPonudnik = property_exists($izdelekPonudnik, 'ID') ? $izdelekPonudnik->ID : $izdelekPonudnik;
+        $izdelekImage = get_post_thumbnail_id($id);
+        $izdVrsteIzdelkov = get_the_terms( $id , 'vrste-izdelkov' );
+        if(!$izdVrsteIzdelkov){
+            $izdVrsteIzdelkov = [];
+        }
+        $izdelekVrsteIzdelkov = array_map(function ($term){return $term->term_id;}, $izdVrsteIzdelkov);
     }
     $vrste = get_terms([
         'taxonomy' => 'vrste-izdelkov',
@@ -18,7 +24,14 @@
         'post_type' => 'ponudniki',
         'numberposts' => -1,
         'post_status' => ['publish', 'pending']
-    ])
+    ]);
+    $media = get_posts([
+        'author' => $current,
+        'post_type' => 'attachment',
+        'numberposts' => -1,
+        'post_status' => null,
+        'post_parent' => null,
+    ]);
 @endphp
 @if($id && $izdelek)
     <section class="flex flex--center">
@@ -34,6 +47,7 @@
                         <input type="text" name="name" id="name" class="input mt4" value="{{$izdelek->post_title}}"
                                placeholder="Ime izdelka" required>
                     </div>
+                    <div class="col-md-6"></div>
                     <div class="col-md-6 mb8">
                         <label for="ponudnik">Ponudnik<span class="required">*</span></label>
                         <div class="select mt4">
@@ -42,6 +56,17 @@
                                     <option value="{{$ponudnik->ID}}"
                                             @if($izdelekPonudnik &&  $izdelekPonudnik == $ponudnik->ID) selected @endif
                                     >{!! $ponudnik->post_title !!}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="vrsta">Vrsta izdelka<span class="required">*</span></label>
+                        <div class="select mt4">
+                            <select id="vrsta" name="vrsta" required>
+                                <option value="" selected disabled style="display: none;">Izberi vrsto izdelka</option>
+                                @foreach($vrste as $vrsta)
+                                    <option value="{{$vrsta->term_id}}" @if($izdelekVrsteIzdelkov && in_array($vrsta->term_id ,$izdelekVrsteIzdelkov)) selected @endif>{!! $vrsta->name !!}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -60,6 +85,22 @@
                         <label for="cenavrednost">Cena izdelka</label>
                         <input type="number" name="cenavrednost" id="cenavrednost" class="input mt4"
                                placeholder="Cena izdelka v eur" value="{{$cena['vrednost']}}">
+                    </div>
+                    <div class="pt24 pl24 pr24 width100">
+                        <h4 class="">Slika izdelka</h4>
+                        <p>
+                            Če želite dodati novo sliko jo prosimo naložite <a href="{{admin_url('upload.php')}}" target="_blank" class="text-bold">tukaj</a>
+                        </p>
+                        <div class="fileselect row width100">
+                            @foreach($media as $img)
+                                <div class="col-md-3 mb16" style="padding: 0 8px">
+                                    <label>
+                                        <input type="radio" name="image" value="{{$img->ID}}" @if($izdelekImage && $izdelekImage===$img->ID) checked @endif>
+                                        <div class="card height100 mt0 mb16 pl0 pr0 pt0 pb0 quadric quadric--full" style="min-width: inherit; background-image: url({{wp_get_attachment_url($img->ID)}})"></div>
+                                    </label>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                     <input type="hidden" name="post_id" value="{{$id}}">
                     <input type="hidden" name="author" value="{{$current}}">

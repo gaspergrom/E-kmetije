@@ -73,4 +73,7 @@ $button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, 
             background: darken(#ed4d4d, 5%);
         }
     }
+    &--info{
+        background-image: linear-gradient(to right, #0560ff, #1e86fd, #0560ff);
+    }
 }

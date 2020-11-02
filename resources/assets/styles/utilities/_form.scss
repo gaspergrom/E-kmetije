@@ -25,3 +25,13 @@ label {
 @import "form/boxinput";
 // @import "form/range";
 // @import "form/color";
+.input--hide{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+}

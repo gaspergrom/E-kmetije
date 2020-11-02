@@ -47,7 +47,7 @@ export default () => {
                 loading.css('display', 'none');
                 message.removeClass('error-text').addClass('success-text');
                 message.text(data);
-                document.getElementById('formadminizdelkiadd').reset();
+                location.reload();
             })
             .fail(function (data) {
                 message.removeClass('success-text').addClass('error-text');

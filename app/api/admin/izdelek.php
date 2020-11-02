@@ -9,6 +9,10 @@ return function (WP_REST_Request $request) {
     if (strlen($ponudnik) === 0) {
         return new WP_Error('validation', __('Prosim izberite ponudnika'), array('status' => 422));
     }
+    $vrsta = $request->get_param('vrsta');
+    if (strlen($vrsta) === 0) {
+        return new WP_Error('validation', __('Prosim izberite vrsto izdelka'), array('status' => 422));
+    }
     $cenavrsta = $request->get_param('cenavrsta');
     if (strlen($cenavrsta) === 0) {
         return new WP_Error('validation', __('Prosim izberite vrsto cene'), array('status' => 422));
@@ -21,6 +25,7 @@ return function (WP_REST_Request $request) {
     if (strlen($author) === 0) {
         return new WP_Error('validation', __('Avtor ni naveden'), array('status' => 422));
     }
+    $image = $request->get_param('image');
     $post = wp_insert_post([
         'post_type' => 'izdelki',
         'post_author' => $author,
@@ -40,11 +45,12 @@ return function (WP_REST_Request $request) {
             return new WP_Error('postcreation', __('Prišlo je do napake pri kreiranju ponudnika'), array('status' => 422));
         }
     } else {
-//        wp_set_object_terms($post, intval($regija), 'regije');
+        wp_set_object_terms($post, intval($vrsta), 'vrste-izdelkov');
         update_field('cena', array(
             'vrsta' => $cenavrsta,
             'vrednost' => $cenavrednost,
         ), $post);
+        set_post_thumbnail( $post, $image);
         return new WP_REST_Response('Izdelek uspešno dodan uspešno dodan!');
     }
 

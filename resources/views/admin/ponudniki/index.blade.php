@@ -21,21 +21,32 @@
         </div>
 
         <div>
-            @foreach($ponudniki as $ponudnik)
-                <div class="card pt8 pb8 pl16 pr16 mb16 mt0" style="max-width: 100%">
-                    <div class="flex flex--middle flex--between" style="min-height: 38px">
-                        <div style="width: calc(100% - 120px);">
-                            <h6>{{$ponudnik->post_title}} @if($ponudnik->post_status==='pending')(v pregledu)@endif</h6>
+            @if($ponudniki)
+                @foreach($ponudniki as $ponudnik)
+                    <div class="card pt8 pb8 pl16 pr16 mb16 mt0" style="max-width: 100%">
+                        <div class="flex flex--middle flex--between" style="min-height: 38px">
+                            <div style="width: calc(100% - 220px);">
+                                <h6>{{$ponudnik->post_title}} @if($ponudnik->post_status==='pending')(v
+                                    pregledu)@endif</h6>
+                            </div>
+                            @if($ponudnik->post_status !== 'pending')
+                                <div class="flex">
+                                    <a href="{{get_the_permalink($ponudnik->ID)}}" target="_blank"
+                                       class="btn btn--small btn--info btn--square mr8" style="color: white !important;">
+                                        Poglej
+                                    </a>
+                                    <a href="{{admin_url('admin.php?page=ponudniki-edit&id='.$ponudnik->ID)}}"
+                                       class="btn btn--small btn--square" style="color: white !important;">
+                                        Uredi
+                                    </a>
+                                </div>
+                            @endif
                         </div>
-                        @if($ponudnik->post_status !== 'pending')
-                            <a href="{{admin_url('admin.php?page=ponudniki-edit&id='.$ponudnik->ID)}}"
-                               class="btn btn--small btn--square" style="color: white !important;">
-                                Uredi
-                            </a>
-                        @endif
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            @else
+                <h5 class="text-center">Trenutno še nimate vnešenih ponudnikov</h5>
+            @endif
         </div>
     </div>
 </section>

@@ -3,6 +3,7 @@
 @php
     $id = get_the_ID();
     $ponudnik = get_field('ponudnik');
+    $ponudnik = property_exists($ponudnik, 'ID') ? $ponudnik : get_post($ponudnik);
     $cena = get_field('cena');
     $thumbnail = get_the_post_thumbnail_url();
 
