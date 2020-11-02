@@ -9,6 +9,10 @@
     ],
     "login": [
       "./styles/login.scss"
+    ],
+    "admin": [
+      "./styles/admin.scss",
+      "./scripts/admin.js"
     ]
   },
   "publicPath": "/app/themes/ekmetije",

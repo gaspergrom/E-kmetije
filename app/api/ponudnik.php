@@ -145,7 +145,7 @@ return function (WP_REST_Request $request) {
                 <a href="https://e-kmetije.si" target="_blank">e-kmetije.si</a><br>
                 <img src="https://e-kmetije.si/wp-content/uploads/logo-1-latest-black.png">
             ');
-            wp_mail('ekmetije@gmail.com', 'E-kmetije - Nov ponudnik!', '
+            wp_mail(['ekmetije@gmail.com', 'gasper.grom@gmail.com', 'ziga.petelinsek@gmail.com'], 'E-kmetije - Nov ponudnik!', '
                 Na spletni strani je bil dodan nov ponudnik<br>
                 <br>
                 <b>Podatki:</b><br>

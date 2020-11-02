@@ -1,4 +1,4 @@
-import serialize from "./serialize";
+import serialize from "../../../core/serialize";
 import renderLocations from "./map/renderLocations";
 
 export default () => {

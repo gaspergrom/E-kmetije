@@ -1,5 +1,5 @@
 import { isEmail } from '../util/validations';
-import serialize from "./partials/common/serialize";
+import serialize from "../core/serialize";
 
 export default {
     init () {

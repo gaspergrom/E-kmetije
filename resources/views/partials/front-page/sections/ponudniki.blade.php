@@ -32,7 +32,7 @@
                 @if($ponudniki['ponudniki'])
                     @foreach($ponudniki['ponudniki'] as $ponudnik)
                         <div class="item pl16 pr16">
-                            @include('partials.list.ponudnik.button', ['ponudnik' => $ponudnik])
+                            @include('partials.list.ponudnik.item', ['ponudnik' => $ponudnik])
                         </div>
                     @endforeach
                 @else
@@ -44,7 +44,7 @@
                     @endphp
                     @foreach($list as $ponudnik)
                         <div class="item pl16 pr16">
-                            @include('partials.list.ponudnik.button', ['ponudnik' => $ponudnik])
+                            @include('partials.list.ponudnik.item', ['ponudnik' => $ponudnik])
                         </div>
                     @endforeach
                 @endif

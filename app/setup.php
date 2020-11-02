@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', function () {
         || is_singular(['ponudniki', 'izdelki'])
         || basename(get_page_template()) == "template-zemljevid.blade.php"
         || is_post_type_archive(['ponudniki', 'izdelki'])
-        || is_tax(['vrste-izdelkov', 'regije', 'obcine','dostava'])
+        || is_tax(['vrste-izdelkov', 'regije', 'obcine', 'dostava'])
         || is_search()) {
         wp_enqueue_script('google-maps-clusers', "https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js", [], null, true);
         wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . get_field('google_maps', 'options') . "&callback=initMap&libraries=&v=weekly", [], null, true);
@@ -32,6 +32,12 @@ add_action('login_head', function () {
     wp_enqueue_style('sage/login.css', asset_path('styles/login.css'), [], APP_VERSION);
 }, 100);
 
+add_action('admin_head', function () {
+    wp_enqueue_style('sage/admin.css', asset_path('styles/admin.css'), [], APP_VERSION);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), [], APP_VERSION);
+    wp_enqueue_script('sage/admin.js', asset_path('scripts/admin.js'), ['jquery'], APP_VERSION, true);
+}, 100);
+remove_action("admin_color_scheme_picker", "admin_color_scheme_picker");
 
 add_action('init', function () {
     add_rewrite_endpoint('prikazi', EP_VRSTE_IZDELKOV);
@@ -67,7 +73,7 @@ add_action('pre_get_posts', function ($query) {
 });
 
 
-add_action('template_redirect', function() {
+add_action('template_redirect', function () {
     global $wp_rewrite;
 
 
@@ -78,18 +84,18 @@ add_action('template_redirect', function() {
     $search_base = $wp_rewrite->search_base;
 
     if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
-        if(isset($_GET['post_type']) && $_GET['post_type'] && ($_GET['post_type'] === 'izdelki' || $_GET['post_type'] === 'ponudniki')){
-            wp_redirect(get_search_link(). 'prikazi/'.$_GET['post_type']);
+        if (isset($_GET['post_type']) && $_GET['post_type'] && ($_GET['post_type'] === 'izdelki' || $_GET['post_type'] === 'ponudniki')) {
+            wp_redirect(get_search_link() . 'prikazi/' . $_GET['post_type']);
             exit();
         }
-        if(strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false){
+        if (strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
             wp_redirect(get_search_link());
             exit();
         }
     }
 });
 
-add_filter('wpseo_json_ld_search_url', function($url) {
+add_filter('wpseo_json_ld_search_url', function ($url) {
     return str_replace('/?s=', '/search/', str_replace('&post_type=', '/prikazi/', $url));
 });
 
@@ -207,6 +213,9 @@ add_action('after_setup_theme', function () {
     /**
      * Create Blade directives
      */
+    sage('blade')->compiler()->directive('asset', function ($asset) {
+        return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
+    });
 //    sage('blade')->compiler()->directive('inapp', function () {
     /*        return '<?php if(!isset($_GET["inapp"])): ?>';*/
 //    });

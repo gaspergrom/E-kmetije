@@ -4,7 +4,7 @@
     $excerpt = get_the_excerpt();
 @endphp
 
-<a href="{{the_permalink()}}" class="card height100 width100 gtm-card-izdelki">
+<div class="card height100 width100 gtm-card-izdelki">
     @if($thumbnail)
         <img src="{{$thumbnail}}" alt="{{the_title()}}" class="width100" style="object-fit: cover; height: 200px;">
     @endif
@@ -28,9 +28,9 @@
                 {!! wp_trim_words($excerpt, 20, '...') !!}
             </p>
         @endif
-        <div class="text--green flex flex--middle mt8">
+        <a href="{{the_permalink()}}" class="text--green flex flex--middle mt8">
             <span class="text-bold">Poglej podrobnosti</span>
             @include('icons.chevron-right')
-        </div>
+        </a>
     </div>
-</a>
+</div>

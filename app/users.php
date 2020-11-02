@@ -63,6 +63,8 @@ add_action("init", function () {
     $admin->add_cap('edit_vrste-izdelkov');
     $admin->add_cap('delete_vrste-izdelkov');
     $admin->add_cap('assign_vrste-izdelkov');
+    $admin->add_cap('ponudniki');
+    $admin->add_cap('izdelki');
     add_role('ponudnik','Ponudnik', include 'users/ponudnik.php');
     $ponudnik = get_role('ponudnik');
     $ponudnik->remove_cap('publish_ponudniki');

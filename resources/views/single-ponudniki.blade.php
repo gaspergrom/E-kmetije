@@ -145,7 +145,18 @@
                                         </div>
                                         <meta itemprop="url" content="{{$kontakt['kontakt']}}">
                                     @endif
+
                                 @endforeach
+                                <div class="flex flex--middle mb8">
+                                    <span class="text--green mr4">
+                                        @include('icons.map-pin')
+                                    </span>
+                                    <a href="http://www.google.com/maps/place/{{$lokacija['lat']}},{{$lokacija['lng']}}" target="_blank" rel="noreferrer"
+                                       class="link--reverse gtm-ponudnik-directions gtm-contact">
+                                        Navodila za pot
+                                    </a>
+
+                                </div>
                                 @if($social && count($social))
                                     <div class="pt16">
                                         <h6 class="mb4">Družabna omrežja</h6>

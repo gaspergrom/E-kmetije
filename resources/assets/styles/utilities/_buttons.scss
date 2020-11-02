@@ -47,6 +47,7 @@ $button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, 
         &.btn--small{
             width: 36px;
             height: 36px;
+            padding: 0 !important;
         }
     }
     &--white{
@@ -59,5 +60,17 @@ $button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, 
     }
     &--square{
         border-radius: 4px;
+    }
+    &--small{
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px 25px;
+        height: 38px;
+    }
+    &--danger{
+        background: #ed4d4d;
+        &:hover{
+            background: darken(#ed4d4d, 5%);
+        }
     }
 }

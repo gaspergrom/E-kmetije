@@ -13,7 +13,7 @@ $container-space: 0;
 
 /* breakpoints (used for grid) */
 $breakpoints: (
-    //'xs': $default,
+    'xs': $default,
     'sm': $sm-up,
     'md': $md-up,
     'lg': $lg-up

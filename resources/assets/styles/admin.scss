@@ -1,0 +1,289 @@
+$color-white: #fff;
+$color-black: #03262c;
+$color-green: #1d8007;
+$color-green-light: #5cb917;
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+$button-gradient:  linear-gradient(to right,  $color-green, $color-green-light, $color-green);
+
+body {
+  background: #f6faf5 !important;
+  font-family: $font-primary !important;
+}
+#footer-left,
+#footer-upgrade,
+#wp-admin-bar-site-name-default,
+#wp-admin-bar-user-info{
+  display: none !important;
+}
+#wp-admin-bar-root-default li{
+  display: none !important;
+  &#wp-admin-bar-site-name{
+    display: block !important;
+  }
+  &#wp-admin-bar-menu-toggle{
+    display: block !important;
+  }
+};
+#wp-admin-bar-site-name{
+  background-image: url('https://e-kmetije.si/wp-content/uploads/logo-1-latest-black.png') !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  background-color: transparent !important;
+  color: transparent !important;
+  background-position: 0 5px !important;
+  .ab-item{
+    background-color: transparent !important;
+    color: transparent !important;
+  }
+}
+#wp-admin-bar-site-name, #wp-admin-bar-my-account{
+  display: block !important;
+  height: 60px !important;
+  a{
+    height: 60px !important;
+    &:before{
+      display: none !important;
+    }
+  }
+}
+#wp-admin-bar-menu-toggle{
+  display: block !important;
+}
+#wp-admin-bar-my-account{
+  .ab-sub-wrapper{
+    top: calc(100% + 7px);
+  }
+  >a{
+    visibility: hidden;
+    font-size: 16px !important;
+    line-height: 50px !important;
+    *{
+      visibility: visible;
+    }
+    img{
+      height: 40px !important;
+      width: 40px !important;
+      border-radius: 50% !important;
+      border: 0 !important;
+    }
+  }
+  #wp-admin-bar-user-actions{
+    li{
+      margin: 0 !important;
+      a{
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input{
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms;
+}
+#wpadminbar.nojs li:hover > .ab-sub-wrapper, #wpadminbar li.hover > .ab-sub-wrapper{
+  display:block !important;
+  visibility: visible;
+  opacity: 1;
+}
+#wp-admin-bar-user-actions{
+  padding: 0 !important;
+  li{
+    height: auto !important;
+    a{
+      height: auto !important;
+      &.ab-item{
+        line-height: 34px !important;
+        text-align: right !important;
+        min-width: inherit !important;
+      }
+    }
+  }
+}
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper{
+  right: 10px !important
+}
+#wpadminbar .ab-submenu{
+  padding: 10px 10px !important;
+}
+#wpadminbar .menupop .ab-sub-wrapper{
+  background-color: $color-white !important;
+  box-shadow: 0 7px 30px rgba(0,0,0,0.25) !important;
+}
+#wpadminbar .ab-top-menu > .menupop > .ab-sub-wrapper{
+  min-width: inherit !important;
+  border-radius: 6px !important;
+}
+#wpadminbar *{
+  font-size: 16px!important;
+}
+#wpadminbar li:not(#wp-admin-bar-site-name) a.ab-item{
+  color: $color-black !important;
+}
+#wpadminbar a.ab-item{
+  font-size: 20px !important;
+  line-height: 60px !important;
+}
+#wp-admin-bar-site-name{
+  padding-left: 0 !important;
+  a{
+    display: block;
+    width: 135px;
+  }
+}
+html.wp-toolbar{
+  padding-top: 60px !important;
+}
+#adminmenu li.wp-menu-separator{
+  height: 0 !important;
+  margin: 0 !important;
+}
+#wpadminbar{
+  height: 60px !important;
+  position: fixed !important;
+  background-color: $color-white !important;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.2) !important;
+}
+#adminmenuback, #adminmenuwrap, #adminmenu{
+  background-color: $color-white !important;
+}
+#collapse-menu{
+  display: none;
+}
+#adminmenu{
+  margin: 12px 0 !important;
+  width: 170px !important;
+  @media only screen and (max-width: 960px){
+    width: 36px !important;
+  }
+  @media screen and (max-width: 782px){
+    width: 170px !important;
+  }
+}
+#adminmenuwrap{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  width: 170px !important;
+  @media only screen and (max-width: 960px){
+    width: 36px !important;
+  }
+  @media screen and (max-width: 782px){
+    width: 170px !important;
+  }
+}
+#adminmenuback {
+  width: 200px !important;
+  @media only screen and (max-width: 960px){
+    width: 66px !important;
+  }
+  @media screen and (max-width: 782px){
+    width: 200px !important;
+  }
+}
+#wpcontent{
+  margin-left: 200px !important;
+  @media only screen and (max-width: 960px){
+    margin-left: 66px !important;
+  }
+  @media screen and (max-width: 782px){
+    margin-left: 0 !important;
+  }
+}
+#wpbody{
+  padding-top: 0 !important;
+}
+#adminmenu{
+  li{
+    background-color: transparent !important;
+    margin-bottom: 10px;
+    &:after{
+      display: none !important;
+    }
+
+    &.wp-menu-open, &.current.menu-top{
+      background-color: $color-green !important;
+      border-radius: 10px !important;
+      box-shadow: 0 7px 30px rgba(0,0,0,0.25) !important;
+      .wp-menu-name{
+        color: $color-white !important;
+      }
+      .wp-menu-image{
+        &:before{
+          color: $color-white !important;
+        }
+      }
+      a{
+        color: $color-white !important;
+      }
+      ul li{
+        background-color: transparent !important;
+      }
+      .wp-submenu.wp-submenu-wrap{
+        display: block !important;
+      }
+    }
+
+  }
+  a{
+    color: $color-black !important;
+  }
+  .wp-menu-arrow{
+    display: none;
+  }
+}
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu li.current a.menu-top, .folded #adminmenu li.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, #adminmenu .wp-menu-arrow, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow div{
+  background-color: transparent !important;
+}
+#adminmenu div.wp-menu-image:before{
+  color: $color-black !important
+}
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu{
+  background-color: transparent!important;
+}
+ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.current:after{
+  display: none !important;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu,#adminmenu .wp-has-current-submenu .wp-submenu, .no-js li.wp-has-current-submenu:hover .wp-submenu, #adminmenu a.wp-has-current-submenu:focus + .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu.sub-open, #adminmenu .wp-has-current-submenu.opensub .wp-submenu{
+  background-color: transparent !important;
+}
+.wp-submenu.wp-submenu-wrap{
+  display: none !important;
+}
+#adminmenu li.menu-top:hover{
+  background-color: $color-green !important;
+  border-radius: 10px;
+  box-shadow: 0 7px 30px rgba(0,0,0,0.25) !important;
+  transition: 200ms;
+  .wp-menu-name{
+    color: $color-white !important;
+    transition: 200ms;
+  }
+  .wp-menu-image{
+    &:before{
+      color: $color-white !important;
+      transition: 200ms;
+    }
+  }
+}
+#adminmenu li.menu-top, #adminmenu li > a.menu-top{
+  border-radius: 10px !important;
+}
+#adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus{
+  background-color: transparent !important;
+}
+#adminmenu a .wp-menu-name{
+  font-weight: 500 !important;
+}
+#wpadminbar .ab-icon:before, #wpadminbar .ab-item:before, #wpadminbar #adminbarsearch:before{
+  color: $color-black !important;
+}
+#wp-admin-bar-menu-toggle .ab-item{
+  height: 60px !important;
+  line-height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: $color-white !important;
+  border: 0 !important;
+}

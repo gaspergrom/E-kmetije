@@ -3,7 +3,7 @@ import renderLocations from "./map/renderLocations";
 
 export default () => {
     const mapElement = document.getElementById('map');
-    if(mapElement){
+    if (mapElement) {
         if (typeof locations !== 'undefined' && locations && locations.length) {
             const map = new google.maps.Map(mapElement, {
                 zoom: 8.6,
@@ -15,7 +15,6 @@ export default () => {
                 fullscreenControl: false,
                 streetViewControl: false,
                 mapTypeControl: false,
-                zoomControl: false,
             });
             const infowindow = new google.maps.InfoWindow({
                 content: "",
@@ -24,7 +23,7 @@ export default () => {
             window.map = map;
             window.infowindow = infowindow;
         }
-        else if(typeof loc !== 'undefined' && loc){
+        else if (typeof loc !== 'undefined' && loc) {
             const map = new google.maps.Map(mapElement, {
                 zoom: 12,
                 center: loc,
@@ -32,12 +31,14 @@ export default () => {
                 fullscreenControl: false,
                 streetViewControl: false,
                 mapTypeControl: false,
-                zoomControl: false,
             });
             const marker = new google.maps.Marker({
                 position: loc,
                 map: map,
                 icon: 'https://e-kmetije.si/wp-content/uploads/pin.png'
+            });
+            marker.addListener("click", () => {
+                window.open(`http://www.google.com/maps/place/${loc.lat},${loc.lng}`, '_blank');
             });
             window.map = map;
         }

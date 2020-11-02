@@ -88,14 +88,14 @@ add_filter('template_include', function ($template) {
     return $template;
 }, PHP_INT_MAX);
 
-add_filter('wp_insert_post_data', function ($data, $postarr) {
-    $post_type = get_post_type( $data->ID );
-    if($post_type === 'izdelki'){
-        $ponudnik = get_field('ponudnik', $data->ID);
-        $data['post_author'] = $ponudnik->post_author;
-    }
-    return $data;
-}, '99', 2);
+//add_filter('wp_insert_post_data', function ($data, $postarr) {
+//    $post_type = get_post_type( $data->ID );
+//    if($post_type === 'izdelki'){
+//        $ponudnik = get_field('ponudnik', $data->ID);
+//        $data['post_author'] = $ponudnik->post_author;
+//    }
+//    return $data;
+//}, '99', 2);
 
 /**
  * Render comments.blade.php

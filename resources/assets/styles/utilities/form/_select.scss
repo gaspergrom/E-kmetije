@@ -37,9 +37,13 @@
         background-clip: padding-box;
         height: 48px;
         font-family: $font-primary;
+        max-width: 100%;
         @include transition(border-color 0.3s ease-in-out);
         &.error:invalid {
             border-color: #ed4d4d;
+        }
+        &:focus{
+            border-color: $color-green;
         }
     }
 }
