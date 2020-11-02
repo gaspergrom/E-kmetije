@@ -57,8 +57,8 @@ add_action('admin_menu', function () {
         null,
         __('Uredi ponudnika', 'ekmetije'),
         __('Uredi ponudnika', 'ekmetije'),
-        'izdelki',
-        'izdelki-edit',
+        'ponudniki',
+        'ponudniki-edit',
         function(){ echo \App\template("admin/ponudniki/edit");},
         85
     );

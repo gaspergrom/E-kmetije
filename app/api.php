@@ -22,4 +22,14 @@ add_action('rest_api_init', function() {
         'callback' => include('api/admin/ponudnikEdit.php'),
         'permission_callback' => '__return_true'
     ]);
+    register_rest_route(API_PREFIX, '/admin/izdelek', [
+        'methods' => 'POST',
+        'callback' => include('api/admin/izdelek.php'),
+        'permission_callback' => '__return_true'
+    ]);
+    register_rest_route(API_PREFIX, '/admin/izdelek/edit', [
+        'methods' => 'POST',
+        'callback' => include('api/admin/izdelekEdit.php'),
+        'permission_callback' => '__return_true'
+    ]);
 });

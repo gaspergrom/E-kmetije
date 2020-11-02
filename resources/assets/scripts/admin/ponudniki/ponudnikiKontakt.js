@@ -41,13 +41,12 @@ export default () => {
     });
 
     if (dataKontakt) {
-        const data = JSON.parse(dataKontakt.attr('data-kontakt'));
-        kontakti = data;
-        renderKontakt();
-        dataKontakt.on('click', '[data-kontakt-delete]', function () {
-            const id = $(this).attr('data-kontakt-delete');
-            kontakti.splice(id, 1);
-            renderKontakt();
-        })
+        // kontakti = JSON.parse(dataKontakt.attr('data-kontakt'));
+        // renderKontakt();
+        // dataKontakt.on('click', '[data-kontakt-delete]', function () {
+        //     const id = $(this).attr('data-kontakt-delete');
+        //     kontakti.splice(id, 1);
+        //     renderKontakt();
+        // })
     }
 };
