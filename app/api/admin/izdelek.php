@@ -26,12 +26,12 @@ return function (WP_REST_Request $request) {
         return new WP_Error('validation', __('Avtor ni naveden'), array('status' => 422));
     }
     $image = $request->get_param('image');
+    $opis = $request->get_param('opis');
     $post = wp_insert_post([
         'post_type' => 'izdelki',
         'post_author' => $author,
         'post_title' => $name,
-        'post_excerpt' => '',
-        'post_content' => '',
+        'post_content' => $opis,
         'post_status' => 'publish',
         'meta_input' => [
             'ponudnik' => $ponudnik

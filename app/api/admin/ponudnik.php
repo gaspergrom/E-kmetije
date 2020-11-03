@@ -40,10 +40,7 @@ return function (WP_REST_Request $request) {
         'post_type' => 'ponudniki',
         'post_author' => $author,
         'post_title' => $naziv,
-        'post_excerpt' => $opis,
-        'post_content' => "<!-- wp:paragraph -->
-<p>" . $opis . "</p>
-<!-- /wp:paragraph -->",
+        'post_content' => $opis,
         'post_status' => 'pending',
         'meta_input' => [
             'kraj' => $kraj,

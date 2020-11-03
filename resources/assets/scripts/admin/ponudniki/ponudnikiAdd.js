@@ -28,7 +28,7 @@ export default () => {
         if (!data.obcina) {
             el.push('obcina');
         }
-
+        data.opis = tinymce.get('tinymceeditor').getContent();
         if (el.length > 0) {
             el.forEach((name) => {
                 $(`[name=${name}]`).addClass('error');

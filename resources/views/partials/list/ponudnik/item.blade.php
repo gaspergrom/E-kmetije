@@ -5,10 +5,6 @@
     $thumbnail = get_the_post_thumbnail_url($ponudnik->ID);
 @endphp
 <div class="card width100 height100 gtm-card-ponudniki relative">
-    @if($thumbnail)
-        <img src="{{$thumbnail}}" alt="{{$izdelek->post_title}}" class="width100"
-             style="object-fit: cover; height: 200px;">
-    @endif
     <div class="pt16 pl24 pr24 pb80">
         <h4 class="mb16">{{$ponudnik->post_title}}</h4>
         @if($kraj)

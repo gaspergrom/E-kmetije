@@ -40,13 +40,13 @@ export default () => {
         renderKontakt()
     });
 
-    if (dataKontakt) {
-        // kontakti = JSON.parse(dataKontakt.attr('data-kontakt'));
-        // renderKontakt();
-        // dataKontakt.on('click', '[data-kontakt-delete]', function () {
-        //     const id = $(this).attr('data-kontakt-delete');
-        //     kontakti.splice(id, 1);
-        //     renderKontakt();
-        // })
+    if (dataKontakt.length) {
+        kontakti = JSON.parse(dataKontakt.attr('data-kontakt'));
+        renderKontakt();
+        dataKontakt.on('click', '[data-kontakt-delete]', function () {
+            const id = $(this).attr('data-kontakt-delete');
+            kontakti.splice(id, 1);
+            renderKontakt();
+        })
     }
 };

@@ -96,10 +96,10 @@
                             </select>
                         </div>
                     </div>
-                    {{--<div class="col-md-12 mb8">--}}
-                    {{--<label for="opis">Opis</label>--}}
-                    {{--<textarea id="opis" name="opis" placeholder="" class="input mt4"></textarea>--}}
-                    {{--</div>--}}
+                    <div class="col-md-12">
+                        <label for="v" class="mb4">Opis</label>
+                        <textarea id="tinymceeditor">{!! $ponudnik->post_content !!}</textarea>
+                    </div>
 
 
                     <div class="col-md-12 pt16">
@@ -172,11 +172,6 @@
                             <h6>Ni dodanih Kontaktnih podatkov</h6>
                         </div>
                     @endif
-                    <div class="col-md-12 pt24">
-                        <p>
-                            Urejevalnik je še v izdelavi. Za dodatne spremembe kontaktirajte <a href="mailto:info@e-kmetije.si">info@e-kmetije.si</a>
-                        </p>
-                    </div>
                     <input type="hidden" name="author" value="{{$current}}">
                     <input type="hidden" name="post_id" value="{{$id}}">
                     <div class="col-md-12 pt16 pt32">

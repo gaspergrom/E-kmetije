@@ -36,12 +36,13 @@ return function (WP_REST_Request $request) {
     $kontakti = $request->get_param('kontakti');
     $vrste = $request->get_param('vrste');
     $dostava = $request->get_param('dostava');
-    $email = get_the_author_meta('user_email', $author);
+    $opis = $request->get_param('opis');
 
     $post = wp_update_post([
         'ID' => $postId,
         'post_author' => $author,
         'post_title' => $naziv,
+        'post_content' => $opis,
         'meta_input' => [
             'kraj' => $kraj,
             'ulica' => $ulica,

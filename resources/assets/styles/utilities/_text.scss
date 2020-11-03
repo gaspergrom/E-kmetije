@@ -38,6 +38,9 @@
     &-capitalize {
         text-transform: capitalize;
     }
+    &-underline{
+        text-decoration: underline;
+    }
 }
 .font--primary{
     font-family: $font-primary;

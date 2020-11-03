@@ -36,6 +36,7 @@ add_action('admin_head', function () {
     wp_enqueue_style('sage/admin.css', asset_path('styles/admin.css'), [], APP_VERSION);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), [], APP_VERSION);
     wp_enqueue_script('sage/admin.js', asset_path('scripts/admin.js'), ['jquery'], APP_VERSION, true);
+    wp_enqueue_script('tinymce', 'https://cdn.tiny.cloud/1/v3g6d46ets8t7k05clwme1u0xst3qrdq0zc9xf149nt9gddm/tinymce/5/tinymce.min.js', ['jquery'], APP_VERSION, true);
 }, 100);
 remove_action("admin_color_scheme_picker", "admin_color_scheme_picker");
 

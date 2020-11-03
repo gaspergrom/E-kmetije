@@ -68,9 +68,9 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-md-12 mb8">
-                    <label for="opis">Opis</label>
-                    <textarea id="opis" name="opis" placeholder="" class="input mt4"></textarea>
+                <div class="col-md-12">
+                    <label for="v" class="mb4">Opis</label>
+                    <textarea id="tinymceeditor"></textarea>
                 </div>
 
 

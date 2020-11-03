@@ -26,6 +26,7 @@ export default () => {
         if (data.cenavrsta === 'cena' && data.cenavrednost.length === 0) {
             el.push('cenavrednost');
         }
+        data.opis = tinymce.get('tinymceeditor').getContent();
 
         if (el.length > 0) {
             el.forEach((name) => {

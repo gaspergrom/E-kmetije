@@ -35,7 +35,13 @@ body {
   .ab-item{
     background-color: transparent !important;
     color: transparent !important;
+    width: 150px !important;
   }
+}
+@media only screen and (max-width: 960px){
+.auto-fold #adminmenu a.menu-top {
+  height: 46px !important;
+}
 }
 #wp-admin-bar-site-name, #wp-admin-bar-my-account{
   display: block !important;
@@ -286,4 +292,30 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
   align-items: center !important;
   background: $color-white !important;
   border: 0 !important;
+}
+
+//#dashboard-widgets-wrap{
+//  margin: 0 !important;
+//  &:before{
+//    content: 'Dobrodošli na nadzorni plošči E-kmetije'
+//  }
+//}
+.wrap h1{
+  font-size: 32px !important;
+}
+.wrap form h2{
+  font-size: 24px !important;
+  border-bottom: solid 4px $color-green !important;
+  display: inline-block !important;
+  margin-bottom: 8px !important;
+  margin-top: 0 !important;
+}
+.form-table{
+  margin-bottom: 40px !important;
+  th, td{
+    padding: 4px 8px 4px 0 !important;
+  }
+}
+#dashboard-widgets .postbox-container .empty-container{
+  display: none;
 }

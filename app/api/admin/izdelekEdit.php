@@ -30,10 +30,12 @@ return function (WP_REST_Request $request) {
         return new WP_Error('validation', __('Ponudnik ni naveden'), array('status' => 422));
     }
     $image = $request->get_param('image');
+    $opis = $request->get_param('opis');
     $post = wp_update_post([
         'ID' => $postId,
         'post_author' => $author,
         'post_title' => $name,
+        'post_content' => $opis,
         'meta_input' => [
             'ponudnik' => $ponudnik
         ],

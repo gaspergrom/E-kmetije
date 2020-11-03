@@ -69,6 +69,10 @@
                         <input type="number" name="cenavrednost" id="cenavrednost" class="input mt4"
                                placeholder="Cena izdelka v eur" required>
                     </div>
+                    <div class="col-md-12">
+                        <label for="v" class="mb4">Opis</label>
+                        <textarea id="tinymceeditor"></textarea>
+                    </div>
                     <div class="pt24 pl24 pr24 width100">
                         <h4 class="">Slika izdelka</h4>
                         <p>

@@ -30,7 +30,7 @@ export default () => {
             el.push('obcina');
         }
         data.kontakti = JSON.parse($('[data-kontakt]').attr('data-kontakt'));
-
+        data.opis = tinymce.get('tinymceeditor').getContent();
         if (el.length > 0) {
             el.forEach((name) => {
                 $(`[name=${name}]`).addClass('error');
@@ -55,7 +55,7 @@ export default () => {
                 loading.css('display', 'none');
                 message.removeClass('error-text').addClass('success-text');
                 message.text(data);
-                document.getElementById('formadminponudnikadd').reset();
+                location.reload();
             })
             .fail(function (data) {
                 console.log(data);
