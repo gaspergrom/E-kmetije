@@ -4,27 +4,11 @@
     <list default="true" id="4e3cf191-6899-40ba-93b1-5e12c3ff1378" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelek.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelek.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/ponudnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/ponudnik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/ponudnikEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/ponudnikEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/setup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiKontakt.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiKontakt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/assets/styles/admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/admin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/styles/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/utilities/_text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/izdelki/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/izdelki/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/izdelki/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/izdelki/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ponudniki/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ponudniki/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ponudniki/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ponudniki/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/front-page/sections/ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/front-page/sections/ponudniki.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,101 +22,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin.php">
+      <file leaf-file-name="pomoc.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/pomoc.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="155" column="130" selection-start-line="155" selection-start-column="130" selection-end-line="155" selection-end-column="130" />
+            <state relative-caret-position="136">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-kontakt.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/scripts/routes/template-kontakt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="60" column="11" selection-start-line="8" selection-start-column="7" selection-end-line="60" selection-end-column="11" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ponudniki.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/front-page/sections/ponudniki.blade.php">
+      <file leaf-file-name="pomoc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/api/admin/pomoc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="105" selection-start-line="34" selection-start-column="105" selection-end-line="34" selection-end-column="105" />
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php">
+      <file leaf-file-name="pomoc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/scripts/admin/pomoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="204">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hook.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="595">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_text.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/styles/utilities/_text.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-            </state>
-          </provider>
+      <file leaf-file-name="customizer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/scripts/customizer.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="setup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/setup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="38" column="133" selection-start-line="38" selection-start-column="133" selection-end-line="38" selection-end-column="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" selection-start-line="1" selection-start-column="4" selection-end-line="7" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/assets/styles/admin.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/izdelki/edit.blade.php">
+      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/scripts/admin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding>
+                <element signature="e#32#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php">
+      <file leaf-file-name="ponudnik.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/api/ponudnik.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="kontakt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/api/kontakt.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ponudnik.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/api/admin/ponudnik.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="107" />
+            <state relative-caret-position="470">
+              <caret line="36" column="56" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -208,15 +177,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/partials/front-page/sections/izdelki.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/styles/vars/_headings.scss" />
-        <option value="$PROJECT_DIR$/resources/views/partials/front-page/sections/zemljevid.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/list/izdelki/hook.blade.php" />
         <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/list/izdelki/item.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/front-page/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/routes/partials/common/map.js" />
-        <option value="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/categories.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/ponudniki.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/icons/chevron-left.blade.php" />
@@ -225,7 +190,6 @@
         <option value="$PROJECT_DIR$/resources/assets/config.json" />
         <option value="$PROJECT_DIR$/resources/views/icons/x.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/core/serialize.js" />
-        <option value="$PROJECT_DIR$/app/api.php" />
         <option value="$PROJECT_DIR$/app/users/ponudnik.php" />
         <option value="$PROJECT_DIR$/app/users.php" />
         <option value="$PROJECT_DIR$/resources/assets/styles/_components.scss" />
@@ -233,7 +197,6 @@
         <option value="$PROJECT_DIR$/resources/assets/styles/components/_fileselect.scss" />
         <option value="$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/styles/utilities/_buttons.scss" />
-        <option value="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/autoload/tinymce.js" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/main.js" />
@@ -243,7 +206,6 @@
         <option value="$PROJECT_DIR$/app/api/admin/ponudnikEdit.php" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiKontakt.js" />
         <option value="$PROJECT_DIR$/app/setup.php" />
-        <option value="$PROJECT_DIR$/resources/assets/scripts/admin.js" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/admin/editor.js" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" />
         <option value="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" />
@@ -257,8 +219,15 @@
         <option value="$PROJECT_DIR$/resources/views/partials/front-page/sections/ponudniki.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php" />
-        <option value="$PROJECT_DIR$/app/admin.php" />
         <option value="$PROJECT_DIR$/resources/assets/styles/admin.scss" />
+        <option value="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" />
+        <option value="$PROJECT_DIR$/app/admin.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pomoc.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/scripts/admin/pomoc.js" />
+        <option value="$PROJECT_DIR$/resources/assets/scripts/admin.js" />
+        <option value="$PROJECT_DIR$/app/api.php" />
+        <option value="$PROJECT_DIR$/app/api/admin/pomoc.php" />
       </list>
     </option>
   </component>
@@ -341,98 +310,20 @@
             <path>
               <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
               <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
               <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
               <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="izdelki" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="ponudniki" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="front-page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="front-page" type="462c0819:PsiDirectoryNode" />
-              <item name="sections" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ekmetije" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ekmetije" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-              <item name="ponudnik" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,8 +349,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\app\api\admin" />
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\assets\scripts\admin" />
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\assets\scripts\admin" />
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\assets\scripts\admin\ponudniki" />
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\icons" />
     </key>
@@ -522,12 +413,12 @@
       <workItem from="1604138074505" duration="43750000" />
       <workItem from="1604330425259" duration="14951000" />
       <workItem from="1604390889187" duration="197000" />
-      <workItem from="1604412982722" duration="9320000" />
+      <workItem from="1604412982722" duration="13079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310506000" />
+    <option name="totallyTimeSpent" value="314265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,14 +434,14 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5033797" side_tool="true" visible="true" weight="0.16901408" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5033797" side_tool="true" weight="0.16901408" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="NativeScript" order="12" sideWeight="0.4998012" weight="0.3286385" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4998012" weight="0.32942098" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49662027" visible="true" weight="0.16901408" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4969697" visible="true" weight="0.13836978" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49662027" visible="true" weight="0.16901408" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4969697" visible="true" weight="0.13836978" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Nativescript Palette" order="3" />
       <window_info anchor="right" id="Database" order="3" />
@@ -606,62 +497,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/api/ponudnik.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="149" column="20" selection-start-line="149" selection-start-column="20" selection-end-line="149" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/routes/template-kontakt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="49" column="67" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/routes/template-povprasevanje.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="82" column="60" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/icons/x.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/single-ponudniki.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/zemljevid.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/categories.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/posts/izdelki.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/styles/vars/_headings.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -673,13 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -759,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/single-izdelki.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -780,24 +601,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/admin/izdelek.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/api/admin/izdelekEdit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/admin/ponudnik.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -812,16 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/customizer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -940,10 +737,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/styles/admin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="322" column="30" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/single-ponudniki.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="157" column="38" lean-forward="true" selection-start-line="148" selection-start-column="32" selection-end-line="157" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/single-izdelki.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding>
+            <element signature="e#1354#1462#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="155" column="130" selection-start-line="155" selection-start-column="130" selection-end-line="155" selection-end-column="130" />
+        <state relative-caret-position="895">
+          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
@@ -953,10 +774,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/styles/admin.scss">
+    <entry file="file://$PROJECT_DIR$/resources/views/template-kontakt.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        <state relative-caret-position="935">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="55" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/admin/izdelek.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/ponudnik.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/kontakt.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/admin/ponudnik.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/routes/template-kontakt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="11" selection-start-line="8" selection-start-column="7" selection-end-line="60" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pomoc.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/customizer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="e#32#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/scripts/admin/pomoc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/admin/pomoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

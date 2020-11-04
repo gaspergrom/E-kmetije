@@ -32,4 +32,9 @@ add_action('rest_api_init', function() {
         'callback' => include('api/admin/izdelekEdit.php'),
         'permission_callback' => '__return_true'
     ]);
+    register_rest_route(API_PREFIX, '/admin/pomoc', [
+        'methods' => 'POST',
+        'callback' => include('api/admin/pomoc.php'),
+        'permission_callback' => '__return_true'
+    ]);
 });

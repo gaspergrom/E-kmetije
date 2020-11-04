@@ -34,37 +34,10 @@
             </div>
             <section class="bg--image"
                      style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
-                <div class="container pt120 pb48 pt120:sm pb40:sm">
+                <div class="container pt120 pb40 pt120:sm pb40:sm">
                     <div class="row">
                         <div class="col-md-8">
-                            <h2 class="mb16">{{$ponudnik->post_title}}</h2>
-                            @if($kraj)
-                                <div class="flex flex--middle mb8">
-                            <span class="text--green mr4">
-                                @include('icons.map-pin')
-                            </span>
-                                    <span>
-                                {{$kraj}}
-                            </span>
-                                </div>
-                            @endif
-                            @if($dostava)
-                                @foreach($dostava as $vrsta)
-                                    <div class="flex flex--middle mb8">
-                        <span class="text--green mr4">
-                            @include('icons.'.get_field('ikona', 'term_'.$vrsta->term_id))
-                        </span>
-                                        <span>
-                            {{$vrsta->name}}
-                        </span>
-                                    </div>
-                                @endforeach
-                            @endif
-                            <div class="pt16">
-                                <a href="{{get_permalink($ponudnik->ID)}}" class="btn gtm-izdelek-ponudnik">
-                                    Poglej ponudnika
-                                </a>
-                            </div>
+                            <h1 class="mb16 h2"  itemprop="name">{{the_title()}}</h1>
                         </div>
                     </div>
                 </div>
@@ -85,15 +58,14 @@
                                       href="https://e-kmetije.si/wp-content/uploads/social-thumbnail.png"/>
                             @endif
                             <div class="col-md-8">
-                                <h1 class="h3 mb8" itemprop="name">{{the_title()}}</h1>
                                 <div class="content" itemprop="description">
                                     {{the_content()}}
                                 </div>
                                 @if($cena)
                                     @if($cena['vrsta'] === 'cena')
-                                        <h5 class="text-right">
+                                        <h4 class="text-right">
                                             {{$cena['vrednost']}}€
-                                        </h5>
+                                        </h4>
                                         <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
                                             <link itemprop="url" href="{{the_permalink()}}"/>
                                             <meta itemprop="availability" content="https://schema.org/InStock"/>
@@ -101,9 +73,9 @@
                                             <meta itemprop="price" content="{{$cena['vrednost']}}"/>
                                         </div>
                                     @elseif($cena['vrsta'] === 'dogovor')
-                                        <h5 class="text-right">
+                                        <h4 class="text-right">
                                             Cena po dogovoru
-                                        </h5>
+                                        </h4>
                                     @endif
                                 @endif
                                 <div itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"
@@ -119,7 +91,7 @@
                             </div>
                         </div>
                         @if($ponudnik && $izdelki && count($izdelki) > 1)
-                            <h3 class="mb16">Ostali izdelki ponudnika</h3>
+                            <h4 class="mb16 pt24">Ostali izdelki ponudnika:</h4>
                             <div class="row">
                                 @foreach($izdelki as $izdelek)
                                     @if($id !== $izdelek->ID)
@@ -135,7 +107,7 @@
                         <div class="col-md-4">
                             @if($ulica && $kraj && $postna_stevilka || $kontakti && count($kontakti))
                                 <div class="card pl16 pr16 pt16 pb16 mb24">
-                                    <h3 class="mb16">Kontakti</h3>
+                                    <h4 class="mb16">{{$ponudnik->post_title}}</h4>
                                     @if($ulica && $kraj && $postna_stevilka)
                                         <p>
                                             {{ $ulica }},<br>
@@ -176,6 +148,16 @@
                                             </div>
                                         @endif
                                     @endforeach
+                                    <div class="flex flex--middle mb8">
+                                    <span class="text--green mr4">
+                                        @include('icons.map-pin')
+                                    </span>
+                                        <a href="http://www.google.com/maps/place/{{$lokacija['lat']}},{{$lokacija['lng']}}" target="_blank" rel="noreferrer"
+                                           class="link--reverse gtm-ponudnik-directions gtm-contact">
+                                            Navodila za pot
+                                        </a>
+
+                                    </div>
                                     @if($social && count($social))
                                         <div class="pt16">
                                             <h6 class="mb4">Družabna omrežja</h6>

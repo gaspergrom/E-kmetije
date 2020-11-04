@@ -7,6 +7,7 @@ import ponudnikiKontakt from "./admin/ponudniki/ponudnikiKontakt";
 import izdelkiAdd from "./admin/izdelki/izdelkiAdd";
 import izdelkiEdit from "./admin/izdelki/izdelkiEdit";
 import editor from "./admin/editor";
+import pomoc from "./admin/pomoc";
 
 jQuery(document).ready(() => {
     ponudnikiAdd();
@@ -15,4 +16,5 @@ jQuery(document).ready(() => {
     izdelkiEdit();
     ponudnikiKontakt();
     editor();
+    pomoc();
 });

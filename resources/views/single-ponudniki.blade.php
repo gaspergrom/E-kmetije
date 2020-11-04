@@ -24,7 +24,6 @@
             <div class="container pt120 pb48 pt120:sm pb40:sm">
                 <div class="row">
                     <div class="col-md-8">
-                        <meta itemprop="@id" content="{{the_permalink()}}"/>
                         @if($image)
                             <link itemprop="image" href="{{$image}}"/>
                         @endif

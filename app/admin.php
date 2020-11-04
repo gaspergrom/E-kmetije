@@ -101,6 +101,17 @@ add_action('admin_menu', function () {
         },
         86
     );
+    add_menu_page(
+        __('Pomoč', 'ekmetije'),
+        __('Pomoč', 'ekmetije'),
+        'ponudniki',
+        'pomoc',
+        function () {
+            echo \App\template("admin/pomoc");
+        },
+        'dashicons-sos',
+        86
+    );
 });
 
 
