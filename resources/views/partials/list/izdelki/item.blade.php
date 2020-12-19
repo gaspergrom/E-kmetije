@@ -1,6 +1,8 @@
 @php
     $thumbnail = get_the_post_thumbnail_url($izdelek->ID);
     $cena = get_field('cena', $izdelek->ID);
+    $ponudnik = get_field('ponudnik',  $izdelek->ID);
+    $ponudnik = property_exists($ponudnik, 'ID') ? $ponudnik : get_post($ponudnik);
     $excerpt = get_the_excerpt($izdelek->ID);
 @endphp
 
@@ -13,6 +15,11 @@
         <h5 class="mb8 mt8">
             {{$izdelek->post_title}}
         </h5>
+        <p>
+            <a href="{{get_permalink($ponudnik->ID)}}">
+                {{$ponudnik->post_title}}
+            </a>
+        </p>
         @if($cena)
             @if($cena['vrsta'] === 'dogovor')
                 <p class="text-bold">

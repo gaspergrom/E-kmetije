@@ -4,6 +4,9 @@
 
 a {
     color: $color-green;
+    &:not(.btn):hover{
+        text-decoration: underline;
+    }
 }
 
 .link{

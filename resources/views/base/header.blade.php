@@ -21,7 +21,7 @@
                 </nav>
                 @if($cta)
                     <div class="flex flex--center show-flex:sm">
-                        <a href="https://e-kmetije.si/wp-admin" target="_blank" class="header__login gtm-header-login">Prijava</a>
+                        <a href="https://e-kmetije.si/wp-admin" target="_blank" class="header__login gtm-header-login" rel="nofollow">Prijava</a>
                     </div>
                     <div class="flex flex--center show-flex:sm">
                         <a href="{{$cta['url']}}" target="{{$cta['target']}}" class="btn gtm-header-cta">
@@ -32,7 +32,7 @@
             </div>
             @if($cta)
                 <div class="flex flex--middle hide:sm">
-                    <a href="https://e-kmetije.si/wp-admin" target="_blank" class="mr16 header__login gtm-header-login">Prijava</a>
+                    <a href="https://e-kmetije.si/wp-admin" target="_blank" class="mr16 header__login gtm-header-login" rel="nofollow">Prijava</a>
                     <div>
                         <a href="{{$cta['url']}}" target="{{$cta['target']}}" class="btn gtm-header-cta">
                             {{$cta['title']}}

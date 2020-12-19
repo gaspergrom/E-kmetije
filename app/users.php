@@ -77,5 +77,7 @@ add_action('admin_menu', function () {
     if (!current_user_can('administrator')) {
         remove_menu_page('edit.php?post_type=ponudniki');
         remove_menu_page('edit.php?post_type=izdelki');
+        remove_menu_page('edit.php?post_type=sponzorji');
+        remove_menu_page('edit.php?post_type=pogosta-vprasanja');
     }
 });

@@ -18,7 +18,7 @@ return [
     'label'               => __( 'Sponzorji', APP_DOMAIN ),
     'description'         => __( 'Sponzorji', APP_DOMAIN ),
     'labels'              => $labels,
-    'supports'            => ['title', 'editor', 'revisions', 'thumbnail'],
+    'supports'            => ['title', 'editor', 'revisions', 'author', 'thumbnail'],
     'taxonomies'          => [],
     'hierarchical'        => true,
     'public'              => true,

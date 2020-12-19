@@ -27,7 +27,17 @@
 @section('content')
     <div itemtype="http://schema.org/Product" itemscope>
         <meta itemprop="mpn" content="{{the_ID()}}"/>
+        <meta itemprop="sku" content="{{the_ID()}}"/>
         <meta itemprop="url" content="{{the_permalink()}}"/>
+        <div itemprop="review" itemtype="http://schema.org/Review" itemscope>
+            <div itemprop="author" itemtype="http://schema.org/Person" itemscope>
+                <meta itemprop="name" content="Gašper Grom"/>
+            </div>
+            <div itemprop="reviewRating" itemtype="http://schema.org/Rating" itemscope>
+                <meta itemprop="ratingValue" content="5"/>
+                <meta itemprop="bestRating" content="5"/>
+            </div>
+        </div>
         @if($ponudnik)
             <div itemprop="brand" itemtype="http://schema.org/Brand" itemscope>
                 <meta itemprop="name" content="{{$ponudnik->post_title}}"/>
@@ -37,7 +47,7 @@
                 <div class="container pt120 pb40 pt120:sm pb40:sm">
                     <div class="row">
                         <div class="col-md-8">
-                            <h1 class="mb16 h2"  itemprop="name">{{the_title()}}</h1>
+                            <h1 class="mb16 h2" itemprop="name">{{the_title()}}</h1>
                         </div>
                     </div>
                 </div>
@@ -58,9 +68,13 @@
                                       href="https://e-kmetije.si/wp-content/uploads/social-thumbnail.png"/>
                             @endif
                             <div class="col-md-8">
-                                <div class="content" itemprop="description">
-                                    {{the_content()}}
-                                </div>
+                                @if( !empty( get_the_content() ) )
+                                    <div class="content" itemprop="description">
+                                        {{the_content()}}
+                                    </div>
+                                @else
+                                    <meta itemprop="description" content="Izdelek ponudnika {{$ponudnik->post_title}}"/>
+                                @endif
                                 @if($cena)
                                     @if($cena['vrsta'] === 'cena')
                                         <h4 class="text-right">
@@ -71,6 +85,7 @@
                                             <meta itemprop="availability" content="https://schema.org/InStock"/>
                                             <meta itemprop="priceCurrency" content="EUR"/>
                                             <meta itemprop="price" content="{{$cena['vrednost']}}"/>
+                                            <meta itemprop="priceValidUntil" content="{{date("Y")}}-12-31"/>
                                         </div>
                                     @elseif($cena['vrsta'] === 'dogovor')
                                         <h4 class="text-right">
@@ -85,8 +100,8 @@
                                         <meta itemprop="url" content="{{the_permalink()}}"/>
                                         <meta itemprop="name" content="{{the_title()}}"/>
                                     </div>
-                                    <meta itemprop="reviewCount" content="16"/>
-                                    <meta itemprop="ratingValue" content="4.9"/>
+                                    <meta itemprop="reviewCount" content="1"/>
+                                    <meta itemprop="ratingValue" content="5"/>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +167,8 @@
                                     <span class="text--green mr4">
                                         @include('icons.map-pin')
                                     </span>
-                                        <a href="http://www.google.com/maps/place/{{$lokacija['lat']}},{{$lokacija['lng']}}" target="_blank" rel="noreferrer"
+                                        <a href="http://www.google.com/maps/place/{{$lokacija['lat']}},{{$lokacija['lng']}}"
+                                           target="_blank" rel="noreferrer"
                                            class="link--reverse gtm-ponudnik-directions gtm-contact">
                                             Navodila za pot
                                         </a>
@@ -176,6 +192,11 @@
                                             </div>
                                         </div>
                                     @endif
+                                    <div class="pt24">
+                                        <a href="{{get_permalink($ponudnik->ID)}}" class="btn">
+                                            Poglej ponudnika
+                                        </a>
+                                    </div>
                                 </div>
                             @endif
                             @if($lokacija)

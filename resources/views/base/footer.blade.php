@@ -9,7 +9,7 @@
         <div class="row pb64 pb24:sm">
             <div class="col-md-5 mb32:sm">
                 <h6 class="text--white mb24 h2">
-                    E-kmetije
+                    <a href="https://e-kmetije.si" style="color: white">E-kmetije</a>
                 </h6>
                 @if($description)
                 <p class="text--white pb8">
@@ -75,10 +75,13 @@
             @endif
         </div>
         <div class="footer__copyright">
-            <div class="flex flex--center pt16 pb16">
-                <p class="mb0 text-center text--white small">
-                    &copy; Copyright 2020 E-kmetije. Vse pravice pridržane
-                </p>
+            <div class="flex flex--between pt16 pb16">
+                    <div class="mb0 text-center text--white small">
+                        &copy; Copyright 2020 <a href="https://e-kmetije.si">E-kmetije</a>. Vse pravice pridržane
+                    </div>
+                    <div class="mb0 text-center text--white small">
+                        Izdelava: <a href="https://gaspergrom.io" target="_blank" rel="noreferrer">Gasper Grom</a>
+                    </div>
             </div>
         </div>
     </div>
