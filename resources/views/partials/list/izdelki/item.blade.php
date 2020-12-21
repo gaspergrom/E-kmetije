@@ -15,11 +15,6 @@
         <h5 class="mb8 mt8">
             {{$izdelek->post_title}}
         </h5>
-        <p>
-            <a href="{{get_permalink($ponudnik->ID)}}">
-                {{$ponudnik->post_title}}
-            </a>
-        </p>
         @if($cena)
             @if($cena['vrsta'] === 'dogovor')
                 <p class="text-bold">
@@ -33,7 +28,7 @@
         @endif
         @if($excerpt)
             <p>
-                {!! wp_trim_words($excerpt, 20, '...') !!}
+                {!! wp_trim_words($excerpt, 10, '...') !!}
             </p>
         @endif
         <a href="{{the_permalink($izdelek->ID)}}" class="text--green flex flex--middle mt8">

@@ -28,7 +28,7 @@
         </div>
         <div class="flex flex--center pt16">
             <a href="/izdelki" class="btn">
-                Poglej vse vrste izdelkov
+                Poglej vse izdelke
             </a>
         </div>
     </div>

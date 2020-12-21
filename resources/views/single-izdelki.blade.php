@@ -211,6 +211,52 @@
                                     <div id="map" style="width: 100%; height: 260px"></div>
                                 </div>
                             @endif
+                                <div class="card pl16 pr16 pt16 pb16 mb24">
+                                    <h4 class="mb16">Deli z drugimi</h4>
+                                    <div class="footer__social flex flex--middle">
+                                        <a title="Facebook share"
+                                           aria-label="Facebook share"
+                                           target="_blank"
+                                           rel="noopener"
+                                           class="btn btn--icon btn--small mr8"
+                                           style="background: #1877F2"
+                                           onclick="window.open(
+                                                   'https://www.facebook.com/sharer/sharer.php?u={{get_permalink()}}',
+                                                   'newwindow', 'width=600,height=400'); return false;">
+                                            @include('icons.facebook')
+                                        </a>
+                                        <a target="_blank"
+                                           rel="noopener"
+                                           title="Twitter share"
+                                           aria-label="Twitter share"
+                                           class="btn btn--icon btn--small mr8"
+                                           style="background: #1FA1F1"
+                                           onclick="window.open(
+                                                   'https://twitter.com/intent/tweet?text={{the_title()}} {{ get_permalink() }}',
+                                                   'newwindow', 'width=600,height=400'); return false;">
+                                            @include('icons.twitter')
+                                        </a>
+                                        <a target="_blank"
+                                           rel="noopener"
+                                           title="Twitter share"
+                                           aria-label="Twitter share"
+                                           class="btn btn--icon btn--small mr8"
+                                           style="background: #ff4500"
+                                           onclick="window.open(
+                                                   'https://www.reddit.com/submit?title={{the_title()}}&url={{ get_permalink() }}',
+                                                   'newwindow', 'width=600,height=400'); return false;">
+                                            @include('icons.reddit')
+                                        </a>
+                                        <a target="_blank"
+                                           href="mailto:?subject={{the_title()}}&body={{ get_permalink() }}"
+                                           rel="noopener"
+                                           title="Email share"
+                                           aria-label="Email share"
+                                           class="btn btn--icon btn--small">
+                                            @include('icons.mail')
+                                        </a>
+                                    </div>
+                                </div>
                         </div>
                     @endif
                 </div>
