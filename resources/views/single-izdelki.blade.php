@@ -13,7 +13,7 @@
         $postna_stevilka = get_field('postna_stevilka', $ponudnik->ID);
         $lokacija = get_field('lokacija', $ponudnik->ID);
         $kontakti = get_field('kontakti', $ponudnik->ID);
-        $social = get_field('druzbena_omrezja', $ponudnik->ID);
+        $social = get_field('f', $ponudnik->ID);
         $dostava = get_the_terms( $ponudnik->ID , 'dostava' );
         $izdelki = get_posts([
             'numberposts'	=> -1,

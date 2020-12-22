@@ -28,8 +28,9 @@ export default () => {
         }
         if (!data.obcina) {
             el.push('obcina');
+        }if (!data.email) {
+            el.push('email');
         }
-        data.kontakti = JSON.parse($('[data-kontakt]').attr('data-kontakt'));
         data.opis = tinymce.get('tinymceeditor').getContent();
         if (el.length > 0) {
             el.forEach((name) => {

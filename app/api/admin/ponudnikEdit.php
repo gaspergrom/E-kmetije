@@ -29,14 +29,22 @@ return function (WP_REST_Request $request) {
     if (strlen($author) === 0) {
         return new WP_Error('validation', __('Avtor ni naveden'), array('status' => 422));
     }
+    $email = $request->get_param('email');
+    if (strlen($email) === 0) {
+        return new WP_Error('validation', __('Email ni naveden'), array('status' => 422));
+    }
     $postId = $request->get_param('post_id');
     if (strlen($postId) === 0) {
         return new WP_Error('validation', __('Ponudnik ni naveden'), array('status' => 422));
     }
-    $kontakti = $request->get_param('kontakti');
     $vrste = $request->get_param('vrste');
     $dostava = $request->get_param('dostava');
     $opis = $request->get_param('opis');
+    $telefon = $request->get_param('telefon');
+    $stelefon = $request->get_param('stelefon');
+    $spletnastran = $request->get_param('spletnastran');
+    $facebook = $request->get_param('facebook');
+    $instagram = $request->get_param('instagram');
 
     $post = wp_update_post([
         'ID' => $postId,
@@ -52,10 +60,48 @@ return function (WP_REST_Request $request) {
             'kontakti' => [],
         ],
     ]);
-    foreach($kontakti as $kontakt){
+    delete_post_meta($post, 'kontakti');
+    if ($email) {
         add_row('kontakti', [
-            'vrsta' => $kontakt['vrsta'],
-            'kontakt' => $kontakt['kontakt'],
+            'vrsta' => 'email',
+            'kontakt' => $email,
+        ], $post);
+    }
+    if ($telefon) {
+        add_row('kontakti', [
+            'vrsta' => 'tel',
+            'kontakt' => $telefon,
+        ], $post);
+    }
+    if ($stelefon) {
+        add_row('kontakti', [
+            'vrsta' => 'tel',
+            'kontakt' => $stelefon,
+        ], $post);
+    }
+    if ($spletnastran) {
+        if(!str_starts_with($spletnastran, 'http')){
+            $spletnastran = "http://".$spletnastran;
+        }
+        add_row('kontakti', [
+            'vrsta' => 'web',
+            'kontakt' => $spletnastran,
+        ], $post);
+    }
+    delete_post_meta($post, 'druzbena_omrezja');
+    if ($facebook) {
+        add_row('druzbena_omrezja', [
+            'platforma' => 'facebook',
+            'povezava' => $facebook,
+        ], $post);
+    }
+    if ($instagram) {
+        if(!str_starts_with($instagram, 'http')){
+            $instagram = "https://www.instagram.com/".$instagram;
+        }
+        add_row('druzbena_omrezja', [
+            'platforma' => 'instagram',
+            'povezava' => $instagram,
         ], $post);
     }
     if (is_wp_error($post)) {

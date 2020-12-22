@@ -9,7 +9,24 @@
         $postnaStevilka = get_field('postna_stevilka', $id);
         $kraj = get_field('kraj', $id);
         $kontakti = get_field('kontakti', $id);
+        $email = array_values(array_filter($kontakti, function ($el){
+            return $el['vrsta'] === 'email';
+        }))[0]['kontakt'];
+        $spletnastran = array_values(array_filter($kontakti, function ($el){
+            return $el['vrsta'] === 'web';
+        }))[0]['kontakt'];
+        $telefoni = array_values(array_filter($kontakti, function ($el){
+            return $el['vrsta'] === 'tel';
+        }));
+        $telefon = $telefoni[0]['kontakt'];
+        $stelefon = $telefoni[1]['kontakt'];
         $social = get_field('druzbena_omrezja', $id);
+        $facebook = array_values(array_filter($social, function ($el){
+            return $el['platforma'] === 'facebook';
+        }))[0]['povezava'];
+        $instagram = array_values(array_filter($social, function ($el){
+            return $el['platforma'] === 'instagram';
+        }))[0]['povezava'];
         $ponudnikRegije = get_the_terms( $id , 'regije' );
         $ponudnikObcine = get_the_terms( $id , 'obcine' );
         $ponVrsteIzdelkov = get_the_terms( $id , 'vrste-izdelkov' );
@@ -142,39 +159,58 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="col-md-12 pt40">
-                            <h5 class="mr16">Kontaktni podatki</h5>
+                    <div class="col-md-12 pt16">
+                        <h5 class="mb16">Kontaktni podatki</h5>
                     </div>
-                    <div class="col-md-12" id="ponudnikkontaktiadd">
-                        <div class="row mb16">
-                            <div class="col-sm-4">
-                                <div class="select mt4">
-                                    <select required data-kontakt-add-vrsta>
-                                        <option value="tel" selected>Telefon</option>
-                                        <option value="email">Email</option>
-                                        <option value="web">Spletna stran</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="input mt4" placeholder="Kontakt" required data-kontakt-add-kontakt>
-                            </div>
-                            <div class="col-sm-4">
-                                <button type="button" class="btn" data-kontakt-add>Dodaj kontakt</button>
-                            </div>
-                        </div>
+                    <div class="col-md-6 mb8">
+                        <label for="email">Email
+                            <span class="required">*</span>
+                        </label>
+                        <input type="url" name="email" id="email" class="input mt4"
+                               placeholder="ime@gmail.com" required value="{{$email}}">
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="spletnastran">Spletna stran
+                            <small>(neobvezno)</small>
+                        </label>
+                        <input type="url" name="spletnastran" id="spletnastran" class="input mt4"
+                               placeholder="https://spletnastran.si" value="{{$spletnastran}}">
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="telefon">Telefon
+                            <small>(neobvezno)</small>
+                        </label>
+                        <input type="tel" name="telefon" id="telefon" class="input mt4"
+                               placeholder="031 123 123" autocomplete="tel" value="{{$telefon}}">
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="stelefon">Sekundarni telefon
+                            <small>(neobvezno)</small>
+                        </label>
+                        <input type="tel" name="stelefon" id="stelefon" class="input mt4"
+                               placeholder="031 123 123" autocomplete="tel" value="{{$stelefon}}">
                     </div>
 
-                    @if($kontakti)
-                        <div data-kontakt='{!!  json_encode($kontakti) !!}' class="col-md-12"></div>
-                    @else
-                        <div class="col-md-12">
-                            <h6>Ni dodanih Kontaktnih podatkov</h6>
-                        </div>
-                    @endif
-                    <input type="hidden" name="author" value="{{$current}}">
+                    <div class="col-md-12 pt16">
+                        <h5 class="mb16">Družabna omrežja</h5>
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="facebook">Facebook
+                            <small>(neobvezno)</small>
+                        </label>
+                        <input type="url" name="facebook" id="facebook" class="input mt4"
+                               placeholder="https://facebook.com/vasastran" value="{{$facebook}}">
+                    </div>
+                    <div class="col-md-6 mb8">
+                        <label for="instagram">Instagram
+                            <small>(neobvezno)</small>
+                        </label>
+                        <input type="url" name="instagram" id="instagram" class="input mt4"
+                               placeholder="https://instagram.com/uporabniskoime" value="{{$instagram}}">
+                    </div>
                     <input type="hidden" name="post_id" value="{{$id}}">
-                    <div class="col-md-12 pt16 pt32">
+                    <input type="hidden" name="author" value="{{$current}}">
+                    <div class="col-md-12 pt16">
                         <div>
                             <button type="submit" class="btn">
                                 Uredi ponudnika

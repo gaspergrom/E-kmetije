@@ -131,6 +131,23 @@
                     <input type="url" name="spletnastran" id="spletnastran" class="input mt4"
                            placeholder="https://spletnastran.si">
                 </div>
+                <div class="col-md-12 pt16">
+                    <h5 class="mb16">Družabna omrežja</h5>
+                </div>
+                <div class="col-md-6 mb8">
+                    <label for="facebook">Facebook
+                        <small>(neobvezno)</small>
+                    </label>
+                    <input type="url" name="facebook" id="facebook" class="input mt4"
+                           placeholder="https://facebook.com/vasastran">
+                </div>
+                <div class="col-md-6 mb8">
+                    <label for="instagram">Instagram
+                        <small>(neobvezno)</small>
+                    </label>
+                    <input type="url" name="instagram" id="instagram" class="input mt4"
+                           placeholder="https://instagram.com/uporabniskoime">
+                </div>
                 <input type="hidden" name="author" value="{{$current}}">
                 <div class="col-md-12 pt16">
                     <div>

@@ -31,6 +31,8 @@ return function (WP_REST_Request $request) {
     }
     $telefon = $request->get_param('telefon');
     $spletnastran = $request->get_param('spletnastran');
+    $facebook = $request->get_param('facebook');
+    $instagram = $request->get_param('instagram');
     $vrste = $request->get_param('vrste');
     $dostava = $request->get_param('dostava');
     $opis = $request->get_param('opis');
@@ -62,9 +64,27 @@ return function (WP_REST_Request $request) {
         'kontakt' => $email,
     ], $post);
     if ($spletnastran) {
+        if(!str_starts_with($spletnastran, 'http')){
+            $spletnastran = "http://".$spletnastran;
+        }
         add_row('kontakti', [
             'vrsta' => 'web',
             'kontakt' => $spletnastran,
+        ], $post);
+    }
+    if ($facebook) {
+        add_row('druzbena_omrezja', [
+            'platforma' => 'facebook',
+            'povezava' => $facebook,
+        ], $post);
+    }
+    if ($instagram) {
+        if(!str_starts_with($instagram, 'http')){
+            $instagram = "https://www.instagram.com/".$instagram;
+        }
+        add_row('druzbena_omrezja', [
+            'platforma' => 'instagram',
+            'povezava' => $instagram,
         ], $post);
     }
     if (is_wp_error($post)) {
