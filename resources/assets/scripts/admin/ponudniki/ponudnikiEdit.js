@@ -64,10 +64,10 @@ export default () => {
                 loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');
                 if (data.responseJSON && data.responseJSON.message) {
-                    error.text(data.responseJSON.message);
+                    message.text(data.responseJSON.message);
                 }
                 else {
-                    error.text('Prišlo je do napake, prosim kontaktirajte podporo')
+                    message.text('Prišlo je do napake, prosim kontaktirajte podporo')
                 }
             })
     });

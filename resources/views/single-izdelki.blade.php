@@ -43,7 +43,7 @@
                 <meta itemprop="name" content="{{$ponudnik->post_title}}"/>
             </div>
             <section class="bg--image"
-                     style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
+                     style="background-image: url(@asset('images/banner.jpg'))">
                 <div class="container pt120 pb40 pt120:sm pb40:sm">
                     <div class="row">
                         <div class="col-md-8">

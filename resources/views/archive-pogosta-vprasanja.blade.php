@@ -9,12 +9,12 @@
 
 @section('content')
     <section class="bg--image"
-             style="background-image: url(https://e-kmetije.si/wp-content/uploads/2020/10/product_hero_section_bg-1.jpg)">
+             style="background-image: url(@asset('images/banner.jpg'))">
         <div class="container pt120 pb48 pt120:sm pb48:sm">
             <h1 class="h2 h1:sm">Pogosta vprašanja</h1>
         </div>
     </section>
-    <section>
+    <section itemtype="http://schema.org/FAQPage" itemscope>
         <div class="container pt64 pb120 pt48:sm pb64:sm">
             <div class="row">
                 @foreach($vrste as $vrsta)
@@ -37,6 +37,12 @@
                         @foreach($vprasanja as $vprasanje)
                             <div class="pb8">
                                 <a href="{{get_permalink($vprasanje->ID)}}">{{$vprasanje->post_title}}</a>
+                            </div>
+                            <div itemprop="mainEntity" itemtype="http://schema.org/Question" itemscope>
+                                <meta itemprop="name" content="{{$vprasanje->post_title}}" />
+                                <div itemprop="acceptedAnswer" itemtype="http://schema.org/Answer" itemscope>
+                                    <meta itemprop="text" content="{{wp_strip_all_tags($vprasanje->post_content)}}" />
+                                </div>
                             </div>
                         @endforeach
                     </div>
