@@ -28,4 +28,24 @@
             </div>
         </div>
     </section>
+    <section>
+      <div class="container pb120 pb64:sm">
+        <div class="row flex--center">
+          <div class="col-md-8">
+            <h2 class="text-center pb16">
+              Postani partner E-kmetij
+            </h2>
+            <p class="text-center">
+              E-kmetije je spletna platforma, ki želi spodbuditi prodajo lokalnim pridelovalcem in ponudnikom.
+              Za konstantni razvoj naše platforme potrebujemo finance, katere pridobimo preko sponzorjev in vsaka pomoč je dobrodošla.
+            </p>
+            <div class="flex flex--center pt8">
+              <a href="https://e-kmetije.si/kontakt" class="btn">
+                Postani partner
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 @endsection

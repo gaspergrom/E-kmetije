@@ -2,29 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e3cf191-6899-40ba-93b1-5e12c3ff1378" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ekmetije.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ekmetije.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/archive-izdelki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/archive-izdelki.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/archive-pogosta-vprasanja.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/archive-pogosta-vprasanja.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/archive-ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/archive-ponudniki.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/acf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/filters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts/sponzorji.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/sponzorji.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/posts/turisticni-ponudniki.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/turisticni-ponudniki.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/setup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/archive-sponzorji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/archive-sponzorji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/single-pogosta-vprasanja.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-pogosta-vprasanja.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/single-sponzorji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-sponzorji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/taxonomy-dostava.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/taxonomy-dostava.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/taxonomy-obcine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/taxonomy-obcine.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/taxonomy-regije.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/taxonomy-regije.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/taxonomy-vrste-izdelkov.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/taxonomy-vrste-izdelkov.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template-kontakt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template-kontakt.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template-zemljevid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template-zemljevid.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/view/search/izdelki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/view/search/izdelki.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/view/search/ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/view/search/ponudniki.blade.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,91 +25,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="23" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive-pogosta-vprasanja.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/archive-pogosta-vprasanja.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <element signature="e#207#315#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-izdelki.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/single-izdelki.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="907">
-              <caret line="181" column="77" selection-start-line="181" selection-start-column="69" selection-end-line="181" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single-pogosta-vprasanja.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/single-pogosta-vprasanja.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="front-page.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/front-page.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/partials/front-page/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="archive-izdelki.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/archive-izdelki.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/search.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="page.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/page.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -301,6 +210,7 @@
     <option name="width" value="1294" />
     <option name="height" value="1407" />
   </component>
+  <component name="ProjectId" id="1p1mmGPWiaVzLNNq2Ko6ccuEUIp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -361,9 +271,14 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -373,9 +288,17 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik" />
+      <recent name="$PROJECT_DIR$/app/posts" />
+      <recent name="$PROJECT_DIR$/resources/views/view/search" />
+      <recent name="$PROJECT_DIR$/resources/views/partials/search" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\assets\scripts\core" />
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\admin\ponudniki" />
@@ -383,26 +306,8 @@
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\partials" />
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\view\search" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\icons" />
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views\partials\front-page\sections" />
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\views" />
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\app\tax" />
-      <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\app\posts" />
-    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -468,6 +373,15 @@
       <workItem from="1608642064452" duration="133000" />
       <workItem from="1608651759554" duration="3679000" />
       <workItem from="1608663427439" duration="3115000" />
+      <workItem from="1614359129419" duration="2737000" />
+      <workItem from="1614412525034" duration="100000" />
+      <workItem from="1615998504814" duration="917000" />
+      <workItem from="1616427271042" duration="2563000" />
+      <workItem from="1616519588566" duration="288000" />
+      <workItem from="1617028058819" duration="1559000" />
+      <workItem from="1617038208404" duration="18000" />
+      <workItem from="1617038840736" duration="6324000" />
+      <workItem from="1617200917867" duration="744000" />
     </task>
     <servers />
   </component>
@@ -540,15 +454,7 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/api/admin/pomoc.php">

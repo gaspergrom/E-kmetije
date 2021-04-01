@@ -33,9 +33,12 @@ add_action('pending_to_publish', function ($post) {
             Dosegljiva je na naslednjem naslovu:<br>
             <a href="' . $url . '" target="_blank">' . $url . '</a><br>
             <br>
-            V nadzorni plošči za ponudnike lahko kadarkoli dodate in uredite vaše izdelke in informacije o ponudniku. V naslednjih dneh vas bo tudi kontaktirala naša ekipa, ki vam bo pomagala izboljšati stran na E-kmetije, da bo le ta dosegla najboljše rezultate.<br>
+            V nadzorni plošči za ponudnike lahko kadarkoli dodate in uredite vaše izdelke in informacije o ponudniku.<br>
             Povezava do nadzorne plošče:<br>
             <a href="https://e-kmetije.si/wp-admin" target="_blank">https://e-kmetije.si/wp-admin</a><br>
+            <br>
+            Navodila kako urejati vaše podatke in izdelke lahko najdete na strani<br>
+            <a href="https://e-kmetije.si/navodila/" target="_blank">https://e-kmetije.si/navodila/</a>
             <br>
             V primeru kakršnihkoli vprašanj smo vam na voljo na tem email naslovu.<br>
             <br>

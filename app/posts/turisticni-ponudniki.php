@@ -18,7 +18,7 @@ return [
     'label'               => __( 'Turistični ponudniki', APP_DOMAIN ),
     'description'         => __( 'Turistični ponudniki', APP_DOMAIN ),
     'labels'              => $labels,
-    'supports'            => ['title', 'editor', 'revisions', 'author', 'comments'],
+    'supports'            => ['title', 'editor', 'revisions', 'author', 'thumbnail', 'comments'],
     'taxonomies'          => [],
     'hierarchical'        => true,
     'public'              => true,

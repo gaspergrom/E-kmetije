@@ -23,13 +23,42 @@ add_filter( 'manage_ponudniki_posts_columns', function ( $columns ) {
     ) );
 }, 'ponudniki');
 
+add_filter( 'manage_turisticni-ponudniki_posts_columns', function ( $columns ) {
+    return array_merge ( $columns, array (
+        'nastanitve' => __( 'Nastanitve' ),
+    ) );
+}, 'turisticni-ponudniki');
+
 add_filter( 'manage_izdelki_posts_columns', function ( $columns ) {
     return array_merge ( $columns, array (
         'ponudnik' => __( 'Ponudnik' ),
     ) );
 }, 'izdelki');
 
+
+add_filter( 'manage_nastanitve_posts_columns', function ( $columns ) {
+    return array_merge ( $columns, array (
+        'ponudnik' => __( 'Ponudnik' ),
+    ) );
+}, 'nastanitve');
+
 add_action ( 'manage_izdelki_posts_custom_column', function ( $column, $post_id ) {
+    switch ( $column ) {
+
+        case 'ponudnik':
+            $ponudnik = get_field('ponudnik', $post_id);
+            if($ponudnik){
+                echo "<a href='" . get_edit_post_link($ponudnik) ."'>" . get_the_title($ponudnik) . "</a>";
+            }
+            else{
+                echo '-';
+            }
+            break;
+
+    }
+}, 10, 2 );
+
+add_action ( 'manage_nastanitve_posts_custom_column', function ( $column, $post_id ) {
     switch ( $column ) {
 
         case 'ponudnik':
@@ -63,7 +92,29 @@ add_action ( 'manage_ponudniki_posts_custom_column', function ( $column, $post_i
             else{
                 echo "-";
             }
-//            echo "<a href='" . get_edit_post_link($ponudnik->ID) ."'>" . $ponudnik->post_title . "</a>";
+            break;
+
+    }
+}, 10, 2 );
+
+add_action ( 'manage_turisticni-ponudniki_posts_custom_column', function ( $column, $post_id ) {
+    switch ( $column ) {
+
+        case 'nastanitve':
+            $nastanitve = get_posts(array(
+                'posts_per_page'	=> -1,
+                'post_type'			=> 'nastanitve',
+                'meta_key'		=> 'ponudnik',
+                'meta_value'	=> $post_id
+            ));
+            if(count($nastanitve) > 0){
+                echo implode(", ", array_map(function($nastanitev){
+                    return "<a href='". get_edit_post_link($nastanitev->ID) . "'>". $nastanitev->post_title . "</a>";
+                }, $nastanitve));
+            }
+            else{
+                echo "-";
+            }
             break;
 
     }

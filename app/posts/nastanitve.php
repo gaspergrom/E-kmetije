@@ -1,0 +1,47 @@
+<?php
+$labels = [
+    'name'                => _x( 'Nastanitve', 'Post Type General Name', APP_DOMAIN ),
+    'singular_name'       => _x( 'Nastanitev', 'Post Type Singular Name', APP_DOMAIN ),
+    'menu_name'           => __( 'Nastanitve', APP_DOMAIN ),
+    'parent_item_colon'   => __( 'Parent nastanitev', APP_DOMAIN ),
+    'all_items'           => __( 'Vse nastanitve', APP_DOMAIN ),
+    'view_item'           => __( 'Poglej nastanitve', APP_DOMAIN ),
+    'add_new_item'        => __( 'Dodaj novo nastanitev', APP_DOMAIN ),
+    'add_new'             => __( 'Dodaj novo nastanitev', APP_DOMAIN ),
+    'edit_item'           => __( 'Uredi', APP_DOMAIN ),
+    'update_item'         => __( 'Posodobi', APP_DOMAIN ),
+    'search_items'        => __( 'Išči', APP_DOMAIN ),
+    'not_found'           => __( 'Ni najdenih nastanitev', APP_DOMAIN ),
+    'not_found_in_trash'  => __( 'Ni najdenih nastanitev v smeteh', APP_DOMAIN ),
+];
+return [
+    'label'               => __( 'Nastanitve', APP_DOMAIN ),
+    'description'         => __( 'Nastanitve turisticnih ponudnikov', APP_DOMAIN ),
+    'labels'              => $labels,
+    'supports'            => ['title', 'editor', 'revisions', 'author', 'thumbnail', 'excerpt'],
+    'taxonomies'          => [],
+    'hierarchical'        => true,
+    'public'              => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => true,
+    'show_in_admin_bar'   => true,
+    'menu_position'       => 4,
+    'menu_icon'           => 'dashicons-admin-multisite',
+    'rewrite'             => ['slug' => 'nastanitve', 'with_front' => false],
+    'can_export'          => true,
+    'has_archive'         => false,
+    'exclude_from_search' => true,
+    'publicly_queryable'  => true,
+    'show_in_rest'        => true,
+    'capability_type'     => 'post',
+    'capabilities'        => [
+        'edit_post' => 'edit_izdelek',
+        'edit_posts' => 'edit_izdelki',
+        'edit_others_posts' => 'edit_other_izdelki',
+        'publish_posts' => 'publish_izdelki',
+        'read_post' => 'read_izdelki',
+        'read_private_posts' => 'read_private_izdelki',
+        'delete_post' => 'delete_izdelki'
+    ]
+];

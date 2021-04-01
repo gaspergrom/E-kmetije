@@ -4,7 +4,7 @@
     <section class="bg--image"
              style="background-image: url(@asset('images/banner.jpg'))">
         <div class="container pt120 pb48 pt120:sm pb48:sm">
-            <h1 class="h2 h1:sm">Sponzorji</h1>
+            <h1 class="h2 h1:sm">Partnerji</h1>
         </div>
     </section>
     <section>
@@ -41,7 +41,7 @@
             <div class="row flex--center">
                 <div class="col-md-8">
                     <h2 class="text-center pb16">
-                        Postani sponzor E-kmetij
+                        Postani partner E-kmetij
                     </h2>
                     <p class="text-center">
                         E-kmetije je spletna platforma, ki želi spodbuditi prodajo lokalnim pridelovalcem in ponudnikom.
@@ -49,7 +49,7 @@
                     </p>
                     <div class="flex flex--center pt8">
                         <a href="https://e-kmetije.si/kontakt" class="btn">
-                            Postani sponzor
+                            Postani partner
                         </a>
                     </div>
                 </div>

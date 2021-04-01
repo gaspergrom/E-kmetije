@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), [], APP_VERSION);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], APP_VERSION, true);
     if (is_front_page()
-        || is_singular(['ponudniki', 'izdelki'])
+        || is_singular(['ponudniki', 'izdelki', 'turisticni-ponudniki', 'nastanitve'])
         || basename(get_page_template()) == "template-zemljevid.blade.php"
         || is_post_type_archive(['ponudniki', 'izdelki'])
         || is_tax(['vrste-izdelkov', 'regije', 'obcine', 'dostava'])
@@ -87,7 +87,11 @@ add_action('template_redirect', function () {
     $search_base = $wp_rewrite->search_base;
 
     if (is_search() && !is_admin() && strpos($_SERVER['REQUEST_URI'], "/{$search_base}/") === false) {
-        if (isset($_GET['post_type']) && $_GET['post_type'] && ($_GET['post_type'] === 'izdelki' || $_GET['post_type'] === 'ponudniki')) {
+        if (isset($_GET['post_type'])
+            && $_GET['post_type']
+            && ($_GET['post_type'] === 'izdelki'
+                || $_GET['post_type'] === 'ponudniki'
+                || $_GET['post_type'] === 'turisticni-ponudniki')) {
             wp_redirect(get_search_link() . 'prikazi/' . $_GET['post_type']);
             exit();
         }
