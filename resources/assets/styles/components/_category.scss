@@ -8,6 +8,7 @@
   line-height: 24px;
   z-index: 1;
   position: relative;
+  text-decoration: none !important;
   @include transition(color 0.3s ease-in-out);
   &:after{
     content: '';

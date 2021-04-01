@@ -1,8 +1,8 @@
 @php
     $current = get_current_user_id();
-    $izdelki = get_posts([
+    $nastanitve = get_posts([
         'author' => $current,
-        'post_type' => 'izdelki',
+        'post_type' => 'nastanitve',
         'numberposts' => -1,
         'post_status' => ['publish', 'pending', 'draft']
     ])
@@ -11,30 +11,30 @@
 <section class="flex flex--center">
     <div class="pt24 width100" style="max-width: 900px;">
         <div class="flex flex--between mb16">
-            <h3 class="mb8">Izdelki</h3>
+            <h3 class="mb8">Nastanitve</h3>
             <div class="mb8">
-                <a href="{{admin_url('admin.php?page=izdelki-add')}}" class="btn btn--small btn--square"
+                <a href="{{admin_url('admin.php?page=nastanitve-add')}}" class="btn btn--small btn--square"
                    style="color: white !important;">
-                    Dodaj izdelek
+                    Dodaj
                 </a>
             </div>
         </div>
 
         <div>
-            @if($izdelki)
-                @foreach($izdelki as $izdelek)
+            @if($nastanitve)
+                @foreach($nastanitve as $nastanitev)
                     <div class="card pt8 pb8 pl16 pr16 mb16 mt0" style="max-width: 100%">
                         <div class="flex flex--middle flex--between" style="min-height: 38px">
                             <div style="width: calc(100% - 250px);">
-                                <h6>{{$izdelek->post_title}} @if($izdelek->post_status==='pending')(v
+                                <h6>{{$nastanitev->post_title}} @if($nastanitev->post_status==='pending')(v
                                     pregledu)@endif</h6>
                             </div>
                             <div class="flex">
-                                <a href="{{get_the_permalink($izdelek->ID)}}" target="_blank"
+                                <a href="{{get_the_permalink($nastanitev->ID)}}" target="_blank"
                                    class="btn btn--small btn--info btn--square mr8" style="color: white !important;">
                                     Poglej
                                 </a>
-                                <a href="{{admin_url('admin.php?page=izdelki-edit&id='.$izdelek->ID)}}"
+                                <a href="{{admin_url('admin.php?page=nastanitve-edit&id='.$nastanitev->ID)}}"
                                    class="btn btn--small btn--square" style="color: white !important;">
                                     Uredi
                                 </a>
@@ -43,7 +43,7 @@
                     </div>
                 @endforeach
             @else
-                <h5 class="text-center">Trenutno še nimate izdelkov</h5>
+                <h5 class="text-center">Trenutno še nimate nastanitev</h5>
             @endif
         </div>
     </div>

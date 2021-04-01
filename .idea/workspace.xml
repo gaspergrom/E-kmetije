@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e3cf191-6899-40ba-93b1-5e12c3ff1378" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ekmetije.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ekmetije.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/acf.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/acf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelek.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelek.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/email.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/filters.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/sponzorji.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/sponzorji.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/posts/turisticni-ponudniki.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/posts/turisticni-ponudniki.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/archive-sponzorji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/archive-sponzorji.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/single-sponzorji.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-sponzorji.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tax.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/tax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/ponudnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/ponudnik.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/roles/menu-limit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/menu-limit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/roles/post-limit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/post-limit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/roles/yoast.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/yoast.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiKontakt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/routes/template-povprasevanje.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/routes/template-povprasevanje.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/styles/components/_category.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/components/_category.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +287,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/api/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -293,11 +302,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik" />
-      <recent name="$PROJECT_DIR$/app/posts" />
-      <recent name="$PROJECT_DIR$/resources/views/view/search" />
-      <recent name="$PROJECT_DIR$/resources/views/partials/search" />
+      <recent name="$PROJECT_DIR$/app/api/admin" />
+      <recent name="$PROJECT_DIR$/resources/assets/scripts/admin" />
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
+      <recent name="$PROJECT_DIR$/resources/assets/scripts/routes" />
+      <recent name="$PROJECT_DIR$/app/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\private\ekmetije\web\app\themes\ekmetije\resources\assets\scripts\core" />
@@ -382,6 +391,7 @@
       <workItem from="1617038208404" duration="18000" />
       <workItem from="1617038840736" duration="6324000" />
       <workItem from="1617200917867" duration="744000" />
+      <workItem from="1617287089947" duration="9133000" />
     </task>
     <servers />
   </component>

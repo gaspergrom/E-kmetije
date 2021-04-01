@@ -47,7 +47,7 @@ add_action('admin_menu', function () {
         85
     );
     add_submenu_page(
-        'ponudniki',
+        null,
         __('Dodaj ponudnika', 'ekmetije'),
         __('Dodaj ponudnika', 'ekmetije'),
         'ponudniki',
@@ -68,7 +68,8 @@ add_action('admin_menu', function () {
         },
         85
     );
-    add_menu_page(
+    add_submenu_page(
+        'ponudniki',
         __('Izdelki', 'ekmetije'),
         __('Izdelki', 'ekmetije'),
         'izdelki',
@@ -76,11 +77,10 @@ add_action('admin_menu', function () {
         function () {
             echo \App\template("admin/izdelki/index");
         },
-        'dashicons-tag',
-        86
+        85
     );
     add_submenu_page(
-        'izdelki',
+        null,
         __('Dodaj izdelek', 'ekmetije'),
         __('Dodaj izdelek', 'ekmetije'),
         'izdelki',
@@ -88,7 +88,7 @@ add_action('admin_menu', function () {
         function () {
             echo \App\template("admin/izdelki/add");
         },
-        86
+        85
     );
     add_submenu_page(
         null,
@@ -99,8 +99,76 @@ add_action('admin_menu', function () {
         function () {
             echo \App\template("admin/izdelki/edit");
         },
+        85
+    );
+    add_menu_page(
+        __('Turistični ponudniki', 'ekmetije'),
+        __('Turistični ponudniki', 'ekmetije'),
+        'ponudniki',
+        'turisticni-ponudniki',
+        function () {
+            echo \App\template("admin/turisticni-ponudniki/index");
+        },
+        'dashicons-palmtree',
         86
     );
+    add_submenu_page(
+        null,
+        __('Dodaj turističnega ponudnika', 'ekmetije'),
+        __('Dodaj turističnega ponudnika', 'ekmetije'),
+        'ponudniki',
+        'turisticni-ponudniki-add',
+        function () {
+            echo \App\template("admin/turisticni-ponudniki/add");
+        },
+        86
+    );
+    add_submenu_page(
+        null,
+        __('Uredi turističnega ponudnika', 'ekmetije'),
+        __('Uredi turističnega ponudnika', 'ekmetije'),
+        'ponudniki',
+        'turisticni-ponudniki-edit',
+        function () {
+            echo \App\template("admin/turisticni-ponudniki/edit");
+        },
+        86
+    );
+
+    add_submenu_page(
+        'turisticni-ponudniki',
+        __('Nastanitve', 'ekmetije'),
+        __('Nastanitve', 'ekmetije'),
+        'ponudniki',
+        'nastanitve',
+        function () {
+            echo \App\template("admin/nastanitve/index");
+        },
+        86
+    );
+    add_submenu_page(
+        null,
+        __('Dodaj nastanitev', 'ekmetije'),
+        __('Dodaj nastanitev', 'ekmetije'),
+        'ponudniki',
+        'nastanitve-add',
+        function () {
+            echo \App\template("admin/nastanitve/add");
+        },
+        86
+    );
+    add_submenu_page(
+        null,
+        __('Uredi nastanitev', 'ekmetije'),
+        __('Uredi nastanitev', 'ekmetije'),
+        'ponudniki',
+        'nastanitve-edit',
+        function () {
+            echo \App\template("admin/nastanitve/edit");
+        },
+        86
+    );
+
     add_menu_page(
         __('Pomoč', 'ekmetije'),
         __('Pomoč', 'ekmetije'),
@@ -110,8 +178,9 @@ add_action('admin_menu', function () {
             echo \App\template("admin/pomoc");
         },
         'dashicons-sos',
-        86
+        90
     );
+
 });
 
 
@@ -164,41 +233,41 @@ add_action('wp_dashboard_setup', function () {
                 echo "<p>Trenutno še nimate ponudnikov</p>";
             }
             echo '<div class="mt16 flex flex--middle">
-<a href="'. admin_url('admin.php?page=ponudniki') .'" class="btn btn--square btn--small mr8" style="color: white">Vsi ponudniki</a>
-<a href="'. admin_url('admin.php?page=ponudniki-add') . '" class="btn btn--square btn--small" style="color: white">Dodaj ponudnika</a>
+<a href="'. admin_url('admin.php?page=ponudniki') .'" class="btn btn--square btn--small mr8 mb8" style="color: white">Vsi ponudniki</a>
+<a href="'. admin_url('admin.php?page=ponudniki-add') . '" class="btn btn--square btn--small mb8" style="color: white">Dodaj ponudnika</a>
 </div>';
         }
     );
     wp_add_dashboard_widget(
-        'wpexplorer_dashboard_izdelki', // Widget slug.
-        'Izdelki', // Title.
+        'wpexplorer_dashboard_turisticni-ponudniki', // Widget slug.
+        'Turistični ponudniki', // Title.
         function () {
             $current = get_current_user_id();
-            $izdelki = get_posts([
+            $turisticniPonudniki = get_posts([
                 'author' => $current,
-                'post_type' => 'izdelki',
+                'post_type' => 'turisticni-ponudniki',
                 'numberposts' => - 1,
                 'post_status' => ['publish', 'pending', 'draft']
             ]);
-            if($izdelki){
-                foreach ($izdelki as $izdelek) {
+            if($turisticniPonudniki){
+                foreach ($turisticniPonudniki as $turisticniPonudnik) {
                     echo '<div class="card pt8 pb8 pl8 pr8 mb8">
                     <div class="flex flex--between">
-                        <p class="mb0">' . $izdelek->post_title . '</p>
+                        <p class="mb0">' . $turisticniPonudnik->post_title . '</p>
                         <div class="flex flex--middle">
-                            <p class="mb0"><a href="'. get_the_permalink($izdelek->ID) .'" target="_blank" class="mr8 text-underline">Poglej</a></p>
-                            <p class="mb0"><a href="'. admin_url('admin.php?page=izdelki-edit&id='.$izdelek->ID) .'" class=" text-underline">Uredi</a></p>
+                            <p class="mb0"><a href="'. get_the_permalink($turisticniPonudnik->ID) .'" target="_blank" class="mr8 text-underline">Poglej</a></p>
+                            <p class="mb0"><a href="'. admin_url('admin.php?page=turisticni-ponudniki-edit&id='.$turisticniPonudnik->ID) .'" class=" text-underline">Uredi</a></p>
                         </div>
                     </div>
                 </div>';
                 }
             }
             else {
-                echo "<p>Trenutno še nimate izdelkov</p>";
+                echo "<p>Trenutno še nimate turističnih ponudnikov</p>";
             }
             echo '<div class="mt16 flex flex--middle">
-<a href="'. admin_url('admin.php?page=izdelki') .'" class="btn btn--square btn--small mr8" style="color: white">Vsi izdelki</a>
-<a href="'. admin_url('admin.php?page=izdelki-add') . '" class="btn btn--square btn--small" style="color: white">Dodaj izdelek</a>
+<a href="'. admin_url('admin.php?page=turisticni-ponudniki') .'" class="btn btn--square btn--small mr8 mb8" style="color: white">Vsi turistični ponudniki</a>
+<a href="'. admin_url('admin.php?page=turisticni-ponudniki-add') . '" class="btn btn--square btn--small mb8" style="color: white">Dodaj turističnega ponudnika</a>
 </div>';
 
         }

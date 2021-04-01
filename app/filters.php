@@ -27,6 +27,8 @@ add_filter('body_class', function (array $classes) {
             $classes[] = 'archive-izdelki';
         } elseif (is_post_type_archive('turisticni-ponudniki')) {
             $classes[] = 'archive-turisticni-ponudniki';
+        } elseif (is_post_type_archive('nastanitve')) {
+            $classes[] = 'nastanitve';
         }
     }
 

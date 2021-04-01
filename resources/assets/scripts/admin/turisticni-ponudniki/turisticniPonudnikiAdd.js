@@ -2,13 +2,12 @@ import serialize from "../../core/serialize";
 
 export default () => {
     const body = $('html, body');
-    const form = $('#formadminponudnikedit');
+    const form = $('#formadminturisticniponudnikadd');
     const message = form.find('#message');
     form.submit(function (e) {
         e.preventDefault();
         message.text('');
         const data = serialize($(this));
-        console.log(data)
         let el = [];
         if (data.naziv.length === 0) {
             el.push('naziv');
@@ -28,8 +27,6 @@ export default () => {
         }
         if (!data.obcina) {
             el.push('obcina');
-        }if (!data.email) {
-            el.push('email');
         }
         data.opis = tinymce.get('tinymceeditor').getContent();
         if (el.length > 0) {
@@ -49,23 +46,21 @@ export default () => {
         const loading = $(this).find('.loading');
         submitbtn.css('display', 'none');
         loading.css('display', 'block');
-        $.post('/wp-json/ekmetije/v1/admin/ponudnik/edit', data)
+        $.post('/wp-json/ekmetije/v1/admin/turisticni-ponudnik', data)
             .done(function (data) {
                 submitbtn.css('display', 'block');
                 loading.css('display', 'none');
                 message.removeClass('error-text').addClass('success-text');
                 message.text(data);
-                location.reload();
+                document.getElementById('formadminturisticniponudnikadd').reset();
             })
             .fail(function (data) {
-                submitbtn.css('display', 'block');
-                loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');
                 if (data.responseJSON && data.responseJSON.message) {
-                    message.text(data.responseJSON.message);
+                    error.text(data.responseJSON.message);
                 }
                 else {
-                    message.text('Prišlo je do napake, prosim kontaktirajte podporo')
+                    error.text('Prišlo je do napake, prosim kontaktirajte podporo')
                 }
             })
     });

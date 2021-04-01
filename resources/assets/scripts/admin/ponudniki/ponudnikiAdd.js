@@ -55,6 +55,8 @@ export default () => {
                 document.getElementById('formadminponudnikadd').reset();
             })
             .fail(function (data) {
+              submitbtn.css('display', 'block');
+              loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');
                 if (data.responseJSON && data.responseJSON.message) {
                     error.text(data.responseJSON.message);

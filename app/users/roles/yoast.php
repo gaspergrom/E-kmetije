@@ -26,4 +26,6 @@ function disable_seo_metabox(){
     remove_meta_box('wpseo_meta', 'page', 'normal');
     remove_meta_box('wpseo_meta', 'ponudniki', 'normal');
     remove_meta_box('wpseo_meta', 'izdelki', 'normal');
+    remove_meta_box('wpseo_meta', 'nastanitve', 'normal');
+    remove_meta_box('wpseo_meta', 'turisticni-ponudniki', 'normal');
 }

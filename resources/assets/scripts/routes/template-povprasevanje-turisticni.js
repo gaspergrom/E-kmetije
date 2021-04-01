@@ -6,9 +6,9 @@ export default {
         // JavaScript to be fired on the home page
     },
     finalize () {
-        const error = $('#formponudnik .error-text');
+        const error = $('#formponudnikturisticni .error-text');
         const body = $('html, body');
-        $('#formponudnik').submit(function (e) {
+        $('#formponudnikturisticni').submit(function (e) {
             e.preventDefault();
             error.text('');
             const data = serialize($(this));
@@ -76,11 +76,11 @@ export default {
             const loading = $(this).find('.loading');
             submitbtn.css('display', 'none');
             loading.css('display', 'block');
-            $.post('/wp-json/ekmetije/v1/ponudnik', data)
+            $.post('/wp-json/ekmetije/v1/turisticni-ponudnik', data)
                 .done(function (data) {
                     submitbtn.css('display', 'block');
                     loading.css('display', 'none');
-                    window.location = '/ponudniki-zakljucek'
+                    // window.location = '/ponudniki-zakljucek'
                 })
                 .fail(function (data) {
                   submitbtn.css('display', 'block');

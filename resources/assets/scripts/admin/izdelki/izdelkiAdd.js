@@ -54,6 +54,8 @@ export default () => {
                 document.getElementById('formadminizdelkiadd').reset();
             })
             .fail(function (data) {
+              submitbtn.css('display', 'block');
+              loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');
                 if (data.responseJSON && data.responseJSON.message) {
                     message.text(data.responseJSON.message);

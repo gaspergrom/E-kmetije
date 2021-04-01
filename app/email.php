@@ -24,7 +24,7 @@ add_action('pending_to_publish', function ($post) {
     $post_type = get_post_type( $post->ID );
     $authorId = $post->post_author;
     $email = $address = get_the_author_meta('user_email', $authorId);
-    if($email && $post_type == "ponudniki"){
+    if($email && ($post_type == "ponudniki" || $post_type == "turisticni-ponudniki")){
         wp_mail($email, 'E-kmetije - Vaš ponudnik je bil objavljen!', '
             Pozdravljeni,<br>
             <br>

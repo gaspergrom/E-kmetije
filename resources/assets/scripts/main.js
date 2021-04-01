@@ -9,6 +9,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import templatePovprasevanje from './routes/template-povprasevanje';
+import templatePovprasevanjeTuristicni from './routes/template-povprasevanje-turisticni';
 import templateZemljevid from './routes/template-zemljevid';
 import templateKontakt from './routes/template-kontakt';
 
@@ -18,6 +19,7 @@ const routes = new Router({
     common,
     home,
     templatePovprasevanje,
+    templatePovprasevanjeTuristicni,
     templateZemljevid,
     templateKontakt,
 });

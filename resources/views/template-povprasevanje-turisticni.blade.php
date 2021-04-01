@@ -1,5 +1,5 @@
 {{--
-  Template Name: Povpraševanje
+  Template Name: Povpraševanje turistični
 --}}
 
 @extends('layouts.app')
@@ -38,17 +38,17 @@
                     <h5 class="mb8">Vrsta ponudnika</h5>
                     <div class="row">
                       <div class="col-md-4">
-                        <div class="category active mb8">
+                        <a href="/postani-ponudnik" class="category mb8">
                               Ponudnik izdelkov
-                        </div>
-                        <a href="/postani-turisticni-ponudnik" class="category mb8">
-                          Turistični ponudnik
                         </a>
+                        <div class="category active mb8">
+                          Turistični ponudnik
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                    <form class="row" id="formponudnik" novalidate>
+                    <form class="row" id="formponudnikturisticni" novalidate>
                         <div class="col-md-12">
                             <h5 class="mb8">Dostopni podatki</h5>
                             <p class="pb8">
@@ -82,7 +82,7 @@
                         <div class="col-md-6 mb8">
                             <label for="naziv">Naziv ponudnika<span class="required">*</span></label>
                             <input type="text" name="naziv" id="naziv" class="input mt4"
-                                   placeholder="Kmetija pr'..." required autocomplete="off">
+                                   placeholder="Turistična kmetija..." required autocomplete="off">
                         </div>
                         <div class="col-md-6 mb8">
                             <label for="ulica">Ulica<span class="required">*</span></label>
@@ -126,44 +126,6 @@
                             <textarea id="opis" name="opis" placeholder="" class="input mt4"></textarea>
                         </div>
 
-
-                        <div class="col-md-12 pt16">
-                            <h5 class="mb8">Vrste izdelkov</h5>
-                            <p class="pb8">
-                                Če za vaše izdelke ne najdete kategorije, pustite prazno in bomo mi umestili v primerno kategorijo.
-                            </p>
-                        </div>
-                        <div class="col-md-12 mb8">
-                            <div class="row">
-                                @foreach($vrste as $vrsta)
-                                <div class="col-sm-6 col-lg-4 mb8">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="vrste" value="{{$vrsta->term_id}}">
-                                        <span>
-                                            {!! $vrsta->name !!}
-                                        </span>
-                                    </label>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-12 pt16">
-                            <h5 class="mb16">Vrste prevzema</h5>
-                        </div>
-                        <div class="col-md-12 mb8">
-                            @foreach($dostave as $dostava)
-                            <div>
-                                <label class="checkbox pb8">
-                                    <input type="checkbox" name="dostava" value="{{$dostava->term_id}}">
-                                    <span>
-                                            {!! $dostava->name !!}
-                                        </span>
-                                </label>
-                            </div>
-                            @endforeach
-                        </div>
 
 
                         <div class="col-md-12 pt16">

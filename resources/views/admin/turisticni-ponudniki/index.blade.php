@@ -2,7 +2,7 @@
     $current = get_current_user_id();
     $ponudniki = get_posts([
         'author' => $current,
-        'post_type' => 'ponudniki',
+        'post_type' => 'turisticni-ponudniki',
         'numberposts' => -1,
         'post_status' => ['publish', 'pending']
     ])
@@ -11,11 +11,11 @@
 <section class="flex flex--center">
     <div class="pt24 width100" style="max-width: 900px;">
         <div class="flex flex--between mb16">
-            <h3 class="mb8">Ponudniki</h3>
+            <h3 class="mb8">Turisticni ponudniki</h3>
             <div class="mb8">
-                <a href="{{admin_url('admin.php?page=ponudniki-add')}}" class="btn btn--small btn--square"
+                <a href="{{admin_url('admin.php?page=turisticni-ponudniki-add')}}" class="btn btn--small btn--square"
                    style="color: white !important;">
-                    Dodaj ponudnika
+                    Dodaj
                 </a>
             </div>
         </div>
@@ -35,7 +35,7 @@
                                        class="btn btn--small btn--info btn--square mr8" style="color: white !important;">
                                         Poglej
                                     </a>
-                                    <a href="{{admin_url('admin.php?page=ponudniki-edit&id='.$ponudnik->ID)}}"
+                                    <a href="{{admin_url('admin.php?page=turisticni-ponudniki-edit&id='.$ponudnik->ID)}}"
                                        class="btn btn--small btn--square" style="color: white !important;">
                                         Uredi
                                     </a>
@@ -45,7 +45,7 @@
                     </div>
                 @endforeach
             @else
-                <h5 class="text-center">Trenutno še nimate vnešenih ponudnikov</h5>
+                <h5 class="text-center">Trenutno še nimate vnešenih turističnih ponudnikov</h5>
             @endif
         </div>
     </div>

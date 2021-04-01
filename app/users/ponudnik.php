@@ -28,6 +28,16 @@ return [
     'edit_other_izdelki' => false,
     'read_private_izdelki' => false,
     'delete_izdelki' => true,
+
+    // Turisticni ponudniki
+    'read_turisticni-ponudniki' => true,
+    'publish_turisticni-ponudniki' => true,
+    'edit_turisticni-ponudnik' => true,
+    'edit_turisticni-ponudniki' => true,
+    'edit_other_turisticni-ponudniki' => false,
+    'read_private_turisticni-ponudniki' => false,
+    'delete_turisticni-ponudniki' => true,
+
     'wpseo_bulk_edit' => false,
     'wpseo_edit_advanced_metadata' => false,
 

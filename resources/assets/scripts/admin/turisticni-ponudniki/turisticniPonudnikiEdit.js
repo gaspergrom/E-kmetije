@@ -2,7 +2,7 @@ import serialize from "../../core/serialize";
 
 export default () => {
     const body = $('html, body');
-    const form = $('#formadminponudnikedit');
+    const form = $('#formadminturisticniponudnikedit');
     const message = form.find('#message');
     form.submit(function (e) {
         e.preventDefault();
@@ -49,8 +49,9 @@ export default () => {
         const loading = $(this).find('.loading');
         submitbtn.css('display', 'none');
         loading.css('display', 'block');
-        $.post('/wp-json/ekmetije/v1/admin/ponudnik/edit', data)
+        $.post('/wp-json/ekmetije/v1/admin/turisticni-ponudnik/edit', data)
             .done(function (data) {
+                console.log(data);
                 submitbtn.css('display', 'block');
                 loading.css('display', 'none');
                 message.removeClass('error-text').addClass('success-text');
@@ -58,6 +59,7 @@ export default () => {
                 location.reload();
             })
             .fail(function (data) {
+                console.log(data);
                 submitbtn.css('display', 'block');
                 loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');

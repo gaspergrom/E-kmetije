@@ -14,6 +14,8 @@ add_filter('pre_get_posts', function ($query) {
         if (in_array($query->get("post_type"), [
             'izdelki',
             'ponudniki',
+            'turisticni-ponudniki',
+            'nastanitve',
             'post',
             'page',
             'attachment'

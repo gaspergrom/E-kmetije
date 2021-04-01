@@ -2,36 +2,26 @@ import serialize from "../../core/serialize";
 
 export default () => {
     const body = $('html, body');
-    const form = $('#formadminponudnikedit');
+    const form = $('#formadminnastanitevadd');
     const message = form.find('#message');
     form.submit(function (e) {
         e.preventDefault();
         message.text('');
         const data = serialize($(this));
-        console.log(data)
         let el = [];
-        if (data.naziv.length === 0) {
-            el.push('naziv');
+        if (data.name.length === 0) {
+            el.push('name');
         }
 
-        if (data.ulica.length === 0) {
-            el.push('ulica');
+        if (data.ponudnik.length === 0) {
+            el.push('ponudnik');
         }
-        if (data.postnastevilka.length === 0) {
-            el.push('postnastevilka');
-        }
-        if (data.kraj.length === 0) {
-            el.push('kraj');
-        }
-        if (!data.regija) {
-            el.push('regija');
-        }
-        if (!data.obcina) {
-            el.push('obcina');
-        }if (!data.email) {
-            el.push('email');
+
+        if (!data.cena) {
+            el.push('cena');
         }
         data.opis = tinymce.get('tinymceeditor').getContent();
+
         if (el.length > 0) {
             el.forEach((name) => {
                 $(`[name=${name}]`).addClass('error');
@@ -49,17 +39,17 @@ export default () => {
         const loading = $(this).find('.loading');
         submitbtn.css('display', 'none');
         loading.css('display', 'block');
-        $.post('/wp-json/ekmetije/v1/admin/ponudnik/edit', data)
+        $.post('/wp-json/ekmetije/v1/admin/nastanitev', data)
             .done(function (data) {
                 submitbtn.css('display', 'block');
                 loading.css('display', 'none');
                 message.removeClass('error-text').addClass('success-text');
                 message.text(data);
-                location.reload();
+                document.getElementById('formadminnastanitevadd').reset();
             })
             .fail(function (data) {
-                submitbtn.css('display', 'block');
-                loading.css('display', 'none');
+              submitbtn.css('display', 'block');
+              loading.css('display', 'none');
                 message.removeClass('success-text').addClass('error-text');
                 if (data.responseJSON && data.responseJSON.message) {
                     message.text(data.responseJSON.message);
