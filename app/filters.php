@@ -124,3 +124,31 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+
+add_action( 'admin_menu', function() {
+
+    global $menu;
+
+    $ponudniki_count = count(get_posts([
+        'numberposts'   => -1,
+        'post_type'     => 'ponudniki',
+        'post_status'   => array( 'pending' ),
+    ]));
+    $turisticni_ponudniki_count = count(get_posts([
+        'numberposts'   => -1,
+        'post_type'     => 'turisticni-ponudniki',
+        'post_status'   => array( 'pending' ),
+    ]));
+
+    $ponudniki = wp_list_filter( $menu, [ 2 => 'edit.php?post_type=ponudniki' ] );
+    $turisticni_ponudniki = wp_list_filter( $menu, [ 2 => 'edit.php?post_type=turisticni-ponudniki' ] );
+
+    if ( ! empty( $ponudniki ) && is_array( $ponudniki ) ) {
+        $menu[ key( $ponudniki ) ][0] .= " <span class='awaiting-mod update-plugins count-" . esc_attr( $ponudniki_count ) . "'><span class='pending-count'>" . absint( number_format_i18n( $ponudniki_count ) ) . '</span></span>';
+    }
+    if ( ! empty( $turisticni_ponudniki ) && is_array( $turisticni_ponudniki ) ) {
+        $menu[ key( $turisticni_ponudniki ) ][0] .= " <span class='awaiting-mod update-plugins count-" . esc_attr( $turisticni_ponudniki_count ) . "'><span class='pending-count'>" . absint( number_format_i18n( $turisticni_ponudniki_count ) ) . '</span></span>';
+    }
+} );

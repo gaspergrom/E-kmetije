@@ -49,6 +49,19 @@ add_action('pending_to_publish', function ($post) {
             <a href="https://e-kmetije.si" target="_blank">e-kmetije.si</a><br>
             <img src="https://e-kmetije.si/wp-content/uploads/logo-1-latest-black.png">
         ');
+        wp_remote_post('https://api.clickup.com/api/v2/list/32043899/task/', [
+            'headers' => [
+                'Authorization' => 'pk_6637241_K3FEBX7N0VJVI8ZUKZ4DT88YA9NTS69H',
+                'Content-Type' => 'application/json'
+            ],
+            'body' => json_encode([
+                'name' => $post->post_title,
+                'description' => 'Url: '. $url .'
+Email: '. $email .'
+                ',
+                'status' => 'vneseno'
+            ])
+        ]);
     }
 
 }, 10, 1);

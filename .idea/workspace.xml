@@ -3,29 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3cf191-6899-40ba-93b1-5e12c3ff1378" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelek.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelek.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/admin/izdelekEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/email.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/filters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/filters.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tax.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/tax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/ponudnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/ponudnik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/roles/menu-limit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/menu-limit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/roles/post-limit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/post-limit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/users/roles/yoast.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/roles/yoast.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/izdelki/izdelkiEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/admin/ponudniki/ponudnikiKontakt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/scripts/routes/template-povprasevanje.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/scripts/routes/template-povprasevanje.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/styles/components/_category.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/components/_category.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/izdelki/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ponudniki/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template-povprasevanje.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,7 +370,7 @@
       <workItem from="1617038208404" duration="18000" />
       <workItem from="1617038840736" duration="6324000" />
       <workItem from="1617200917867" duration="744000" />
-      <workItem from="1617287089947" duration="9133000" />
+      <workItem from="1617287089947" duration="12013000" />
     </task>
     <servers />
   </component>
