@@ -49,7 +49,14 @@ add_action('pending_to_publish', function ($post) {
             <a href="https://e-kmetije.si" target="_blank">e-kmetije.si</a><br>
             <img src="https://e-kmetije.si/wp-content/uploads/logo-1-latest-black.png">
         ');
-        wp_remote_post('https://api.clickup.com/api/v2/list/32043899/task/', [
+        $listId = '32043899';
+        if($post_type == 'ponudniki'){
+            $listId = '32043899';
+        }
+        elseif ($post_type == 'turisticni-ponudniki'){
+            $listId = '53090795';
+        }
+        wp_remote_post('https://api.clickup.com/api/v2/list/'. $listId .'/task/', [
             'headers' => [
                 'Authorization' => 'pk_6637241_K3FEBX7N0VJVI8ZUKZ4DT88YA9NTS69H',
                 'Content-Type' => 'application/json'
