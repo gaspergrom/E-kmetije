@@ -1,0 +1,36 @@
+.contacts{
+  position: fixed;
+  background: $color-green;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  @include flex;
+  @include flex--center;
+  width: auto;
+
+  @include xs-down {
+    width: 100%;
+    a {
+      width: inherit;
+    }
+  }
+
+  a{
+    width: 50px;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    color: $color-white;
+    height: 40px;
+    border-right: solid 1px $color-white;
+    @include flex;
+    @include flex--center;
+    @include flex--middle;
+
+    &:last-child{
+      border-right: none;
+    }
+  }
+}

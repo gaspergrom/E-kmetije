@@ -3,23 +3,31 @@
 \* ---------------------------------- */
 
 a {
-    color: $color-green;
-    &:not(.btn):hover{
-        text-decoration: underline;
-    }
+  color: $color-green;
+
+  &:not(.btn):not(.card):hover {
+    text-decoration: underline;
+  }
 }
 
-.link{
-    &--reverse{
-        color: $color-black;
-        &:hover{
-            color: $color-green;
-        }
+.link {
+  color: $color-green;
+
+  &:not(.btn):hover {
+    text-decoration: underline;
+  }
+
+  &--reverse {
+    color: $color-black;
+
+    &:hover {
+      color: $color-green;
     }
+  }
 }
 
 .cursor {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*

@@ -3,6 +3,9 @@
   background: $color-white;
   display: block;
   color: $color-black;
+  //&:hover{
+  //  text-decoration: none !important;
+  //}
 
   &--hover {
     background: $color-white;

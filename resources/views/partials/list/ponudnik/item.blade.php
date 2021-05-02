@@ -4,7 +4,7 @@
     $excerpt = get_the_excerpt($ponudnik->ID);
     $thumbnail = get_the_post_thumbnail_url($ponudnik->ID);
 @endphp
-<div class="card width100 height100 gtm-card-ponudniki relative">
+<a href="{{get_the_permalink($ponudnik->ID)}}" class="card width100 height100 gtm-card-ponudniki relative">
     <div class="pt16 pl24 pr24 pb80">
         <h4 class="mb16">{{$ponudnik->post_title}}</h4>
         @if($kraj)
@@ -33,9 +33,9 @@
             </p>
         @endif
         <div class="absolute absolute--bottom absolute--left pt16 pb16 pl16 pr16 width100">
-            <a href="{{get_the_permalink($ponudnik->ID)}}" class="btn">
+            <div class="btn">
                 Poglej več
-            </a>
+            </div>
         </div>
     </div>
-</div>
+</a>

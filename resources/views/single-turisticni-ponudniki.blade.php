@@ -211,5 +211,27 @@
             </div>
         </section>
     </div>
+    @if(count($kontakti) > 0)
+      @php
+        $phone = array_values(array_filter($kontakti, function ($kontakt){
+        return $kontakt['vrsta'] == 'tel';
+       }));
+       $phone = count($phone) > 0 ? $phone[0]['kontakt'] : '';
+       $email = array_values(array_filter($kontakti, function ($kontakt){
+        return $kontakt['vrsta'] == 'email';
+       }));
+       $email = count($email) > 0 ? $email[0]['kontakt'] : '';
+       $web = array_values(array_filter($kontakti, function ($kontakt){
+        return $kontakt['vrsta'] == 'web';
+       }));
+       $web = count($web) > 0 ? $web[0]['kontakt'] : '';
 
+      @endphp
+      @include('partials.contacts', [
+          'phone' => $phone,
+          'email' => $email,
+          'web' => $web,
+          'location' => $lokacija
+      ])
+    @endif
 @endsection

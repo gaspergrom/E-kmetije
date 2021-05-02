@@ -3,6 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4e3cf191-6899-40ba-93b1-5e12c3ff1378" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/styles/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/_components.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/styles/components/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/components/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/assets/styles/utilities/_links.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/styles/utilities/_links.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/izdelki/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/izdelki/hook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/izdelki/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/izdelki/item.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/hook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/ponudnik/item.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/sponzorji/hook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik/hook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik/hook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik/item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/list/turisticni-ponudnik/item.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-izdelki.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-ponudniki.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/single-turisticni-ponudniki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-turisticni-ponudniki.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +93,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -274,7 +295,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -372,6 +393,8 @@
       <workItem from="1618507414367" duration="620000" />
       <workItem from="1618929419942" duration="19000" />
       <workItem from="1618937702867" duration="167000" />
+      <workItem from="1619969856732" duration="67000" />
+      <workItem from="1619969939382" duration="7141000" />
     </task>
     <servers />
   </component>
